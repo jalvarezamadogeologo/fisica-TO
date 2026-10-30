@@ -88,6 +88,14 @@ python _tools/test-diagnostico.py
 
 Resultado esperado: sin problemas en los tres chequeos.
 
+## Publicación
+
+- Repositorio: https://github.com/jalvarezamadogeologo/fisica-TO (público)
+- Sitio: https://jalvarezamadogeologo.github.io/fisica-TO/ (GitHub Pages, rama `master`, raíz)
+- Pages publica solo las páginas y sus recursos. Las carpetas que empiezan con guion bajo
+  (`_tools/`, `_respaldo-v1/`) no se sirven, aunque sí están en el repositorio.
+- El programa oficial del curso (PDF) no se publica: está en `.gitignore`.
+
 ## Estado
 
 Re-enfoque completo el 2026-10-30: contenido reescrito con pedagogía por bloques, 20 temas

@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidad 1 — Cinemática y Dinámica · Física CBA0210</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Unidad 1 — Cinemática y Dinámica</h1>
+    <p class="sub">Física CBA0210 &middot; RA 1 y RA 4 &middot; <a href="index.html">Volver al inicio</a></p>
+  </div>
+</header>
+
+<nav>
+  <ul class="nav-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="unidad1.html" class="activa">Unidad 1 — Cinemática y Dinámica</a></li>
+    <li><a href="unidad2.html">Unidad 2 — Energía, Trabajo y Electrostática</a></li>
+    <li><a href="unidad3.html">Unidad 3 — Circuitos y Fluidos</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section class="seccion ra">
+    <h3>Qué busca esta unidad</h3>
+    <p><strong>RA 1:</strong> aplicar las leyes de Newton en modelos cinemáticos y dinámicos, describiendo y prediciendo el movimiento de un cuerpo, para desarrollar la capacidad de abstracción necesaria para comprender procesos fisiológicos.</p>
+    <p><strong>RA 4:</strong> utilizar el método científico en experimentos guiados y grupales, recopilando y analizando datos experimentales, describiendo fuentes de error y estableciendo relaciones lógicas con modelos teóricos simplificados.</p>
+  </section>
+
+  <section class="seccion indicadores">
+    <h3>Al terminar la unidad deberías poder</h3>
+    <ul>
+      <li>Definir e interpretar sistemas de referencia y calcular vectores en ellos.</li>
+      <li>Distinguir distancia recorrida, desplazamiento, rapidez y velocidad, y calcularlos.</li>
+      <li>Calcular desplazamientos, velocidades y aceleraciones con las ecuaciones de movimiento.</li>
+      <li>Interpretar y construir gráficos de posición, velocidad y aceleración en función del tiempo.</li>
+      <li>Identificar las fuerzas relevantes en una situación dada y construir el diagrama de cuerpo libre.</li>
+      <li>Plantear y resolver problemas de dinámica, distinguiendo sistemas en equilibrio y en no equilibrio.</li>
+      <li>Trabajar en equipo, comunicar aportes con evidencia y describir fuentes de error en un experimento.</li>
+    </ul>
+  </section>
+
+  <!-- ============================ TEMA 1.1 ============================ -->
+  <section class="tema" id="u1-t1">
+    <h2><span class="num-tema">1.1</span> Posición, distancia, desplazamiento, velocidad y aceleración</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Distinguir con precisión posición, distancia recorrida, desplazamiento, rapidez, velocidad y aceleración; calcular velocidad media y aceleración media con signos coherentes.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Caminas 400 m por un pasillo, te devuelves y terminas exactamente donde empezaste. ¿Te moviste? ¿Cuál fue tu velocidad media en todo el trayecto?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>Sí te moviste: recorriste 800 m. Pero tu <em>desplazamiento</em> neto fue cero, porque el punto final coincide con el inicial. Por lo tanto tu velocidad media fue <strong>0 m/s</strong>, aunque tu rapidez media fue de 800 m divididos por el tiempo total. Distancia y desplazamiento no son lo mismo, y esta diferencia es la fuente del primer tercio de los errores de la unidad.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>Describir movimiento es describir cambios respecto de algo</h4>
+      <p>Ningún movimiento existe "en absoluto": todo movimiento se describe respecto de un <strong>sistema de referencia</strong>. Una persona sentada en un avión está en reposo respecto del avión y se mueve a 900 km/h respecto del suelo. Ambas afirmaciones son verdaderas. Por eso el primer paso de cualquier problema es fijar el origen y el sentido positivo del eje: sin eso, ni los números ni los signos significan nada.</p>
+      <p>Una vez fijado el sistema, hay que separar dos cosas que el lenguaje cotidiano mezcla:</p>
+      <ul>
+        <li><strong>Trayectoria y distancia recorrida.</strong> La trayectoria es el camino efectivamente recorrido; la distancia es su longitud, sumando todos los tramos. Es una cantidad <em>escalar</em> y nunca es negativa.</li>
+        <li><strong>Posición y desplazamiento.</strong> La posición es dónde está el cuerpo (un vector desde el origen). El desplazamiento es el cambio de posición: une el punto inicial con el final, sin importar el camino. Es un <em>vector</em>, y su signo indica el sentido del cambio.</li>
+      </ul>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con una cuenta bancaria.</strong> La <em>distancia</em> es el total de dinero que moviste: todos los depósitos y todos los giros, sumados en valor absoluto. El <em>desplazamiento</em> es el saldo neto: cuánto tienes más o menos que al principio. Puedes mover millones y terminar con el mismo saldo. Y el <em>saldo</em> puede ser negativo; la <em>distancia</em>, nunca.
+    </div>
+
+    <p>La <strong>velocidad media</strong> es desplazamiento dividido por el intervalo de tiempo. Por eso puede ser cero aunque haya habido mucho movimiento, y puede ser negativa si el cuerpo terminó a la izquierda (o al sur, o abajo) de donde empezó. La <strong>rapidez media</strong>, en cambio, usa la distancia: siempre es positiva y siempre mayor o igual que el módulo de la velocidad media. Ambas coinciden solo cuando el movimiento es en un único sentido.</p>
+
+    <p>La <strong>aceleración</strong> es el cambio de velocidad por unidad de tiempo. Aquí está el concepto que más se malentiende: acelerar no significa "ir rápido". Un avión a 900 km/h con velocidad constante tiene aceleración cero. Una pelota detenida en el punto más alto de su vuelo tiene aceleración de 9,8 m/s² hacia abajo. La aceleración mide <em>cuánto cambia</em> la velocidad, no cuán grande es.</p>
+
+    <div class="analogia">
+      <strong>Analogía con el dolor.</strong> La <em>intensidad</em> del dolor sería la velocidad: cuánto hay ahora. La <em>aceleración</em> sería la rapidez con que ese dolor está aumentando o cediendo en el tiempo. Un dolor 8/10 estable es intenso pero no está "acelerando"; un dolor 3/10 que sube un punto por minuto sí lo está.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Velocidad media, rapidez media y aceleración media</span>
+      <strong>v<sub>m</sub> = Δx / Δt</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>rapidez<sub>m</sub> = d / Δt</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>a<sub>m</sub> = Δv / Δt</strong>
+      <span class="nota">Δx = x<sub>final</sub> − x<sub>inicial</sub> &nbsp;&middot;&nbsp; Δv = v<sub>final</sub> − v<sub>inicial</sub> &nbsp;&middot;&nbsp; Δt siempre es positivo</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Cómo se interpreta</th></tr>
+      <tr><td>x</td><td>Posición en el eje elegido</td><td>m</td><td>Dónde está el cuerpo respecto del origen</td></tr>
+      <tr><td>Δx</td><td>Desplazamiento</td><td>m</td><td>Signo positivo: se alejó en el sentido positivo del eje</td></tr>
+      <tr><td>d</td><td>Distancia recorrida</td><td>m</td><td>Siempre positiva o cero</td></tr>
+      <tr><td>Δt</td><td>Intervalo de tiempo</td><td>s</td><td>Siempre positivo: el tiempo no retrocede</td></tr>
+      <tr><td>v<sub>m</sub></td><td>Velocidad media</td><td>m/s</td><td>Puede ser negativa; signo = sentido</td></tr>
+      <tr><td>a<sub>m</sub></td><td>Aceleración media</td><td>m/s²</td><td>Signo igual a v: acelera; signo opuesto: frena</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo resolver un problema de este tipo</h4>
+      <ol>
+        <li>Dibuja un eje con origen y marca el sentido positivo (por ejemplo, "hacia el este es positivo").</li>
+        <li>Anota la posición inicial y la final con su signo respecto de ese eje.</li>
+        <li>Calcula el desplazamiento como <strong>x<sub>f</sub> − x<sub>i</sub></strong>, conservando el signo.</li>
+        <li>Si te piden distancia, suma los tramos <em>en valor absoluto</em>, tramo por tramo.</li>
+        <li>Divide por el tiempo total. No promedies velocidades sin ponderar por tiempo.</li>
+        <li>Interpreta el signo en palabras: "se desplazó 8 m hacia la sala", "frenó a 4 m/s²".</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Traslado dentro de un servicio</h4>
+      <p>Una enfermera camina 12 m desde el puesto de enfermería hacia una habitación, se devuelve 4 m para recoger un insumo y se detiene. El trayecto completo le toma 20 s. Determine la distancia recorrida, el desplazamiento, la rapidez media y la velocidad media.</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Sistema de referencia</span>
+        <p>Origen en el puesto de enfermería; sentido positivo hacia la habitación. Entonces x<sub>i</sub> = 0 m.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Distancia recorrida</span>
+        <p>Ida: 12 m. Vuelta: 4 m. Distancia total d = 12 + 4 = <strong>16 m</strong>. <span class="porque">Sumamos valores absolutos porque la distancia no distingue sentidos.</span></p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Desplazamiento</span>
+        <p>Termina en x<sub>f</sub> = 12 − 4 = 8 m. Entonces Δx = 8 − 0 = <strong>+8 m</strong>. <span class="porque">El signo positivo indica que quedó más cerca de la habitación que del origen.</span></p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 4. Rapidez media y velocidad media</span>
+        <p>Rapidez media = d / Δt = 16 / 20 = <strong>0,8 m/s</strong>.<br>
+        Velocidad media = Δx / Δt = 8 / 20 = <strong>+0,4 m/s</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 5. Control de sentido</span>
+        <p>La rapidez media (0,8) es mayor que el módulo de la velocidad media (0,4), como debe ser siempre que hay cambio de sentido. Si hubieran coincidido, sabríamos que el movimiento fue en una sola dirección.</p>
+      </div>
+    </div>
+
+    <div class="ejemplo">
+      <h4>Aceleración: frenado de una camilla</h4>
+      <p>Una camilla avanza a 2 m/s y se detiene en 0,5 s. ¿Cuál es su aceleración media?</p>
+      <div class="paso">
+        <span class="titulo-paso">Planteo</span>
+        <p>a<sub>m</sub> = (v<sub>f</sub> − v<sub>i</sub>) / Δt = (0 − 2) / 0,5 = <strong>−4 m/s²</strong>.</p>
+      </div>
+      <div class="paso">
+        <span class="titulo-paso">Interpretación</span>
+        <p>El signo negativo no significa "va hacia atrás": significa que la aceleración se opone al movimiento, es decir, <em>frena</em>. Si la camilla se moviera en sentido negativo y frenara, la aceleración sería positiva. Lo que importa es la relación entre los signos de v y de a.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Usar "distancia" y "desplazamiento" como sinónimos. En un trayecto con regreso, la distancia es mayor y la velocidad media puede ser cero.</li>
+        <li>Reportar velocidad sin signo ni dirección. Una velocidad es un vector: "0,4 m/s" está incompleto; falta el sentido.</li>
+        <li>Creer que velocidad cero implica aceleración cero. En el punto más alto de un lanzamiento vertical, v = 0 pero a = g.</li>
+        <li>Interpretar una aceleración negativa como "movimiento hacia atrás". El signo de a solo indica el sentido del cambio de velocidad.</li>
+        <li>Promediar dos velocidades sin ponderar: si vas 10 m/s durante 1 s y 20 m/s durante 9 s, la velocidad media no es 15 m/s.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.1</h4>
+      <p class="enunciado">Una deportista trota 300 m hacia el norte, se devuelve 100 m hacia el sur y se detiene. El recorrido total le toma 80 s. Calcula: (a) la distancia recorrida, (b) el desplazamiento, (c) la rapidez media y (d) la velocidad media.</p>
+      <input type="number" step="any" id="e1-1-resp" placeholder="Velocidad media (m/s)" data-enter-valida="e1-1">
+      <button class="btn-validar" data-target="e1-1" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e1-1-msg"></span>
+<button class="btn-solucion" data-target="e1-1-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="e1-1-sol" data-valor="2.5">
+        <h5>Solución</h5>
+        <ol>
+          <li>Eje con norte positivo. Posiciones: 0 m, +300 m, +200 m.</li>
+          <li>(a) Distancia = 300 + 100 = <strong>400 m</strong>.</li>
+          <li>(b) Desplazamiento = 200 − 0 = <strong>+200 m</strong> (200 m hacia el norte).</li>
+          <li>(c) Rapidez media = 400 / 80 = <strong>5 m/s</strong>.</li>
+          <li>(d) Velocidad media = 200 / 80 = <strong>2,5 m/s hacia el norte</strong>.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u1-t1" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u1-t1">
+      <h5>Pista</h5>
+      <ol>
+        <li>Dibuja el eje antes de calcular: norte positivo.</li>
+        <li>Para la distancia suma los dos tramos como valores absolutos; para el desplazamiento, resta considerando el signo.</li>
+        <li>Antes de dividir, pregúntate cuál de los dos resultados debe ser mayor. Ese control detecta el 90 % de los errores.</li>
+      </ol>
+    </div>
+
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.2</h4>
+      <p class="enunciado">Una persona camina 60 m hacia el este en 30 s y luego 20 m hacia el oeste en 10 s. Tomando el este como sentido positivo, ¿cuál es su velocidad media en m/s en todo el trayecto?</p>
+      <input type="number" step="any" id="p-u1-t1-resp" placeholder="Velocidad media (m/s)" data-enter-valida="p-u1-t1">
+      <button class="btn-validar" data-target="p-u1-t1" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u1-t1-msg"></span>
+<button class="btn-solucion" data-target="p-u1-t1-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="p-u1-t1-sol" data-valor="1">
+        <h5>Solución</h5>
+        <ol>
+          <li>Desplazamiento = +60 − 20 = +40 m.</li>
+          <li>Tiempo total = 30 + 10 = 40 s.</li>
+          <li>Velocidad media = 40 / 40 = <strong>+1 m/s</strong> (hacia el este).</li>
+          <li>Control: la rapidez media fue 80/40 = 2 m/s, mayor que 1 m/s, como corresponde.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u1-t1" data-correctas="3"
+          data-resp1="b" data-exp1="El desplazamiento une el punto inicial con el final: si coinciden, vale cero. La distancia acumula todo el recorrido y sí es 400 m."
+          data-resp2="b" data-exp2="Si la aceleración y la velocidad tienen el mismo signo, la rapidez aumenta. El signo solo indica el sentido del eje."
+          data-resp3="a" data-exp3="Velocidad constante significa que la velocidad no cambia: la aceleración es cero, sin importar cuán grande sea la velocidad.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> Una ciclista completa una vuelta a una pista circular de 400 m y vuelve al punto de partida. ¿Qué es correcto?</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t1-p1" value="a"> a) Desplazamiento 400 m y distancia 0 m.</label>
+            <label><input type="radio" name="u1-t1-p1" value="b"> b) Desplazamiento 0 m y distancia 400 m.</label>
+            <label><input type="radio" name="u1-t1-p1" value="c"> c) Desplazamiento 400 m y distancia 400 m.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t1-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> Un cuerpo se mueve con velocidad negativa y aceleración negativa. Entonces:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t1-p2" value="a"> a) Está frenando.</label>
+            <label><input type="radio" name="u1-t1-p2" value="b"> b) Su rapidez está aumentando.</label>
+            <label><input type="radio" name="u1-t1-p2" value="c"> c) Su aceleración es cero.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t1-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Un auto viaja por una autopista a 100 km/h constantes. Su aceleración es:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t1-p3" value="a"> a) Cero.</label>
+            <label><input type="radio" name="u1-t1-p3" value="b"> b) Positiva, porque se mueve.</label>
+            <label><input type="radio" name="u1-t1-p3" value="c"> c) Igual a 100 km/h².</label>
+          </div>
+          <div class="feedback" id="fb-u1-t1-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u1-t1"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: la prueba de marcha de 6 minutos</h4>
+      <p>En rehabilitación cardiopulmonar se mide cuánto camina una persona en 6 minutos, muchas veces en un circuito de ida y vuelta. Si el paciente recorre 300 m y vuelve al punto de partida, su <strong>desplazamiento</strong> es cero pero su <strong>distancia</strong> es la que informa la capacidad funcional. Por eso el indicador clínico es la distancia, no el desplazamiento: reportar "velocidad media" sin aclarar cuál se usó haría el resultado ininterpretable. La distinción no es un tecnicismo de examen; es la diferencia entre un dato útil y un dato inútil.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u1-t1"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u1-t1" data-tema="u1-t1" data-set-estado="dominado">
+        <label for="chk-u1-t1">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 1.2 ============================ -->
+  <section class="tema" id="u1-t2">
+    <h2><span class="num-tema">1.2</span> Cinemática en una dimensión: MRU, MRUA y caída libre</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Elegir y aplicar correctamente las ecuaciones de movimiento rectilíneo uniforme y uniformemente acelerado, incluida la caída libre, manteniendo la coherencia de signos.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Dos autos parten del mismo punto al mismo tiempo. Uno avanza con velocidad constante de 20 m/s; el otro parte del reposo y acelera a 4 m/s². ¿Cuándo se vuelven a encontrar?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>Se encuentran cuando sus <em>posiciones</em> coinciden: 20·t = ½·4·t², es decir 20t = 2t², que se cumple en t = 0 s (la partida) y en t = 10 s. En ese instante ambos están a 200 m. La clave del ejercicio no es la aritmética: es entender que "encontrarse" significa igualar posiciones, no igualar velocidades.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>Todo depende de qué magnitud permanece constante</h4>
+      <p>En el movimiento rectilíneo hay dos casos ideales que resuelven la mayoría de los problemas:</p>
+      <ul>
+        <li><strong>MRU (movimiento rectilíneo uniforme):</strong> la velocidad es constante. Si la velocidad no cambia, la aceleración es cero. La posición avanza en forma lineal con el tiempo.</li>
+        <li><strong>MRUA (movimiento rectilíneo uniformemente acelerado):</strong> la aceleración es constante. La velocidad cambia linealmente con el tiempo y la posición cambia con el cuadrado del tiempo: por eso la gráfica de posición es una parábola.</li>
+      </ul>
+      <p>La <strong>caída libre</strong> es el caso particular del MRUA en el que la única fuerza que actúa es el peso y, por lo tanto, la aceleración es g ≈ 9,8 m/s² hacia abajo. El roce del aire se desprecia. Un punto que sorprende y conviene entender: en caída libre la masa no interviene. Una pluma y un martillo caen igual en el vacío, porque la fuerza gravitatoria es proporcional a la masa y la aceleración que produce también lo es; los factores se cancelan.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con el suero.</strong> Un suero que gotea a ritmo constante es un MRU: cada gota recorre la misma distancia en el mismo tiempo. Un suero que acelera al abrirse la llave es un MRUA: cada segundo cae más distancia que el anterior, porque la velocidad va en aumento. En el primer caso el ritmo es fijo; en el segundo, el ritmo cambia de manera constante.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Ecuaciones del movimiento rectilíneo</span>
+      <strong>MRU: x = x₀ + v·t</strong><br>
+      <strong>MRUA: v = v₀ + a·t</strong><br>
+      <strong>MRUA: x = x₀ + v₀·t + ½·a·t²</strong><br>
+      <strong>MRUA: v² = v₀² + 2·a·(x − x₀)</strong>
+      <span class="nota">Con g = 9,8 m/s² si el eje apunta hacia abajo; con a = −g si el eje apunta hacia arriba.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>x₀</td><td>Posición inicial</td><td>m</td><td>Puedes elegirla como 0 si simplifica el problema</td></tr>
+      <tr><td>v₀</td><td>Velocidad inicial</td><td>m/s</td><td>No siempre es cero: "parte del reposo" es un dato, no una regla</td></tr>
+      <tr><td>a</td><td>Aceleración</td><td>m/s²</td><td>Constante en todo el movimiento</td></tr>
+      <tr><td>t</td><td>Tiempo transcurrido</td><td>s</td><td>Se mide desde el instante inicial elegido</td></tr>
+      <tr><td>v</td><td>Velocidad en el instante t</td><td>m/s</td><td>Su signo indica el sentido</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo resolver un problema de cinemática en 1D</h4>
+      <ol>
+        <li>Fija el eje y el sentido positivo. Anota explícitamente qué significa cada signo.</li>
+        <li>Lista los datos: de las cinco magnitudes (x₀, v₀, a, t, v), normalmente conoces tres.</li>
+        <li>Identifica la incógnita. Elige la ecuación que la contiene y que no incluye la magnitud que no te interesa ni conoces.</li>
+        <li>Sustituye con unidades y calcula. Si aparece una raíz cuadrada, analiza ambos signos y decide cuál tiene sentido físico.</li>
+        <li>Verifica: ¿la velocidad final es mayor si acelera en el sentido del movimiento? ¿El tiempo es positivo? ¿La distancia es del orden esperado?</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Una ambulancia que parte del reposo</h4>
+      <p>Una ambulancia arranca desde el reposo y acelera uniformemente a 2,5 m/s² durante 8 s. ¿Qué velocidad alcanza y qué distancia recorre?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Datos y elección de eje</span>
+        <p>Eje positivo en el sentido del movimiento. x₀ = 0 m, v₀ = 0 m/s, a = +2,5 m/s², t = 8 s. Incógnitas: v y x.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Velocidad final</span>
+        <p>v = v₀ + a·t = 0 + 2,5 · 8 = <strong>20 m/s</strong>, equivalentes a 72 km/h.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Distancia recorrida</span>
+        <p>x = v₀·t + ½·a·t² = 0 + ½ · 2,5 · 8² = ½ · 2,5 · 64 = <strong>80 m</strong>.</p>
+        <p class="porque">Si hubieras usado la velocidad media (10 m/s) multiplicada por el tiempo (8 s), obtendrías lo mismo: en MRUA con v₀ = 0, la velocidad media es la mitad de la final. Es un buen control cruzado.</p>
+      </div>
+    </div>
+
+    <div class="ejemplo">
+      <h4>Caída libre: una gota de suero</h4>
+      <p>Se suelta una gota desde 1,25 m de altura, sin considerar el roce del aire. ¿Cuánto tarda en llegar al suelo y con qué velocidad impacta? (g = 9,8 m/s²)</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Eje hacia abajo</span>
+        <p>Con el eje apuntando hacia abajo, todo lo que baja es positivo: x₀ = 0, x = 1,25 m, v₀ = 0, a = +9,8 m/s².</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Tiempo</span>
+        <p>x = ½·g·t² → 1,25 = 4,9·t² → t² = 0,255 → t = <strong>0,505 s</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Velocidad de impacto</span>
+        <p>v = g·t = 9,8 · 0,505 = <strong>4,95 m/s</strong> (unos 18 km/h).</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 4. Control de sentido</span>
+        <p>Medio segundo de caída para 1,25 m es razonable: en el primer segundo un cuerpo cae 4,9 m. Si hubieras obtenido 0,05 s o 5 s, el error estaría en el planteo.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Suponer que v₀ = 0 siempre. Muchos problemas parten de un cuerpo que ya se mueve.</li>
+        <li>Cambiar de criterio de signos a mitad del ejercicio. Elige un eje y mantenlo hasta el final.</li>
+        <li>Olvidar el término v₀·t en la ecuación de posición.</li>
+        <li>Usar las ecuaciones de MRUA cuando la aceleración no es constante (por ejemplo, un frenado real con roce variable).</li>
+        <li>Mezclar km/h con m/s. Convierte dividiendo por 3,6 antes de reemplazar.</li>
+        <li>Descartar la solución negativa del tiempo sin analizarla. En general se descarta porque el tiempo no puede ser negativo, pero conviene decirlo explícitamente.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.3</h4>
+      <p class="enunciado">Un auto circula a 20 m/s y frena con aceleración constante de −4 m/s² hasta detenerse. ¿Cuánto tarda en detenerse y qué distancia recorre mientras frena?</p>
+      <input type="number" step="any" id="e1-2-resp" placeholder="Distancia de frenado (m)" data-enter-valida="e1-2">
+      <button class="btn-validar" data-target="e1-2" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e1-2-msg"></span>
+<button class="btn-solucion" data-target="e1-2-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="e1-2-sol" data-valor="50">
+        <h5>Solución</h5>
+        <ol>
+          <li>Datos: v₀ = 20 m/s, v = 0 m/s, a = −4 m/s².</li>
+          <li>Tiempo: v = v₀ + a·t → 0 = 20 − 4t → t = <strong>5 s</strong>.</li>
+          <li>Distancia: v² = v₀² + 2a·Δx → 0 = 400 − 8Δx → Δx = <strong>50 m</strong>.</li>
+          <li>Control: 50 m en 5 s equivale a una velocidad media de 10 m/s, exactamente la mitad de la inicial. Correcto para un frenado uniforme.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u1-t2" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u1-t2">
+      <h5>Pista</h5>
+      <ol>
+        <li>"Hasta detenerse" significa que la velocidad final es cero.</li>
+        <li>Con v, v₀ y a puedes obtener el tiempo con la primera ecuación.</li>
+        <li>Para la distancia, la ecuación que no necesita el tiempo es v² = v₀² + 2a·Δx. Con ella se evita arrastrar el error del paso anterior.</li>
+      </ol>
+    </div>
+
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.4</h4>
+      <p class="enunciado">Se deja caer una piedra desde un puente de 45 m de altura. Sin considerar el roce del aire y usando g = 10 m/s², ¿cuánto tarda en llegar al agua, en segundos?</p>
+      <input type="number" step="any" id="p-u1-t2-resp" placeholder="Tiempo (s)" data-enter-valida="p-u1-t2">
+      <button class="btn-validar" data-target="p-u1-t2" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u1-t2-msg"></span>
+<button class="btn-solucion" data-target="p-u1-t2-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="p-u1-t2-sol" data-valor="3">
+        <h5>Solución</h5>
+        <ol>
+          <li>45 = ½ · 10 · t² = 5t².</li>
+          <li>t² = 9 → t = <strong>3 s</strong>.</li>
+          <li>Velocidad de impacto: v = g·t = 30 m/s. Control: cae 5 m el primer segundo, 15 m el segundo y 25 m el tercero; la suma es 45 m.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u1-t2" data-correctas="3"
+          data-resp1="b" data-exp1="En el MRU la velocidad no cambia; por definición, entonces, la aceleración es cero."
+          data-resp2="b" data-exp2="En el punto más alto la velocidad vertical es cero, pero la gravedad sigue actuando: la aceleración es 9,8 m/s² hacia abajo."
+          data-resp3="a" data-exp3="v = g·t = 10 · 3 = 30 m/s. La distancia sería 45 m, que es otra magnitud.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> En un movimiento rectilíneo uniforme, ¿qué magnitud es constante?</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t2-p1" value="a"> a) La posición.</label>
+            <label><input type="radio" name="u1-t2-p1" value="b"> b) La velocidad, y por lo tanto la aceleración es cero.</label>
+            <label><input type="radio" name="u1-t2-p1" value="c"> c) La aceleración, que va aumentando.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t2-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> Se lanza una pelota verticalmente hacia arriba. En el punto más alto de su trayectoria:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t2-p2" value="a"> a) La velocidad y la aceleración son cero.</label>
+            <label><input type="radio" name="u1-t2-p2" value="b"> b) La velocidad es cero y la aceleración es 9,8 m/s² hacia abajo.</label>
+            <label><input type="radio" name="u1-t2-p2" value="c"> c) La velocidad es máxima.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t2-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Un objeto cae desde el reposo durante 3 s (g = 10 m/s²). Su velocidad final es:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t2-p3" value="a"> a) 30 m/s.</label>
+            <label><input type="radio" name="u1-t2-p3" value="b"> b) 10 m/s.</label>
+            <label><input type="radio" name="u1-t2-p3" value="c"> c) 45 m/s.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t2-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u1-t2"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: objetos que caen en el entorno clínico</h4>
+      <p>Una jeringa que cae desde una mesa de 1,1 m tarda unos 0,47 s y llega al suelo a unos 4,6 m/s, es decir 16,6 km/h. Ese número explica por qué un objeto pequeño y aparentemente inofensivo puede producir una lesión punzante o contaminar una superficie. La misma ecuación permite dimensionar medidas de prevención: reducir la altura a la mitad reduce la velocidad de impacto en un factor de raíz de dos, no a la mitad. Entender la relación cuadrática evita subestimar una caída "corta".</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u1-t2"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u1-t2" data-tema="u1-t2" data-set-estado="dominado">
+        <label for="chk-u1-t2">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 1.3 ============================ -->
+  <section class="tema" id="u1-t3">
+    <h2><span class="num-tema">1.3</span> Cinemática en dos dimensiones: vectores y tiro parabólico</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Descomponer una velocidad en componentes, resolver el tiro parabólico tratándolo como dos movimientos independientes y calcular tiempo de vuelo, altura máxima y alcance.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Desde la misma altura se suelta una bala y, al mismo tiempo, se dispara otra horizontalmente. ¿Cuál llega primero al suelo?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>Llegan <strong>al mismo tiempo</strong>. Sin roce del aire, el movimiento vertical no depende del horizontal: ambas parten con velocidad vertical cero y caen la misma altura con la misma aceleración g. La bala disparada avanza horizontalmente, pero eso no retrasa su caída. Este es el principio que ordena toda la cinemática en dos dimensiones.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>Un movimiento complicado se resuelve como dos movimientos simples</h4>
+      <p>Cuando un cuerpo se mueve en dos dimensiones (por ejemplo, un chorro de agua o un proyectil), puedes separar su movimiento en dos ejes perpendiculares que <strong>no se afectan entre sí</strong>:</p>
+      <ul>
+        <li><strong>Eje horizontal:</strong> si se desprecia el roce del aire, no hay fuerza horizontal, así que la velocidad horizontal es constante (MRU).</li>
+        <li><strong>Eje vertical:</strong> la gravedad actúa siempre, así que la velocidad vertical cambia con aceleración constante g (MRUA, caída libre).</li>
+      </ul>
+      <p>La trayectoria curva (una parábola) no es un movimiento nuevo: es la <em>composición</em> de esos dos. El único elemento que comparten los ejes es el <strong>tiempo</strong>: lo que tarda en subir y bajar es lo mismo que tarda en avanzar horizontalmente. Ese tiempo es el puente entre las dos ecuaciones.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con dos relojes.</strong> Imagina dos personas cronometrando el mismo vuelo: una mira solo el avance horizontal y ve una velocidad constante; la otra mira solo la altura y ve un objeto que sube, se detiene y baja. Ambas describen el mismo evento. Para reconstruir la trayectoria completa basta con volver a juntar las dos lecturas, instante por instante.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Componentes de la velocidad inicial</span>
+      <strong>v₀ₓ = v₀ · cos θ</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>v₀ᵧ = v₀ · sen θ</strong>
+      <span class="nota">θ se mide respecto de la horizontal. Verifica siempre que sen²θ + cos²θ = 1.</span>
+    </div>
+
+    <div class="formula">
+      <span class="etiqueta">Ecuaciones del tiro parabólico (sin roce del aire)</span>
+      <strong>x = v₀ₓ · t</strong><br>
+      <strong>vᵧ = v₀ᵧ − g·t</strong><br>
+      <strong>y = v₀ᵧ·t − ½·g·t²</strong><br>
+      <strong>h<sub>máx</sub> = v₀ᵧ² / (2g)</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>t<sub>vuelo</sub> = 2·v₀ᵧ / g</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>R = v₀² · sen(2θ) / g</strong>
+      <span class="nota">h<sub>máx</sub>, t<sub>vuelo</sub> y R suponen lanzamiento y llegada al mismo nivel.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>θ</td><td>Ángulo de lanzamiento</td><td>grados</td><td>Se mide desde la horizontal</td></tr>
+      <tr><td>v₀ₓ</td><td>Componente horizontal de la velocidad</td><td>m/s</td><td>Constante durante todo el vuelo</td></tr>
+      <tr><td>v₀ᵧ</td><td>Componente vertical inicial</td><td>m/s</td><td>Positiva si apunta hacia arriba</td></tr>
+      <tr><td>h<sub>máx</sub></td><td>Altura máxima sobre el punto de lanzamiento</td><td>m</td><td>Se alcanza cuando vᵧ = 0</td></tr>
+      <tr><td>R</td><td>Alcance horizontal</td><td>m</td><td>Máximo cuando θ = 45°</td></tr>
+    </table>
+
+    <div class="diagrama">
+      <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Trayectoria parabólica con componentes de la velocidad">
+        <!-- ejes -->
+        <line x1="60" y1="210" x2="520" y2="210" stroke="#333" stroke-width="2"/>
+        <line x1="60" y1="210" x2="60" y2="30" stroke="#333" stroke-width="2"/>
+        <text x="525" y="215" font-size="12">x (m)</text>
+        <text x="20" y="35" font-size="12">y (m)</text>
+        <!-- trayectoria -->
+        <path d="M 60 210 Q 290 20 520 210" fill="none" stroke="#1f5c8a" stroke-width="3"/>
+        <!-- vector inicial -->
+        <line x1="60" y1="210" x2="130" y2="150" stroke="#c62828" stroke-width="3"/>
+        <text x="95" y="168" font-size="12" fill="#c62828">v₀ (θ)</text>
+        <!-- componentes -->
+        <line x1="60" y1="210" x2="130" y2="210" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5 3"/>
+        <text x="70" y="203" font-size="11" fill="#2e7d32">v₀ₓ</text>
+        <line x1="130" y1="210" x2="130" y2="150" stroke="#e89c1c" stroke-width="2" stroke-dasharray="5 3"/>
+        <text x="136" y="185" font-size="11" fill="#b07500">v₀ᵧ</text>
+        <!-- punto mas alto -->
+        <circle cx="290" cy="115" r="5" fill="#c62828"/>
+        <text x="298" y="108" font-size="11" fill="#c62828">vᵧ = 0</text>
+        <text x="298" y="124" font-size="11" fill="#2e7d32">vₓ sigue igual</text>
+        <!-- leyenda -->
+        <text x="180" y="245" font-size="11" fill="#666">La parábola es la composición de un MRU horizontal y una caída libre vertical.</text>
+      </svg>
+      <div class="leyenda">En el punto más alto la componente vertical de la velocidad se anula, pero la horizontal continúa: el cuerpo no se detiene.</div>
+    </div>
+
+    <div class="metodo">
+      <h4>Cómo resolver un tiro parabólico</h4>
+      <ol>
+        <li>Dibuja la trayectoria y marca el punto de lanzamiento y el de llegada.</li>
+        <li>Descompone v₀ en v₀ₓ y v₀ᵧ. Escribe los datos por separado para cada eje.</li>
+        <li>Si el problema menciona altura o tiempo de vuelo, trabaja primero con el eje vertical: allí está la gravedad.</li>
+        <li>Usa el tiempo obtenido para el eje horizontal y calcula el alcance.</li>
+        <li>Verifica: el alcance debe ser mayor que la altura máxima en lanzamientos de 45° y menores; si obtienes lo contrario, revisaste mal las componentes.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Chorro de una jeringa</h4>
+      <p>Se impulsa líquido con una velocidad de 20 m/s formando 30° sobre la horizontal. Sin considerar el roce del aire y con g = 9,8 m/s², calcula la altura máxima, el tiempo de vuelo y el alcance horizontal, suponiendo que aterriza al mismo nivel.</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Componentes</span>
+        <p>v₀ₓ = 20 · cos 30° = 20 · 0,866 = 17,3 m/s.<br>
+        v₀ᵧ = 20 · sen 30° = 20 · 0,5 = 10 m/s.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Altura máxima</span>
+        <p>Se alcanza cuando vᵧ = 0: t<sub>subida</sub> = v₀ᵧ / g = 10 / 9,8 = 1,02 s.<br>
+        h<sub>máx</sub> = v₀ᵧ² / (2g) = 100 / 19,6 = <strong>5,1 m</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Tiempo de vuelo</span>
+        <p>Sin desnivel, el vuelo dura el doble de la subida: t = 2 · 1,02 = <strong>2,04 s</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 4. Alcance</span>
+        <p>x = v₀ₓ · t = 17,3 · 2,04 = <strong>35,3 m</strong>. Comprobación con la fórmula directa: R = v₀²·sen(60°)/g = 400 · 0,866 / 9,8 = 35,3 m.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 5. Control de sentido</span>
+        <p>Un chorro lanzado a 20 m/s (72 km/h) alcanza 5 m de altura y 35 m de distancia. Son órdenes de magnitud plausibles para un chorro impulsado; si hubieras obtenido 350 m, el error estaría en no haber separado las componentes.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Usar v₀ completa en la ecuación horizontal, sin descomponerla.</li>
+        <li>Creer que en el punto más alto la velocidad total es cero. Solo se anula la componente vertical.</li>
+        <li>Creer que en el punto más alto la aceleración es cero. La gravedad nunca se apaga.</li>
+        <li>Sumar velocidades como escalares en vez de componerlas vectorialmente.</li>
+        <li>Aplicar la fórmula del alcance cuando el lanzamiento y la llegada están a distinta altura.</li>
+        <li>Usar el ángulo medido respecto de la vertical sin convertirlo.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.5</h4>
+      <p class="enunciado">Una pelota rueda por una mesa de 1,8 m de altura y sale horizontalmente con 4 m/s. ¿Cuánto tarda en llegar al suelo y a qué distancia horizontal de la mesa cae? (g = 9,8 m/s²)</p>
+      <input type="number" step="any" id="e1-3-resp" placeholder="Distancia horizontal (m)" data-enter-valida="e1-3">
+      <button class="btn-validar" data-target="e1-3" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e1-3-msg"></span>
+<button class="btn-solucion" data-target="e1-3-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="e1-3-sol" data-valor="2.42">
+        <h5>Solución</h5>
+        <ol>
+          <li>Lanzamiento horizontal: v₀ᵧ = 0, v₀ₓ = 4 m/s.</li>
+          <li>Vertical: 1,8 = ½ · 9,8 · t² → t² = 0,367 → t = <strong>0,606 s</strong>.</li>
+          <li>Horizontal: x = 4 · 0,606 = <strong>2,42 m</strong>.</li>
+          <li>Control: menos de un segundo de caída para 1,8 m es coherente; el alcance es menor que la altura, lo esperable con una velocidad horizontal pequeña.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u1-t3" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u1-t3">
+      <h5>Pista</h5>
+      <ol>
+        <li>Si sale horizontalmente, la velocidad vertical inicial es cero: la caída es libre pura.</li>
+        <li>Calcula primero el tiempo con el eje vertical; no necesitas la velocidad horizontal para eso.</li>
+        <li>Ese mismo tiempo es el que usa el eje horizontal para avanzar.</li>
+      </ol>
+    </div>
+
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.6</h4>
+      <p class="enunciado">Un proyectil se lanza con 30 m/s formando 45° sobre la horizontal y cae al mismo nivel del que partió. Usando g = 10 m/s², ¿cuál es su alcance horizontal en metros?</p>
+      <input type="number" step="any" id="p-u1-t3-resp" placeholder="Alcance (m)" data-enter-valida="p-u1-t3">
+      <button class="btn-validar" data-target="p-u1-t3" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u1-t3-msg"></span>
+<button class="btn-solucion" data-target="p-u1-t3-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="p-u1-t3-sol" data-valor="90">
+        <h5>Solución</h5>
+        <ol>
+          <li>R = v₀² · sen(2θ) / g = 900 · sen(90°) / 10.</li>
+          <li>sen(90°) = 1, entonces R = <strong>90 m</strong>.</li>
+          <li>Control: a 45° se obtiene el alcance máximo para una rapidez dada; cualquier otro ángulo daría menos de 90 m.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u1-t3" data-correctas="3"
+          data-resp1="b" data-exp1="No hay fuerza horizontal (sin roce del aire), así que la componente horizontal de la velocidad no cambia."
+          data-resp2="b" data-exp2="La componente vertical se anula en el punto más alto; la horizontal permanece constante y la aceleración sigue siendo g."
+          data-resp3="c" data-exp3="El movimiento vertical es independiente del horizontal: ambos parten con velocidad vertical cero y caen la misma altura con la misma aceleración.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> En un tiro parabólico sin roce del aire, la componente horizontal de la velocidad:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t3-p1" value="a"> a) Disminuye durante la subida.</label>
+            <label><input type="radio" name="u1-t3-p1" value="b"> b) Permanece constante durante todo el vuelo.</label>
+            <label><input type="radio" name="u1-t3-p1" value="c"> c) Aumenta durante la bajada.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t3-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> En el punto más alto de la trayectoria:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t3-p2" value="a"> a) La velocidad y la aceleración son cero.</label>
+            <label><input type="radio" name="u1-t3-p2" value="b"> b) La componente vertical de la velocidad es cero, pero la horizontal no.</label>
+            <label><input type="radio" name="u1-t3-p2" value="c"> c) La aceleración cambia de sentido.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t3-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Desde una torre se suelta un objeto y, al mismo tiempo, se lanza otro horizontalmente. Sin roce del aire:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t3-p3" value="a"> a) Llega primero el lanzado horizontalmente.</label>
+            <label><input type="radio" name="u1-t3-p3" value="b"> b) Llega primero el que se soltó.</label>
+            <label><input type="radio" name="u1-t3-p3" value="c"> c) Llegan al mismo tiempo.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t3-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u1-t3"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: gotas respiratorias y aerosoles</h4>
+      <p>Cuando una persona tose o habla emite gotas que, en primera aproximación, siguen un tiro parabólico: salen con cierta velocidad y ángulo, y la gravedad las hace caer mientras avanzan. De ahí surgen dos consecuencias prácticas. Primero, las gotas grandes caen cerca porque su alcance es limitado por su velocidad inicial. Segundo, el tamaño y la velocidad de salida determinan la distancia alcanzada, lo que fundamenta las recomendaciones de distancia física y el uso de barreras. En un nebulizador ocurre lo mismo: la velocidad de salida del aerosol condiciona qué tan profundo llega a la vía aérea, porque las partículas con mayor inercia impactan antes en las paredes.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u1-t3"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u1-t3" data-tema="u1-t3" data-set-estado="dominado">
+        <label for="chk-u1-t3">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 1.4 ============================ -->
+  <section class="tema" id="u1-t4">
+    <h2><span class="num-tema">1.4</span> Gráficos de movimiento: x-t, v-t y a-t</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Interpretar y construir gráficos de posición, velocidad y aceleración en función del tiempo, usando la pendiente y el área como herramientas de lectura.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>En un gráfico de posición contra tiempo, ¿cómo se ve un objeto detenido? ¿Y uno que se devuelve?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>Detenido: una <strong>recta horizontal</strong>, porque la posición no cambia al avanzar el tiempo. Devolviéndose: una recta con <strong>pendiente negativa</strong>, porque la posición disminuye. La clave es que la forma del gráfico no es la trayectoria del cuerpo: es la relación entre dos variables.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>Dos operaciones leen casi todo: la pendiente y el área</h4>
+      <p>Los tres gráficos del movimiento están conectados por dos operaciones geométricas, y entenderlas reemplaza a memorizar listas de casos:</p>
+      <ul>
+        <li>La <strong>pendiente</strong> de un gráfico es <em>cómo cambia</em> la variable del eje vertical por cada unidad de tiempo. Por eso la pendiente de x-t es la velocidad, y la pendiente de v-t es la aceleración.</li>
+        <li>El <strong>área</strong> bajo la curva es <em>cuánto se acumuló</em>. Por eso el área bajo v-t es el desplazamiento, y el área bajo a-t es el cambio de velocidad.</li>
+      </ul>
+      <p>Un gráfico no muestra "dónde está el cuerpo en el espacio": muestra cómo evoluciona una magnitud en el tiempo. Confundir el gráfico x-t con la trayectoria es el error conceptual más común y el que más preguntas hace fallar.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con una ficha clínica.</strong> La pendiente es la tendencia del último control: si la temperatura subió 0,5 °C en una hora, esa es su "velocidad" de cambio. El área es lo acumulado: la dosis total administrada en el día, que es la suma de todas las dosis pequeñas. Una curva puede ser muy alta (fiebre alta) y tener pendiente cero (estable), del mismo modo que un cuerpo puede ir muy rápido y tener aceleración cero.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <table class="general">
+      <tr><th>Gráfico</th><th>Qué representa la pendiente</th><th>Qué representa el área</th><th>Forma típica en MRU / MRUA</th></tr>
+      <tr><td>x-t (posición vs tiempo)</td><td>Velocidad</td><td>No tiene interpretación física directa</td><td>Recta (MRU) / parábola (MRUA)</td></tr>
+      <tr><td>v-t (velocidad vs tiempo)</td><td>Aceleración</td><td>Desplazamiento</td><td>Recta horizontal (MRU) / recta inclinada (MRUA)</td></tr>
+      <tr><td>a-t (aceleración vs tiempo)</td><td>No se usa habitualmente</td><td>Cambio de velocidad</td><td>Recta horizontal (MRUA)</td></tr>
+    </table>
+
+    <div class="formula">
+      <span class="etiqueta">Lectura cuantitativa</span>
+      <strong>pendiente = Δy / Δx</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>área rectángulo = base × altura</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>área triángulo = ½ × base × altura</strong>
+      <span class="nota">En v-t, "base" es tiempo y "altura" es velocidad: el producto da metros. Si el área queda bajo el eje del tiempo, el desplazamiento es negativo.</span>
+    </div>
+
+    <div class="diagrama">
+      <svg viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico velocidad-tiempo con tres tramos">
+        <!-- ejes -->
+        <line x1="70" y1="240" x2="510" y2="240" stroke="#333" stroke-width="2"/>
+        <line x1="70" y1="240" x2="70" y2="40" stroke="#333" stroke-width="2"/>
+        <text x="515" y="245" font-size="12">t (s)</text>
+        <text x="30" y="45" font-size="12">v (m/s)</text>
+        <!-- grilla -->
+        <line x1="70" y1="140" x2="510" y2="140" stroke="#dde4ea" stroke-width="1" stroke-dasharray="4 4"/>
+        <text x="42" y="145" font-size="11" fill="#666">10</text>
+        <!-- tramo 1: 0 a 4 s sube a 10 -->
+        <line x1="70" y1="240" x2="190" y2="140" stroke="#1f5c8a" stroke-width="3"/>
+        <!-- tramo 2: 4 a 10 s constante -->
+        <line x1="190" y1="140" x2="370" y2="140" stroke="#1f5c8a" stroke-width="3"/>
+        <!-- tramo 3: 10 a 12 s baja a 0 -->
+        <line x1="370" y1="140" x2="430" y2="240" stroke="#1f5c8a" stroke-width="3"/>
+        <!-- marcas de tiempo -->
+        <text x="185" y="258" font-size="11" fill="#666">4</text>
+        <text x="362" y="258" font-size="11" fill="#666">10</text>
+        <text x="424" y="258" font-size="11" fill="#666">12</text>
+        <!-- areas sombreadas -->
+        <polygon points="70,240 190,240 190,140" fill="#cfe0ec" opacity="0.7"/>
+        <polygon points="190,240 370,240 370,140 190,140" fill="#e8f5e9" opacity="0.8"/>
+        <polygon points="370,240 430,240 370,140" fill="#fdecea" opacity="0.9"/>
+        <text x="100" y="200" font-size="11" fill="#14405f">20 m</text>
+        <text x="250" y="195" font-size="11" fill="#2e7d32">60 m</text>
+        <text x="384" y="205" font-size="11" fill="#c62828">10 m</text>
+        <text x="150" y="30" font-size="11" fill="#666">v-t: el área total es el desplazamiento (90 m)</text>
+      </svg>
+      <div class="leyenda">Tres tramos: acelera durante 4 s hasta 10 m/s, mantiene 10 m/s durante 6 s y frena en 2 s. Las áreas suman 90 m de desplazamiento.</div>
+    </div>
+
+    <div class="metodo">
+      <h4>Cómo leer un gráfico sin equivocarse</h4>
+      <ol>
+        <li>Mira los ejes y sus unidades antes que la forma de la curva.</li>
+        <li>Pregúntate qué operación corresponde: ¿me piden un cambio instantáneo (pendiente) o un acumulado (área)?</li>
+        <li>Divide la curva en tramos rectos; cada tramo tiene una pendiente distinta y un área simple (rectángulo, triángulo o trapecio).</li>
+        <li>Asigna signo al área según esté sobre o bajo el eje del tiempo.</li>
+        <li>Verifica coherencia: si en x-t la pendiente es positiva, en v-t el valor debe ser positivo.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Del gráfico a la distancia recorrida</h4>
+      <p>Un móvil parte del reposo, acelera hasta 10 m/s en 4 s, mantiene esa velocidad hasta los 10 s y frena hasta detenerse a los 12 s. ¿Qué distancia recorre en total y qué aceleración tiene en cada tramo?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Tramo de aceleración (0 a 4 s)</span>
+        <p>Área triangular: ½ · 4 · 10 = <strong>20 m</strong>.<br>
+        Aceleración = pendiente = (10 − 0) / 4 = <strong>2,5 m/s²</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Tramo a velocidad constante (4 a 10 s)</span>
+        <p>Área rectangular: 6 · 10 = <strong>60 m</strong>.<br>
+        Aceleración = <strong>0 m/s²</strong>, porque la velocidad no cambia.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Tramo de frenado (10 a 12 s)</span>
+        <p>Área triangular: ½ · 2 · 10 = <strong>10 m</strong>.<br>
+        Aceleración = (0 − 10) / 2 = <strong>−5 m/s²</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 4. Total y control</span>
+        <p>Distancia total = 20 + 60 + 10 = <strong>90 m</strong>.<br>
+        Control: el área total bajo la curva es un trapecio de bases 12 s y 6 s con altura 10 m/s: ½ · (12 + 6) · 10 = 90 m. Coincide.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Leer el gráfico x-t como si fuera la trayectoria del cuerpo.</li>
+        <li>Confundir la altura de la curva con la pendiente: en x-t, un valor alto no significa velocidad alta; lo que importa es la inclinación.</li>
+        <li>Calcular el área en un gráfico x-t. Ahí el área no tiene significado físico útil.</li>
+        <li>Ignorar el signo del área cuando la curva pasa bajo el eje del tiempo.</li>
+        <li>Olvidar que un tramo horizontal en v-t implica aceleración cero, no velocidad cero.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.7</h4>
+      <p class="enunciado">Un móvil acelera desde el reposo hasta 8 m/s en 5 s y luego mantiene esa velocidad durante 10 s más. ¿Qué distancia recorre en total?</p>
+      <input type="number" step="any" id="e1-4-resp" placeholder="Distancia total (m)" data-enter-valida="e1-4">
+      <button class="btn-validar" data-target="e1-4" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e1-4-msg"></span>
+<button class="btn-solucion" data-target="e1-4-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="e1-4-sol" data-valor="100">
+        <h5>Solución</h5>
+        <ol>
+          <li>Tramo 1 (triángulo): ½ · 5 · 8 = <strong>20 m</strong>.</li>
+          <li>Tramo 2 (rectángulo): 10 · 8 = <strong>80 m</strong>.</li>
+          <li>Total = <strong>100 m</strong>.</li>
+          <li>Alternativa: trapecio de bases 15 s y 10 s con altura 8 m/s → ½ · 25 · 8 = 100 m.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u1-t4" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u1-t4">
+      <h5>Pista</h5>
+      <ol>
+        <li>Dibuja el gráfico v-t: verás un triángulo y un rectángulo.</li>
+        <li>El triángulo tiene base 5 s y altura 8 m/s; el rectángulo, base 10 s y altura 8 m/s.</li>
+        <li>La distancia es la suma de las dos áreas, no el área del dibujo completo sin separar tramos.</li>
+      </ol>
+    </div>
+
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.8</h4>
+      <p class="enunciado">En un gráfico posición-tiempo, la posición pasa de 0 m a 50 m entre t = 0 s y t = 10 s siguiendo una línea recta. ¿Cuál es la velocidad del móvil en m/s?</p>
+      <input type="number" step="any" id="p-u1-t4-resp" placeholder="Velocidad (m/s)" data-enter-valida="p-u1-t4">
+      <button class="btn-validar" data-target="p-u1-t4" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u1-t4-msg"></span>
+<button class="btn-solucion" data-target="p-u1-t4-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="p-u1-t4-sol" data-valor="5">
+        <h5>Solución</h5>
+        <ol>
+          <li>La pendiente de x-t es la velocidad: v = Δx / Δt.</li>
+          <li>v = (50 − 0) / (10 − 0) = <strong>5 m/s</strong>.</li>
+          <li>Que sea una recta confirma velocidad constante: aceleración cero.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u1-t4" data-correctas="3"
+          data-resp1="b" data-exp1="Área bajo v-t = velocidad × tiempo = metros, es decir, desplazamiento."
+          data-resp2="a" data-exp2="Si la posición no cambia, la pendiente es cero y el cuerpo está en reposo."
+          data-resp3="b" data-exp3="Pendiente de v-t = Δv/Δt, que es exactamente la definición de aceleración.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> En un gráfico velocidad-tiempo, el área bajo la curva representa:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t4-p1" value="a"> a) La aceleración.</label>
+            <label><input type="radio" name="u1-t4-p1" value="b"> b) El desplazamiento.</label>
+            <label><input type="radio" name="u1-t4-p1" value="c"> c) La fuerza neta.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t4-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> En un gráfico posición-tiempo, una recta horizontal significa:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t4-p2" value="a"> a) El cuerpo está en reposo.</label>
+            <label><input type="radio" name="u1-t4-p2" value="b"> b) El cuerpo se mueve con velocidad constante positiva.</label>
+            <label><input type="radio" name="u1-t4-p2" value="c"> c) El cuerpo acelera.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t4-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> La pendiente de un gráfico velocidad-tiempo corresponde a:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t4-p3" value="a"> a) El desplazamiento.</label>
+            <label><input type="radio" name="u1-t4-p3" value="b"> b) La aceleración.</label>
+            <label><input type="radio" name="u1-t4-p3" value="c"> c) La posición.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t4-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u1-t4"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: curvas de flujo y volumen</h4>
+      <p>En un espirómetro, el gráfico de flujo aéreo contra tiempo es un v-t: la <strong>pendiente</strong> indica con qué rapidez cambia el flujo, y el <strong>área</strong> bajo la curva es el volumen movilizado (volumen corriente, capacidad vital). Por eso los informes de función pulmonar se leen igual que un gráfico de cinemática: el volumen es un área acumulada, no un punto de la curva. Quien entiende esta equivalencia interpreta un espigrama sin memorizar fórmulas nuevas.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u1-t4"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u1-t4" data-tema="u1-t4" data-set-estado="dominado">
+        <label for="chk-u1-t4">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 1.5 ============================ -->
+  <section class="tema" id="u1-t5">
+    <h2><span class="num-tema">1.5</span> Fuerzas: gravitacional, normal, roce y elástica</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Identificar las fuerzas que actúan sobre un cuerpo, distinguir masa de peso y calcular peso, fuerza normal, fuerza de roce y fuerza elástica.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Si viajas a la Luna, ¿cambia tu masa? ¿Cambia tu peso?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>Tu <strong>masa no cambia</strong>: sigue siendo la misma cantidad de materia, medida en kilogramos. Tu <strong>peso sí cambia</strong>, porque es la fuerza con que un astro te atrae y depende de la gravedad local. En la Luna g ≈ 1,6 m/s², así que una persona de 70 kg pesa 686 N en la Tierra y unos 112 N en la Luna, con la misma masa. Esta distinción aparece en cada problema de dinámica.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>Una fuerza es una interacción, y siempre tiene dos protagonistas</h4>
+      <p>Las fuerzas no son propiedades de un cuerpo: son interacciones entre dos cosas. Por eso, frente a cualquier fuerza conviene preguntarse tres cosas: <strong>quién la ejerce</strong>, <strong>sobre quién</strong> y <strong>en qué dirección</strong>. Si no puedes responder la primera, probablemente esa fuerza no existe en tu diagrama.</p>
+      <p>Las que aparecen en este curso son:</p>
+      <ul>
+        <li><strong>Gravitacional o peso (P):</strong> la ejerce la Tierra sobre el cuerpo, siempre hacia abajo, con magnitud P = m·g.</li>
+        <li><strong>Normal (N):</strong> la ejerce una superficie sobre el cuerpo que apoya, siempre perpendicular a la superficie. No es "la reacción del peso": su valor depende de todas las fuerzas que comprimen el cuerpo contra la superficie.</li>
+        <li><strong>Tensión (T):</strong> la ejerce una cuerda, cable o tendón estirado, a lo largo de su eje y tirando del cuerpo.</li>
+        <li><strong>Roce o fricción (f):</strong> la ejerce una superficie sobre el cuerpo y se opone al <em>deslizamiento relativo</em> entre ambos. Tiene dos regímenes: estático, cuando no hay deslizamiento, y cinético, cuando ya lo hay.</li>
+        <li><strong>Elástica (Fₑ):</strong> la ejerce un resorte o un material deformado, y apunta siempre a devolverlo a su forma original (ley de Hooke).</li>
+      </ul>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con el roce estático.</strong> Un mueble pesado en el piso: si empujas suave, no se mueve, pero tú sientes que "responde". Esa respuesta es el roce estático, que crece igual que tu empuje hasta un límite. Cuando tu fuerza supera ese límite, el mueble se suelta y pasa al roce cinético, que suele ser menor. Por eso cuesta más iniciar el movimiento que mantenerlo: no es una impresión, es un cambio de régimen.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Peso y fuerza elástica</span>
+      <strong>P = m · g</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Fₑ = −k · x</strong>
+      <span class="nota">g ≈ 9,8 m/s² cerca de la superficie terrestre. El signo negativo de Hooke indica que la fuerza se opone a la deformación; para la magnitud se usa |Fₑ| = k·x.</span>
+    </div>
+
+    <div class="formula">
+      <span class="etiqueta">Rozamiento</span>
+      <strong>f<sub>estático</sub> ≤ µₛ · N</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>f<sub>cinético</sub> = µₖ · N</strong>
+      <span class="nota">µ es adimensional y depende de las dos superficies. El roce estático es una desigualdad: solo alcanza su valor máximo cuando el cuerpo está a punto de deslizar.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>m</td><td>Masa</td><td>kg</td><td>Escalar, no cambia con la gravedad</td></tr>
+      <tr><td>P</td><td>Peso</td><td>N</td><td>Vector hacia el centro de la Tierra</td></tr>
+      <tr><td>N</td><td>Normal</td><td>N</td><td>Perpendicular a la superficie; no siempre igual a P</td></tr>
+      <tr><td>µₛ, µₖ</td><td>Coeficientes de roce estático y cinético</td><td>sin unidad</td><td>µₛ > µₖ en la mayoría de los pares de materiales</td></tr>
+      <tr><td>k</td><td>Constante elástica del resorte</td><td>N/m</td><td>Resorte más rígido: k mayor</td></tr>
+      <tr><td>x</td><td>Deformación (estiramiento o compresión)</td><td>m</td><td>Se mide desde la longitud natural, no desde cero</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo trabajar con fuerzas</h4>
+      <ol>
+        <li>Elige el cuerpo cuyo movimiento te interesa. Solo las fuerzas <em>sobre ese cuerpo</em> entran en el análisis.</li>
+        <li>Recorre las interacciones: ¿hay gravedad? ¿hay superficie (normal y roce)? ¿hay cuerdas (tensión)? ¿hay resortes? ¿hay algo empujando (fuerza aplicada)?</li>
+        <li>Dibuja cada una como flecha desde el centro del cuerpo, con su dirección correcta.</li>
+        <li>Calcula magnitudes solo cuando tengas los datos. La normal se obtiene del equilibrio o de la aceleración en el eje perpendicular.</li>
+        <li>Comprueba: si el cuerpo está en reposo sobre una superficie horizontal y nada más actúa verticalmente, entonces N = P. Si hay otra fuerza vertical, ya no.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Peso, normal y una fuerza adicional</h4>
+      <p>Un paciente de 70 kg está acostado en una camilla horizontal. (a) ¿Cuál es su peso? (b) ¿Qué fuerza normal ejerce la camilla? (c) Si una enfermera apoya las manos y ejerce 100 N hacia abajo sobre el tórax, ¿cuánto vale ahora la normal?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Peso</span>
+        <p>P = m·g = 70 · 9,8 = <strong>686 N</strong> hacia abajo.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Normal sin fuerza adicional</span>
+        <p>Verticalmente no hay aceleración, así que ΣF<sub>y</sub> = 0: N − P = 0 → N = <strong>686 N</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Normal con la fuerza adicional</span>
+        <p>Ahora actúan tres fuerzas verticales: N hacia arriba, P hacia abajo y F = 100 N hacia abajo.<br>
+        N = P + F = 686 + 100 = <strong>786 N</strong>.</p>
+        <p class="porque">La normal aumentó porque la superficie debe sostener más. Esto explica por qué una zona de apoyo sometida a presión externa concentra más fuerza y, sobre la misma superficie, más presión.</p>
+      </div>
+    </div>
+
+    <div class="ejemplo">
+      <h4>Ley de Hooke</h4>
+      <p>Un resorte de constante k = 200 N/m se estira 5 cm. ¿Qué fuerza ejerce?</p>
+      <div class="paso">
+        <span class="titulo-paso">Planteo</span>
+        <p>x = 0,05 m (convertir antes de reemplazar).<br>
+        |Fₑ| = k·x = 200 · 0,05 = <strong>10 N</strong>, dirigida a recuperar la longitud natural.</p>
+      </div>
+      <div class="paso">
+        <span class="titulo-paso">Interpretación del signo</span>
+        <p>Si el resorte se estiró hacia la derecha, la fuerza apunta hacia la izquierda. El signo negativo de la fórmula no indica "fuerza negativa", sino <em>oposición a la deformación</em>.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Decir "pesa 70 kg". El kilogramo es masa; el peso se mide en newton.</li>
+        <li>Afirmar que N = P siempre. Solo ocurre en una superficie horizontal sin otras fuerzas verticales.</li>
+        <li>Usar f = µ·N para el roce estático como si fuera una igualdad. El estático es una desigualdad: se ajusta a lo necesario hasta el límite.</li>
+        <li>Creer que el roce se opone siempre a la fuerza aplicada. Se opone al movimiento relativo, y puede no ser opuesto a la fuerza aplicada en todos los casos.</li>
+        <li>Medir x desde el suelo en lugar de desde la longitud natural del resorte.</li>
+        <li>Olvidar convertir centímetros a metros antes de usar k en N/m.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.9</h4>
+      <p class="enunciado">Un bloque de 8 kg está apoyado en una mesa horizontal. Una persona lo presiona hacia abajo con 20 N. ¿Cuál es la fuerza normal que ejerce la mesa? (g = 9,8 m/s²)</p>
+      <input type="number" step="any" id="e1-5-resp" placeholder="Normal (N)" data-enter-valida="e1-5">
+      <button class="btn-validar" data-target="e1-5" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e1-5-msg"></span>
+<button class="btn-solucion" data-target="e1-5-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="e1-5-sol" data-valor="98.4">
+        <h5>Solución</h5>
+        <ol>
+          <li>Peso: P = 8 · 9,8 = 78,4 N hacia abajo.</li>
+          <li>Fuerza aplicada: 20 N hacia abajo.</li>
+          <li>Equilibrio vertical: N = P + F = 78,4 + 20 = <strong>98,4 N</strong>.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u1-t5" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u1-t5">
+      <h5>Pista</h5>
+      <ol>
+        <li>Dibuja el bloque solo con las tres fuerzas verticales: normal hacia arriba, peso y fuerza aplicada hacia abajo.</li>
+        <li>Como no hay aceleración vertical, la suma de las fuerzas hacia arriba iguala la suma de las que van hacia abajo.</li>
+        <li>Calcula el peso primero y luego compáralo con la respuesta: debe ser mayor que 78,4 N.</li>
+      </ol>
+    </div>
+
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.10</h4>
+      <p class="enunciado">¿Cuál es el peso, en newton, de una persona de 60 kg en la Tierra? (g = 9,8 m/s²)</p>
+      <input type="number" step="any" id="p-u1-t5-resp" placeholder="Peso (N)" data-enter-valida="p-u1-t5">
+      <button class="btn-validar" data-target="p-u1-t5" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u1-t5-msg"></span>
+<button class="btn-solucion" data-target="p-u1-t5-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="p-u1-t5-sol" data-valor="588">
+        <h5>Solución</h5>
+        <ol>
+          <li>P = m·g = 60 · 9,8 = <strong>588 N</strong>.</li>
+          <li>La masa sigue siendo 60 kg: lo que cambió fue la fuerza con que la Tierra la atrae.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u1-t5" data-correctas="3"
+          data-resp1="b" data-exp1="La masa es una propiedad del cuerpo y no depende de la gravedad; el peso sí depende de g."
+          data-resp2="b" data-exp2="La normal es perpendicular a la superficie y su valor resulta del equilibrio o de la aceleración en ese eje, no de igualar simplemente al peso."
+          data-resp3="a" data-exp3="|Fₑ| = k·x = 100 · 0,02 = 2 N. El error típico es no convertir centímetros a metros.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> La masa de un cuerpo:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t5-p1" value="a"> a) Cambia según la gravedad del lugar.</label>
+            <label><input type="radio" name="u1-t5-p1" value="b"> b) Es invariante y se mide en kilogramos.</label>
+            <label><input type="radio" name="u1-t5-p1" value="c"> c) Se mide en newton.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t5-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> La fuerza normal ejercida por una superficie:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t5-p2" value="a"> a) Siempre es igual al peso del cuerpo.</label>
+            <label><input type="radio" name="u1-t5-p2" value="b"> b) Es perpendicular a la superficie y su valor depende de las demás fuerzas en ese eje.</label>
+            <label><input type="radio" name="u1-t5-p2" value="c"> c) Apunta siempre hacia abajo.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t5-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Un resorte de k = 100 N/m se comprime 0,02 m. La magnitud de la fuerza elástica es:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t5-p3" value="a"> a) 2 N.</label>
+            <label><input type="radio" name="u1-t5-p3" value="b"> b) 200 N.</label>
+            <label><input type="radio" name="u1-t5-p3" value="c"> c) 0,02 N.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t5-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u1-t5"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: presión de apoyo y lesiones por presión</h4>
+      <p>La normal sobre la piel de un paciente encamado es la fuerza que la superficie ejerce para sostenerlo, y su valor aumenta si se agrega peso o se concentra el apoyo. Como la presión es fuerza dividida por área, mantener la misma fuerza sobre una superficie más pequeña multiplica la presión local: ahí está el origen mecánico de una úlcera por presión. De la misma física surgen las medidas de prevención: redistribuir la fuerza (colchones especiales), ampliar el área de contacto y cambiar de posición periódicamente. Los vendajes compresivos usan el mismo principio al revés: concentrar una fuerza conocida sobre un área definida para lograr una presión terapéutica reproducible.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u1-t5"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u1-t5" data-tema="u1-t5" data-set-estado="dominado">
+        <label for="chk-u1-t5">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 1.6 ============================ -->
+  <section class="tema" id="u1-t6">
+    <h2><span class="num-tema">1.6</span> Leyes de Newton y diagrama de cuerpo libre</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Enunciar y aplicar las tres leyes de Newton, construir diagramas de cuerpo libre correctos y usar ΣF = m·a en una y dos dimensiones.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Empujas una caja con todas tus fuerzas y no se mueve. ¿Significa que no hay fuerzas sobre ella?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>No. Hay fuerzas, pero su <strong>suma vectorial es cero</strong>: tu empuje queda equilibrado por el roce estático, que crece justo lo necesario para impedir el deslizamiento. La caja está en equilibrio (ΣF = 0) aunque tú estés haciendo fuerza. La primera ley no dice "no hay fuerzas", dice "no hay fuerza neta".</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>Tres leyes, tres preguntas distintas</h4>
+      <p><strong>Primera ley (inercia).</strong> Un cuerpo mantiene su estado de reposo o de movimiento rectilíneo uniforme mientras la fuerza neta sea cero. Dicho de otro modo: no se necesita fuerza para mantener el movimiento, solo para cambiarlo. Esto explica el cinturón de seguridad: en una frenada brusca, el cuerpo del pasajero tiende a seguir a la velocidad que llevaba.</p>
+      <p><strong>Segunda ley.</strong> La fuerza neta produce una aceleración proporcional e inversamente proporcional a la masa: ΣF = m·a. Es una ecuación vectorial, así que se aplica por ejes. La aceleración tiene la dirección y el sentido de la fuerza neta, <em>no</em> necesariamente los de la velocidad: por eso un cuerpo puede acelerar en contra de su movimiento y frenar.</p>
+      <p><strong>Tercera ley.</strong> Si A ejerce una fuerza sobre B, B ejerce sobre A una fuerza de igual magnitud y sentido opuesto. El detalle que se evalúa mucho: esas dos fuerzas actúan sobre <strong>cuerpos distintos</strong>, por lo tanto nunca se cancelan entre sí. Al caminar empujas el suelo hacia atrás; el suelo te empuja hacia adelante. No te mueves por tu propia fuerza, sino por la que el suelo ejerce sobre ti.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con una camilla.</strong> Para poner en marcha una camilla cargada necesitas una fuerza neta (segunda ley). Una vez que rueda, si el roce es despreciable, no necesitas seguir empujando para que avance: solo para compensar el roce o para girar (primera ley). Y cuando empujas la camilla, la camilla te empuja a ti con la misma fuerza (tercera ley); si tu masa es mucho mayor, tu aceleración es casi nula y por eso no lo notas.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Segunda ley de Newton, por componentes</span>
+      <strong>ΣF<sub>x</sub> = m · a<sub>x</sub></strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>ΣF<sub>y</sub> = m · a<sub>y</sub></strong>
+      <span class="nota">Equilibrio: ΣF = 0 y por lo tanto a = 0 (reposo o velocidad constante). No equilibrio: ΣF ≠ 0 y a ≠ 0.</span>
+    </div>
+
+    <div class="diagrama">
+      <svg viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de cuerpo libre de una caja">
+        <!-- suelo -->
+        <line x1="60" y1="215" x2="500" y2="215" stroke="#999" stroke-width="2"/>
+        <text x="62" y="232" font-size="11" fill="#666">superficie</text>
+        <!-- caja -->
+        <rect x="240" y="130" width="90" height="85" fill="#1f5c8a" rx="5"/>
+        <text x="285" y="178" font-size="13" fill="#fff" text-anchor="middle">caja</text>
+        <!-- normal -->
+        <line x1="285" y1="130" x2="285" y2="55" stroke="#16a085" stroke-width="4" marker-end="url(#arrN)"/>
+        <text x="292" y="50" font-size="12" fill="#16a085">N</text>
+        <!-- peso -->
+        <line x1="285" y1="215" x2="285" y2="270" stroke="#2e7d32" stroke-width="4" marker-end="url(#arrP)"/>
+        <text x="292" y="268" font-size="12" fill="#2e7d32">P = m·g</text>
+        <!-- aplicada -->
+        <line x1="240" y1="172" x2="150" y2="172" stroke="#c62828" stroke-width="4" marker-end="url(#arrF)"/>
+        <text x="120" y="165" font-size="12" fill="#c62828">F aplicada</text>
+        <!-- roce -->
+        <line x1="330" y1="172" x2="420" y2="172" stroke="#e89c1c" stroke-width="4" marker-end="url(#arrR)"/>
+        <text x="426" y="165" font-size="12" fill="#b07500">roce</text>
+        <defs>
+          <marker id="arrN" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#16a085"/></marker>
+          <marker id="arrP" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#2e7d32"/></marker>
+          <marker id="arrF" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#c62828"/></marker>
+          <marker id="arrR" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#e89c1c"/></marker>
+        </defs>
+        <text x="150" y="255" font-size="11" fill="#666">Solo se dibujan fuerzas ejercidas sobre la caja.</text>
+      </svg>
+      <div class="leyenda">Diagrama de cuerpo libre: las cuatro fuerzas que actúan sobre la caja, dibujadas desde su centro y en su dirección real.</div>
+    </div>
+
+    <div class="metodo">
+      <h4>Diagrama de cuerpo libre en cinco pasos</h4>
+      <ol>
+        <li>Aísla el cuerpo: dibújalo solo, sin el entorno, como un punto o una caja.</li>
+        <li>Dibuja el peso, siempre vertical y hacia abajo. No lo omitas nunca (salvo que el enunciado lo indique).</li>
+        <li>Dibuja las fuerzas de contacto: normal perpendicular a la superficie, roce paralelo a ella, tensión a lo largo de la cuerda.</li>
+        <li>Elige ejes (x en la dirección del movimiento cuando sea posible) y descompón las fuerzas inclinadas.</li>
+        <li>Escribe ΣF = m·a en cada eje. Si el cuerpo no acelera en un eje, esa suma es cero: de ahí sale la normal.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Segunda ley con roce</h4>
+      <p>Un bloque de 5 kg descansa sobre una superficie horizontal. Se le aplica una fuerza de 20 N hacia la derecha y el roce cinético opone 5 N. ¿Cuál es su aceleración?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Eje horizontal</span>
+        <p>Fuerza neta: ΣF<sub>x</sub> = 20 − 5 = 15 N (hacia la derecha, positivo).</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Segunda ley</span>
+        <p>a = ΣF / m = 15 / 5 = <strong>3 m/s²</strong> hacia la derecha.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Eje vertical (control)</span>
+        <p>No hay aceleración vertical, así que N = m·g = 49 N. Este valor no entra en el cálculo horizontal salvo para obtener el roce, si te dieran µ en lugar de f.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 4. Lectura conceptual</span>
+        <p>La fuerza aplicada es 20 N, pero la que produce aceleración es 15 N: el roce "se come" 5 N. Confundir F aplicada con F neta es el error más frecuente en los certámenes.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Incluir en el diagrama de un cuerpo las fuerzas que ese cuerpo ejerce sobre otros.</li>
+        <li>Creer que las fuerzas de acción y reacción se anulan. Actúan sobre cuerpos distintos: no pueden sumarse en el mismo diagrama.</li>
+        <li>Igualar la fuerza aplicada a m·a cuando hay roce u otras fuerzas horizontales.</li>
+        <li>Suponer que si la velocidad es cero, la aceleración también lo es. Un cuerpo lanzado hacia arriba tiene v = 0 en el punto más alto y a = g.</li>
+        <li>Usar el peso en kilogramos dentro de ΣF = m·a, mezclando masa y fuerza.</li>
+        <li>Olvidar que la tercera ley no explica un equilibrio: explica una interacción entre dos cuerpos.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.11</h4>
+      <p class="enunciado">Una persona de 70 kg está de pie en un ascensor que sube acelerando a 2 m/s². ¿Qué fuerza normal ejerce el piso sobre ella? (g = 9,8 m/s²)</p>
+      <input type="number" step="any" id="e1-6-resp" placeholder="Normal (N)" data-enter-valida="e1-6">
+      <button class="btn-validar" data-target="e1-6" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e1-6-msg"></span>
+<button class="btn-solucion" data-target="e1-6-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="e1-6-sol" data-valor="826">
+        <h5>Solución</h5>
+        <ol>
+          <li>Diagrama: N hacia arriba, P = 686 N hacia abajo.</li>
+          <li>La aceleración es hacia arriba, así que tomamos ese sentido como positivo: ΣF = N − P = m·a.</li>
+          <li>N = m·g + m·a = m(g + a) = 70 · (9,8 + 2) = <strong>826 N</strong>.</li>
+          <li>Interpretación: se siente "más pesado" mientras el ascensor acelera hacia arriba. La masa no cambió; la normal sí.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u1-t6" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u1-t6">
+      <h5>Pista</h5>
+      <ol>
+        <li>Dibuja solo dos fuerzas: normal hacia arriba, peso hacia abajo.</li>
+        <li>La aceleración apunta hacia arriba, en el mismo sentido que la normal. Eso hace que la normal deba ser mayor que el peso.</li>
+        <li>Usa ΣF<sub>y</sub> = m·a con signo positivo hacia arriba.</li>
+      </ol>
+    </div>
+
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.12</h4>
+      <p class="enunciado">La misma persona de 70 kg está ahora en un ascensor que baja acelerando a 2 m/s². ¿Qué fuerza normal ejerce el piso? (g = 9,8 m/s²)</p>
+      <input type="number" step="any" id="p-u1-t6-resp" placeholder="Normal (N)" data-enter-valida="p-u1-t6">
+      <button class="btn-validar" data-target="p-u1-t6" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u1-t6-msg"></span>
+<button class="btn-solucion" data-target="p-u1-t6-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="p-u1-t6-sol" data-valor="546">
+        <h5>Solución</h5>
+        <ol>
+          <li>Tomando positivo hacia abajo (sentido de la aceleración): P − N = m·a.</li>
+          <li>N = m·g − m·a = m(g − a) = 70 · 7,8 = <strong>546 N</strong>.</li>
+          <li>Interpretación: se siente "más liviano" al bajar acelerando. Si el ascensor bajara con a = g, la normal sería cero: eso es la caída libre aparente.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u1-t6" data-correctas="3"
+          data-resp1="a" data-exp1="Velocidad constante implica aceleración cero, y por la segunda ley la fuerza neta debe ser cero."
+          data-resp2="b" data-exp2="Las fuerzas de acción y reacción se ejercen sobre cuerpos distintos; por eso no se anulan mutuamente."
+          data-resp3="a" data-exp3="a = ΣF/m. Si ΣF se duplica con la misma masa, la aceleración también se duplica.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> Un cuerpo se mueve en línea recta con velocidad constante. La fuerza neta sobre él:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t6-p1" value="a"> a) Es cero.</label>
+            <label><input type="radio" name="u1-t6-p1" value="b"> b) Apunta en el sentido del movimiento y es igual a m·v.</label>
+            <label><input type="radio" name="u1-t6-p1" value="c"> c) Es igual al peso.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t6-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> La tercera ley de Newton describe:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t6-p2" value="a"> a) Dos fuerzas que se anulan sobre el mismo cuerpo.</label>
+            <label><input type="radio" name="u1-t6-p2" value="b"> b) Dos fuerzas iguales y opuestas ejercidas sobre cuerpos distintos.</label>
+            <label><input type="radio" name="u1-t6-p2" value="c"> c) La fuerza gravitatoria entre dos masas.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t6-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Si se duplica la fuerza neta sobre un cuerpo de masa constante, su aceleración:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t6-p3" value="a"> a) Se duplica.</label>
+            <label><input type="radio" name="u1-t6-p3" value="b"> b) Se reduce a la mitad.</label>
+            <label><input type="radio" name="u1-t6-p3" value="c"> c) No cambia.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t6-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u1-t6"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: manejo manual de pacientes</h4>
+      <p>Al levantar a un paciente, la fuerza que tu columna debe soportar no es solo el peso de la persona: incluye el momento generado por tu propio tronco inclinado y la distancia al eje lumbar. Por eso la recomendación técnica no es "levantar con las piernas" como consigna memorizada, sino acercar la carga al cuerpo y evitar la flexión sostenida: ambas medidas reducen la distancia y, con ella, la fuerza necesaria. La segunda ley explica el resto: una misma fuerza produce mayor aceleración en una masa menor, de modo que mover a un paciente entre dos personas distribuye la carga y disminuye la fuerza por operador. Los arneses y grúas de traslado aplican exactamente este principio.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u1-t6"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u1-t6" data-tema="u1-t6" data-set-estado="dominado">
+        <label for="chk-u1-t6">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 1.7 ============================ -->
+  <section class="tema" id="u1-t7">
+    <h2><span class="num-tema">1.7</span> Dinámica en una y dos dimensiones: equilibrio, planos inclinados y poleas</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Resolver problemas de dinámica en dos dimensiones: distinguir equilibrio de no equilibrio, descomponer el peso en planos inclinados y analizar sistemas de cuerpos unidos por poleas.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Un objeto se desliza por una rampa sin roce. ¿Su aceleración depende de cuánto pesa?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>No. En una rampa sin roce, la aceleración es a = g·sen θ, donde la masa se cancela: la fuerza que tira hacia abajo de la rampa y la inercia crecen en la misma proporción. Lo que cambia con la masa es la fuerza necesaria, no la aceleración resultante. Es el mismo motivo por el que en caída libre todos los cuerpos caen igual.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>Elegir bien los ejes resuelve la mitad del problema</h4>
+      <p>En dos dimensiones, el peso siempre apunta hacia abajo, pero el movimiento puede ir en otra dirección. La técnica consiste en <strong>girar los ejes</strong> para que uno coincida con el movimiento: en un plano inclinado, el eje x va a lo largo de la rampa y el eje y perpendicular a ella. Entonces el peso se descompone en dos partes:</p>
+      <ul>
+        <li><strong>m·g·sen θ</strong>, paralela a la rampa: es la responsable de que el cuerpo se deslice.</li>
+        <li><strong>m·g·cos θ</strong>, perpendicular a la rampa: es la que comprime al cuerpo contra la superficie y determina la normal.</li>
+      </ul>
+      <p>De ahí sale un resultado que conviene entender y no memorizar: N = m·g·cos θ. Cuando θ = 0 (superficie horizontal), cos θ = 1 y N = m·g. Cuando θ = 90° (pared vertical), cos θ = 0 y no hay normal: el cuerpo cae. Los dos extremos confirman la fórmula.</p>
+      <p>En cuanto al <strong>equilibrio</strong>, hay dos formas y ambas cumplen ΣF = 0: el equilibrio <em>estático</em> (el cuerpo está en reposo) y el <em>dinámico</em> (se mueve con velocidad constante). Un ascensor que sube a velocidad constante está en equilibrio dinámico, no en "no equilibrio".</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con la rampa de acceso.</strong> Una rampa suave es un plano inclinado con θ pequeño: la componente del peso a lo largo de la rampa es pequeña y por eso cuesta poco subir, aunque el recorrido sea más largo. Una rampa empinada reduce la distancia pero multiplica la fuerza necesaria. La normativa de accesibilidad no elige la pendiente por estética: la elige porque la fuerza requerida crece con sen θ.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Plano inclinado</span>
+      <strong>N = m · g · cos θ</strong><br>
+      <strong>F<sub>‖</sub> = m · g · sen θ</strong><br>
+      <strong>sin roce: a = g · sen θ</strong><br>
+      <strong>con roce cinético: a = g · (sen θ − µₖ · cos θ)</strong>
+    </div>
+
+    <div class="formula">
+      <span class="etiqueta">Dos masas colgadas de una polea ideal (máquina de Atwood)</span>
+      <strong>a = (m₁ − m₂) · g / (m₁ + m₂)</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>T = 2 · m₁ · m₂ · g / (m₁ + m₂)</strong>
+      <span class="nota">Polea y cuerda ideales: sin masa, sin roce en el eje, cuerda inextensible. Las dos masas comparten la misma aceleración en magnitud.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>θ</td><td>Ángulo de inclinación</td><td>grados</td><td>Se mide respecto de la horizontal</td></tr>
+      <tr><td>F<sub>‖</sub></td><td>Componente del peso paralela a la rampa</td><td>N</td><td>Es la que impulsa o frena el deslizamiento</td></tr>
+      <tr><td>T</td><td>Tensión de la cuerda</td><td>N</td><td>Igual en toda la cuerda si la polea es ideal</td></tr>
+      <tr><td>m₁, m₂</td><td>Masas unidas por la polea</td><td>kg</td><td>El sistema acelera hacia la masa mayor</td></tr>
+    </table>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Rampa con roce</h4>
+      <p>Un bloque de 10 kg se desliza por una rampa de 30° con coeficiente de roce cinético 0,2. ¿Cuál es su aceleración? (g = 9,8 m/s²)</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Componentes del peso</span>
+        <p>Paralela: m·g·sen 30° = 10 · 9,8 · 0,5 = 49 N.<br>
+        Perpendicular: m·g·cos 30° = 10 · 9,8 · 0,866 = 84,9 N.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Normal y roce</span>
+        <p>N = 84,9 N.<br>
+        f = µₖ · N = 0,2 · 84,9 = 17,0 N, opuesta al deslizamiento.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Segunda ley a lo largo de la rampa</span>
+        <p>ΣF = 49 − 17,0 = 32,0 N.<br>
+        a = 32,0 / 10 = <strong>3,2 m/s²</strong> rampa abajo.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 4. Control</span>
+        <p>Sin roce, a = g·sen 30° = 4,9 m/s². Con roce debe ser menor: 3,2 m/s² es consistente. Si hubieras obtenido 5,8 m/s², el roce estaría sumando en vez de restar.</p>
+      </div>
+    </div>
+
+    <div class="ejemplo">
+      <h4>Polea con dos masas</h4>
+      <p>Dos masas de 3 kg y 2 kg cuelgan de una polea ideal. ¿Cuál es la aceleración del sistema y la tensión de la cuerda?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Aceleración</span>
+        <p>a = (m₁ − m₂)·g / (m₁ + m₂) = (1 · 9,8) / 5 = <strong>1,96 m/s²</strong>, con la masa de 3 kg bajando y la de 2 kg subiendo.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Tensión</span>
+        <p>T = 2·m₁·m₂·g / (m₁ + m₂) = (2 · 3 · 2 · 9,8) / 5 = 117,6 / 5 = <strong>23,5 N</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Control de sentido</span>
+        <p>La tensión debe estar entre los dos pesos: 19,6 N (masa de 2 kg) < 23,5 N < 29,4 N (masa de 3 kg). Si hubiera dado 40 N, sería imposible con esas masas.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Invertir seno y coseno en el plano inclinado. La componente que hace deslizar lleva <em>sen</em>; la que comprime contra la superficie lleva <em>cos</em>.</li>
+        <li>Usar N = m·g en una rampa. Ahí N = m·g·cos θ.</li>
+        <li>Creer que un cuerpo que sube o baja a velocidad constante está en no equilibrio. Está en equilibrio dinámico.</li>
+        <li>Suponer que la tensión es igual al peso de una de las masas en un sistema que acelera. No lo es: si acelerara con tensión igual al peso, no habría fuerza neta.</li>
+        <li>Asignar aceleraciones distintas a dos masas unidas por una cuerda inextensible.</li>
+        <li>Olvidar que el roce cinético siempre se opone al movimiento, sea cual sea el sentido.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.13</h4>
+      <p class="enunciado">Un objeto de 5 kg se desliza por una rampa de 30° sin roce. ¿Cuál es su aceleración? (g = 9,8 m/s²)</p>
+      <input type="number" step="any" id="e1-7-resp" placeholder="Aceleración (m/s²)" data-enter-valida="e1-7">
+      <button class="btn-validar" data-target="e1-7" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e1-7-msg"></span>
+<button class="btn-solucion" data-target="e1-7-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="e1-7-sol" data-valor="4.9">
+        <h5>Solución</h5>
+        <ol>
+          <li>Sin roce, la única fuerza a lo largo de la rampa es m·g·sen θ.</li>
+          <li>a = m·g·sen θ / m = g·sen θ.</li>
+          <li>a = 9,8 · 0,5 = <strong>4,9 m/s²</strong>.</li>
+          <li>Nota: la masa de 5 kg no aparece en el resultado final. Es un dato distractor para comprobar si entendiste el modelo.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u1-t7" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u1-t7">
+      <h5>Pista</h5>
+      <ol>
+        <li>Gira los ejes: x a lo largo de la rampa, y perpendicular.</li>
+        <li>La componente del peso que impulsa el deslizamiento es m·g·sen θ.</li>
+        <li>Plantea ΣF = m·a y observa qué ocurre con la masa al despejar.</li>
+      </ol>
+    </div>
+
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 1.14</h4>
+      <p class="enunciado">Una rampa de acceso tiene 20° de inclinación y no se considera roce. ¿Con qué aceleración baja un objeto que se suelta en ella? (g = 9,8 m/s²; entrega dos decimales)</p>
+      <input type="number" step="any" id="p-u1-t7-resp" placeholder="Aceleración (m/s²)" data-enter-valida="p-u1-t7">
+      <button class="btn-validar" data-target="p-u1-t7" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u1-t7-msg"></span>
+<button class="btn-solucion" data-target="p-u1-t7-sol" type="button">Ver solución ▼</button>
+<div class="solucion" id="p-u1-t7-sol" data-valor="3.35">
+        <h5>Solución</h5>
+        <ol>
+          <li>a = g · sen 20° = 9,8 · 0,342 = <strong>3,35 m/s²</strong>.</li>
+          <li>Control: menor que en la rampa de 30° (4,9 m/s²), como corresponde a un ángulo menor.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u1-t7" data-correctas="3"
+          data-resp1="a" data-exp1="a = g·sen θ: la masa se cancela porque la fuerza que impulsa y la inercia son ambas proporcionales a ella."
+          data-resp2="a" data-exp2="Velocidad constante implica aceleración cero y, por lo tanto, fuerza neta cero: es equilibrio dinámico."
+          data-resp3="b" data-exp3="Si las masas son iguales, la diferencia en la fórmula de la aceleración es cero: el sistema no acelera y queda en equilibrio.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> En un plano inclinado sin roce, la aceleración de deslizamiento:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t7-p1" value="a"> a) No depende de la masa.</label>
+            <label><input type="radio" name="u1-t7-p1" value="b"> b) Es proporcional a la masa.</label>
+            <label><input type="radio" name="u1-t7-p1" value="c"> c) Es siempre igual a g.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t7-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> Un cuerpo sube por una rampa con velocidad constante. Se encuentra en:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t7-p2" value="a"> a) Equilibrio dinámico.</label>
+            <label><input type="radio" name="u1-t7-p2" value="b"> b) No equilibrio, porque se mueve.</label>
+            <label><input type="radio" name="u1-t7-p2" value="c"> c) Caída libre.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t7-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> En una polea ideal con dos masas iguales:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u1-t7-p3" value="a"> a) La masa más alta cae.</label>
+            <label><input type="radio" name="u1-t7-p3" value="b"> b) El sistema queda en equilibrio y no acelera.</label>
+            <label><input type="radio" name="u1-t7-p3" value="c"> c) La tensión es cero.</label>
+          </div>
+          <div class="feedback" id="fb-u1-t7-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u1-t7"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: rampas, transferencias y carga lumbar</h4>
+      <p>Las rampas de acceso de un centro de salud se diseñan con pendientes suaves porque la fuerza necesaria para subir una silla de ruedas crece con sen θ, y quien la impulsa —o quien acompaña— debe vencer además el roce de las ruedas. El mismo razonamiento se aplica a las transferencias: cuando una persona se inclina hacia adelante para levantarse, la componente del peso que debe vencer cambia con el ángulo del tronco respecto de la vertical. De ahí que la técnica de transferencia correcta controle el ángulo y no solo la fuerza. En ambos casos, el concepto que decide es la descomposición del peso en componentes, no la fuerza bruta.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u1-t7"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u1-t7" data-tema="u1-t7" data-set-estado="dominado">
+        <label for="chk-u1-t7">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Guía de Estudio de Física &middot; CBA0210 &middot; Unidad 1 — Cinemática y Dinámica</p>
+  <p><a href="index.html">Volver al inicio</a> &middot; <a href="unidad2.html">Ir a la Unidad 2</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

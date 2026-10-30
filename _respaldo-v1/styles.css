@@ -1,0 +1,255 @@
+/* ==========================================================================
+   fisica-to — Guía de Estudio Didáctica (CBA0210)
+   Diseño pedagógico: micro-lecciones, progreso, autoevaluación
+   ========================================================================== */
+
+:root {
+  --azul: #1f5c8a;
+  --azul-oscuro: #144060;
+  --azul-claro: #e3f0f8;
+  --azul-suave: #f4f8fb;
+  --verde: #2e7d32;
+  --verde-claro: #e8f5e9;
+  --naranja: #e89c1c;
+  --naranja-claro: #fdf3e3;
+  --rojo: #c62828;
+  --rojo-claro: #ffebee;
+  --gris-texto: #2b2b2b;
+  --gris-suave: #f5f7f9;
+  --borde: #d9e2e8;
+  --sombra: 0 2px 10px rgba(31, 92, 138, 0.06);
+  --radius: 10px;
+  --fuente: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--fuente);
+  color: var(--gris-texto);
+  background: var(--gris-suave);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a { color: var(--azul); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Header ---------- */
+header {
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
+  color: #ffffff;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 16px rgba(20, 64, 96, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container { max-width: 1100px; margin: 0 auto; }
+header h1 { font-size: 1.5rem; margin-bottom: 0.3rem; }
+header p.sub { font-size: 0.95rem; opacity: 0.95; }
+
+/* ---------- Navegación ---------- */
+nav { background: #ffffff; border-bottom: 1px solid var(--borde); position: sticky; top: 56px; z-index: 90; }
+.nav-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0; max-width: 1100px; margin: 0 auto; padding: 0; border-bottom: 3px solid var(--azul); }
+.nav-list li { flex: 1 1 200px; min-width: 150px; }
+.nav-list a {
+  display: block; padding: 0.7rem 1rem; color: var(--gris-texto);
+  font-weight: 600; border-bottom: 3px solid transparent; text-align: center;
+  transition: background 0.2s, border-color 0.2s; text-decoration: none;
+}
+.nav-list a:hover { background: var(--azul-claro); border-color: var(--azul); }
+.nav-list a.activa { background: var(--azul); color: #ffffff; border-color: #ffd166; }
+
+/* ---------- Contenedor ---------- */
+main { max-width: 1000px; margin: 1.5rem auto; padding: 0 1rem; }
+.seccion { margin-bottom: 2.5rem; }
+
+/* ---------- Tarjetas ---------- */
+.tarjeta {
+  background: #ffffff; border: 1px solid var(--borde); border-radius: var(--radius);
+  padding: 1.25rem 1.5rem; margin-bottom: 1.25rem; box-shadow: var(--sombra);
+}
+.tarjeta h2 { color: var(--azul-oscuro); font-size: 1.25rem; margin-bottom: 0.75rem; border-left: 4px solid var(--azul); padding-left: 0.75rem; }
+.tarjeta h3 { font-size: 1.1rem; margin: 1rem 0 0.6rem 0; color: var(--azul); }
+.tarjeta p { margin-bottom: 0.8rem; }
+.tarjeta ul { margin: 0.5rem 0 0.8rem 1.4rem; }
+.tarjeta ul li { margin-bottom: 0.35rem; }
+
+/* ---------- Objetivo ---------- */
+.objetivo {
+  background: var(--azul-claro); border-left: 4px solid var(--azul);
+  border-radius: var(--radius); padding: 0.9rem 1.2rem; margin: 0.8rem 0;
+}
+.objetivo h4 { color: var(--azul-oscuro); margin-bottom: 0.3rem; font-size: 1rem; }
+.objetivo p { margin: 0; font-size: 0.95rem; }
+
+/* ---------- Fórmulas ---------- */
+.formula {
+  background: #ffffff; border: 1px solid var(--borde); border-left: 4px solid var(--azul);
+  border-radius: var(--radius); padding: 1rem; margin: 0.8rem 0;
+  font-family: "Segoe UI Symbol", "DejaVu Sans", monospace; font-size: 1.05rem;
+  text-align: center; color: var(--azul-oscuro);
+}
+.formula .etiqueta { font-size: 0.85rem; display: block; color: #5a6b7a; margin-bottom: 0.25rem; }
+
+/* ---------- Diagramas ---------- */
+.diagrama {
+  background: #ffffff; border: 1px solid var(--borde); border-radius: var(--radius);
+  padding: 1rem; margin: 0.8rem 0; text-align: center;
+}
+.diagrama svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.diagrama .leyenda { margin-top: 0.5rem; font-size: 0.88rem; color: #5a6b7a; }
+
+/* ---------- Ejemplo modelo ---------- */
+.ejemplo {
+  background: var(--azul-suave); border: 1px solid var(--borde); border-left: 4px solid var(--azul);
+  border-radius: var(--radius); padding: 1rem 1.25rem; margin: 0.8rem 0;
+}
+.ejemplo h4 { color: var(--azul-oscuro); margin-bottom: 0.5rem; font-size: 1rem; }
+.ejemplo ol { margin-left: 1.4rem; }
+.ejemplo li { margin-bottom: 0.35rem; }
+
+/* ---------- Práctica guiada ---------- */
+.guiada {
+  background: var(--naranja-claro); border: 1px solid #f0d9a8; border-left: 4px solid var(--naranja);
+  border-radius: var(--radius); padding: 1rem 1.25rem; margin: 0.8rem 0;
+}
+.guiada h4 { color: #7a5a00; margin-bottom: 0.5rem; font-size: 1rem; }
+.guiada p { margin-bottom: 0.5rem; }
+
+.pista {
+  background: #ffffff; border: 1px solid #f0d9a8; border-radius: 6px;
+  padding: 0.6rem 0.9rem; margin-top: 0.5rem; font-size: 0.9rem;
+  display: none;
+}
+.pista.mostrar { display: block; }
+.pista h5 { color: #7a5a00; margin-bottom: 0.3rem; font-size: 0.9rem; }
+
+/* ---------- Práctica autónoma ---------- */
+.autonoma {
+  background: #ffffff; border: 1px solid var(--borde); border-left: 4px solid var(--verde);
+  border-radius: var(--radius); padding: 1rem 1.25rem; margin: 0.8rem 0;
+}
+.autonoma h4 { color: var(--verde); margin-bottom: 0.5rem; font-size: 1rem; }
+
+/* ---------- Autoevaluación ---------- */
+.autoevaluacion {
+  background: #ffffff; border: 2px solid var(--borde); border-radius: var(--radius);
+  padding: 1.25rem 1.5rem; margin: 0.8rem 0;
+}
+.autoevaluacion h4 { color: var(--azul-oscuro); margin-bottom: 1rem; font-size: 1.1rem; }
+.pregunta { margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px dashed var(--borde); }
+.pregunta:last-child { border-bottom: none; }
+.pregunta label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.95rem; }
+.opciones { display: flex; flex-direction: column; gap: 0.35rem; }
+.opciones label { font-weight: normal; cursor: pointer; padding: 0.4rem 0.7rem; border: 1px solid var(--borde); border-radius: 6px; transition: all 0.2s; }
+.opciones label:hover { background: var(--azul-claro); border-color: var(--azul); }
+.opciones input[type="radio"] { margin-right: 0.5rem; }
+
+.btn-validar {
+  margin-top: 0.6rem; padding: 0.45rem 1rem; background: var(--azul); color: #ffffff;
+  border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.95rem;
+}
+.btn-validar:hover { background: var(--azul-oscuro); }
+
+.feedback { margin-top: 0.5rem; padding: 0.6rem 0.9rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; display: none; }
+.feedback.correcto { background: var(--verde-claro); color: var(--verde); border: 1px solid #a5d6a7; }
+.feedback.incorrecto { background: var(--rojo-claro); color: var(--rojo); border: 1px solid #ef9a9a; }
+
+/* ---------- Conexión clínica ---------- */
+.caso {
+  background: #fdf6e3; border: 1px solid #e3d2a8; border-left: 4px solid var(--naranja);
+  border-radius: var(--radius); padding: 1rem 1.25rem; margin: 0.8rem 0;
+}
+.caso h4 { color: #7a5a00; margin-bottom: 0.5rem; font-size: 1rem; }
+.caso p { margin-bottom: 0.4rem; }
+
+/* ---------- Errores frecuentes ---------- */
+.errores {
+  background: var(--rojo-claro); border: 1px solid #ef9a9a; border-left: 4px solid var(--rojo);
+  border-radius: var(--radius); padding: 0.9rem 1.2rem; margin: 0.8rem 0;
+}
+.errores h4 { color: var(--rojo); margin-bottom: 0.4rem; font-size: 1rem; }
+.errores ul { margin-left: 1.4rem; list-style: none; }
+.errores li { position: relative; padding-left: 1.2rem; margin-bottom: 0.3rem; font-size: 0.93rem; }
+.errores li::before { content: "✗"; position: absolute; left: 0; color: var(--rojo); font-weight: bold; }
+
+/* ---------- Checklist / progreso tema ---------- */
+.checklist {
+  background: #ffffff; border: 1px solid var(--borde); border-radius: var(--radius);
+  padding: 0.9rem 1.2rem; margin: 0.8rem 0; display: flex; align-items: center; gap: 0.7rem;
+}
+.checklist input[type="checkbox"] { width: 18px; height: 18px; cursor: pointer; accent-color: var(--verde); }
+.checklist label { cursor: pointer; font-size: 0.95rem; user-select: none; }
+.checklist label.marcado { text-decoration: line-through; color: #7a8794; }
+
+/* ---------- Estado tema ---------- */
+.estado-tema {
+  display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.6rem; font-size: 0.85rem;
+}
+.badge { padding: 0.2rem 0.6rem; border-radius: 12px; font-weight: 700; font-size: 0.8rem; }
+.badge.iniciado { background: #e3f0f8; color: var(--azul-oscuro); border: 1px solid var(--azul); }
+.badge.enprogreso { background: var(--naranja-claro); color: #7a5a00; border: 1px solid var(--naranja); }
+.badge.dominado { background: var(--verde-claro); color: var(--verde); border: 1px solid #a5d6a7; }
+
+/* ---------- Mapa de progreso ---------- */
+.mapa {
+  background: #ffffff; border: 1px solid var(--borde); border-radius: var(--radius);
+  padding: 1.25rem 1.5rem; margin: 1rem 0;
+}
+.mapa h3 { margin-bottom: 1rem; color: var(--azul-oscuro); font-size: 1.2rem; }
+.tema-mapa {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.6rem 0.8rem; border-bottom: 1px solid #f0f3f5; font-size: 0.95rem;
+}
+.tema-mapa:last-child { border-bottom: none; }
+.tema-mapa .btn-ir {
+  padding: 0.25rem 0.6rem; background: var(--azul-claro); color: var(--azul-oscuro);
+  border: 1px solid var(--azul); border-radius: 6px; cursor: pointer; font-size: 0.85rem;
+}
+.tema-mapa .btn-ir:hover { background: var(--azul); color: #ffffff; }
+
+/* ---------- Calculadoras ---------- */
+.calculadora {
+  background: #ffffff; border: 1px solid var(--borde); border-radius: var(--radius);
+  padding: 1rem 1.25rem; margin: 0.8rem 0; max-width: 420px;
+}
+.calculadora h4 { margin-bottom: 0.7rem; color: var(--azul-principal, var(--azul)); }
+.calculadora label { display: block; margin: 0.5rem 0 0.2rem 0; font-size: 0.9rem; font-weight: 600; }
+.calculadora input[type="number"] { width: 100%; padding: 0.45rem; border: 1px solid var(--borde); border-radius: 6px; font-size: 1rem; }
+.calculadora button { margin-top: 0.6rem; padding: 0.5rem 1rem; background: var(--azul); color: #ffffff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; }
+.calculadora button:hover { background: var(--azul-oscuro); }
+.calculadora .resultado { margin-top: 0.6rem; padding: 0.6rem; background: var(--azul-claro); border-radius: 6px; font-weight: 600; color: var(--azul-oscuro); }
+
+/* ---------- Diagnóstico ---------- */
+.diagnostico {
+  background: #ffffff; border: 1px solid var(--borde); border-radius: var(--radius);
+  padding: 1.5rem; margin: 1rem 0;
+}
+.diagnostico h3 { color: var(--azul-oscuro); margin-bottom: 1rem; }
+.resultado-diag { margin-top: 1rem; padding: 1rem; border-radius: var(--radius); display: none; }
+.resultado-diag.mostrar { display: block; }
+.resultado-diag.bajo { background: var(--rojo-claro); border: 1px solid #ef9a9a; color: var(--rojo); }
+.resultado-diag.medio { background: var(--naranja-claro); border: 1px solid #f0d9a8; color: #7a5a00; }
+.resultado-diag.alto { background: var(--verde-claro); border: 1px solid #a5d6a7; color: var(--verde); }
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--azul-oscuro); color: #ffffff; padding: 1.5rem 1rem; margin-top: 2rem;
+  text-align: center; font-size: 0.9rem;
+}
+footer a { color: #aed7e8; }
+
+/* ---------- Utils ---------- */
+.oculto { display: none !important; }
+.nota { font-size: 0.88rem; color: #5a6b7a; font-style: italic; }
+.marco-centrado { text-align: center; }
+
+@media (max-width: 700px) {
+  .nav-list li { flex: 1 1 100%; }
+  .tarjeta { padding: 1rem; }
+}

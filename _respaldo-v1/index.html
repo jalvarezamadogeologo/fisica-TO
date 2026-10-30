@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+title>Guía de Estudio de Física — CBA0210</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Guía de Estudio de Física</h1>
+    <p class="sub">Curso CBA0210 &middot; Facultad de Medicina, Universidad de Chile &middot; 2º Semestre 2026</p>
+  </div>
+</header>
+
+<nav>
+  <ul class="nav-list">
+    <li><a href="index.html" class="activa">Inicio y diagnóstico</a></li>
+    <li><a href="unidad1.html">Unidad 1 — Cinemática y Dinámica</a></li>
+    <li><a href="unidad2.html">Unidad 2 — Energía, Trabajo y Electrostática</a></li>
+    <li><a href="unidad3.html">Unidad 3 — Circuitos y Fluidos</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ================= PORTADA ================= -->
+  <section class="seccion tarjeta">
+    <h2>¿Qué es esta guía?</h2>
+    <p>Esta es una <strong>guía de estudio autoinstruccional</strong> diseñada para que prepares el curso de Física (CBA0210) de forma activa. No se trata solo de leer teoría: en cada tema encontrarás un objetivo claro, un ejemplo resuelto, ejercicios guiados y autónomos, y una autoevaluación de 3 preguntas con feedback inmediato.</p>
+    <p>El progreso se guarda automáticamente en tu navegador. Puedes cerrar y volver después: tus temas marcados como "dominado" se conservarán.</p>
+
+    <h3>Cómo usar cada tema (en este orden)</h3>
+    <ol>
+      <li>Lee el <strong>objetivo de aprendizaje</strong>: qué sabrás hacer al terminar.</li>
+      <li>Responde la <strong>pregunta de activación</strong> para conectar con lo que ya sabes.</li>
+      <li>Estudia el <strong>concepto clave</strong> y la fórmula.</li>
+      <li>Observa el <strong>ejemplo modelo</strong> paso a paso.</li>
+      <li>Haz la <strong>práctica guiada</strong> (usa las pistas si te atascas).</li>
+      <li>Intenta la <strong>práctica autónoma</strong> sin ayuda.</li>
+      <li>Rinde la <strong>autoevaluación de 3 preguntas</strong> y revisa el feedback.</li>
+      <li>Lee el <strong>caso clínico</strong> y los <strong>errores frecuentes</strong>.</li>
+      <li>Si lo dominas, márcalo como <strong>✓ Dominado</strong> en la lista de verificación.</li>
+    </ol>
+  </section>
+
+  <!-- ================= DIAGNÓSTICO ================= -->
+  <section class="seccion diagnostico">
+    <h2>Test diagnóstico inicial (10 preguntas)</h2>
+    <p>Responde lo que sepas. No afecta tu nota; sirve para saber por dónde empezar y qué repasar con prioridad.</p>
+
+    <form id="form-diagnostico" class="autoevaluacion-form" data-tema="diagnostico" data-correctas="10">
+      <div class="pregunta">
+        <label><strong>1.</strong> Un cuerpo se mueve en línea recta a velocidad constante. ¿Cuál es su aceleración?</label>
+        <div class="opciones">
+          <label><input type="radio" name="d1" value="a"> a) Cero (0 m/s²)</label>
+          <label><input type="radio" name="d1" value="b"> b) Igual a la velocidad</label>
+          <label><input type="radio" name="d1" value="c"> c) Siempre positiva</label>
+        </div>
+      </div>
+
+      <div class="pregunta">
+        <label><strong>2.</strong> La fuerza P = m·g se llama:</label>
+        <div class="opciones">
+          <label><input type="radio" name="d2" value="a"> a) Peso (fuerza gravitatoria)</label>
+          <label><input type="radio" name="d2" value="b"> b) Fuerza normal</label>
+          <label><input type="radio" name="d2" value="c"> c) Rozamiento</label>
+        </div>
+      </div>
+
+      <div class="pregunta">
+        <label><strong>3.</strong> En un circuito en serie, la corriente:</label>
+        <div class="opciones">
+          <label><input type="radio" name="d3" value="a"> a) Es la misma por todos los componentes</label>
+          <label><input type="radio" name="d3" value="b"> b) Se divide entre cada componente</label>
+          <label><input type="radio" name="d3" value="c"> c) Solo circula por el primero</label>
+        </div>
+      </div>
+
+      <div class="pregunta">
+        <label><strong>4.</strong> El trabajo de una fuerza se calcula como:</label>
+        <div class="opciones">
+          <label><input type="radio" name="d4" value="a"> a) W = F·d·cos(θ)</label>
+          <label><input type="radio" name="d4" value="b"> b) W = F + d</label>
+          <label><input type="radio" name="d4" value="c"> c) W = F / d</label>
+        </div>
+      </div>
+
+      <div class="pregunta">
+        <label><strong>5.</strong> En caída libre (sin rozamiento), la energía mecánica:</label>
+        <div class="opciones">
+          <label><input type="radio" name="d5" value="a"> a) Se conserva (E_p se convierte en E_c)</label>
+          <label><input type="radio" name="d5" value="b"> b) Se pierde por el aire</label>
+          <label><input type="radio" name="d5" value="c"> c) Solo es energía potencial</label>
+        </div>
+      </div>
+
+      <div class="pregunta">
+        <label><strong>6.</strong> Según la Ley de Ohm, si duplicas el voltaje y mantienes la resistencia:</label>
+        <div class="opciones">
+          <label><input type="radio" name="d6" value="a"> a) La corriente se duplica</label>
+          <label><input type="radio" name="d6" value="b"> b) La corriente se reduce a la mitad</label>
+          <label><input type="radio" name="d6" value="c"> c) La corriente no cambia</label>
+        </div>
+      </div>
+
+      <div class="pregunta">
+        <label><strong>7.</strong> La presión hidrostática depende de:</label>
+        <div class="opciones">
+          <label><input type="radio" name="d7" value="a"> a) Densidad, gravedad y profundidad</label>
+          <label><input type="radio" name="d7" value="b"> b) Solo la profundidad</label>
+          <label><input type="radio" name="d7" value="c"> c) Solo el volumen del fluido</label>
+        </div>
+      </div>
+
+      <div class="pregunta">
+        <label><strong>8.</strong> En un fluido ideal, el principio de Bernoulli dice que al aumentar la velocidad:</label>
+        <div class="opciones">
+          <label><input type="radio" name="d8" value="a"> a) La presión disminuye</label>
+          <label><input type="radio" name="d8" value="b"> b) La presión aumenta</label>
+          <label><input type="radio" name="d8" value="c"> c) La presión no cambia</label>
+        </div>
+      </div>
+
+      <div class="pregunta">
+        <label><strong>9.</strong> La ley de Poiseuille dice que el caudal en un tubo depende de la cuarta potencia del:</label>
+        <div class="opciones">
+          <label><input type="radio" name="d9" value="a"> a) Radio del tubo</label>
+          <label><input type="radio" name="d9" value="b"> b) Largo del tubo</label>
+          <label><input type="radio" name="d9" value="c"> c) Viscosidad</label>
+        </div>
+      </div>
+
+      <div class="pregunta">
+        <label><strong>10.</strong> El número de Reynolds bajo (< 2000) indica flujo:</label>
+        <div class="opciones">
+          <label><input type="radio" name="d10" value="a"> a) Laminar (ordenado)</label>
+          <label><input type="radio" name="d10" value="b"> b) Turbulento (con remolinos)</label>
+          <label><input type="radio" name="d10" value="c"> c) Sin movimiento</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-validar" style="width:auto;">Calcular resultado</button>
+    </form>
+
+    <div id="resultado-diag" class="resultado-diag"></div>
+  </section>
+
+  <!-- ================= MAPA DE PROGRESO ================= -->
+  <section class="seccion mapa">
+    <h2>Mapa de temas y progreso</h2>
+    <p class="nota">Tu avance se guarda en este navegador. Haz clic en un tema para ir directamente a su micro-lección.</p>
+
+    <div style="margin-bottom:1rem; font-size:0.9rem; color:#5a6b7a;">
+      <span class="badge iniciado" style="margin-right:0.5rem;">● No iniciado</span>
+      <span class="badge enprogreso" style="margin-right:0.5rem;">● En progreso</span>
+      <span class="badge dominado" style="margin-right:0.5rem;">● Dominado</span>
+    </div>
+
+    <h3 style="color:var(--azul-oscuro); margin-bottom:0.8rem; font-size:1.15rem;">Unidad 1 — Cinemática y Dinámica</h3>
+    <div class="tema-mapa"><span>1.1 Posición, desplazamiento, velocidad y aceleración</span><a href="unidad1.html#u1-t1"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u1-t1" data-tema="u1-t1"></span></div>
+    <div class="tema-mapa"><span>1.2 MRU y MRUA: ecuaciones del movimiento</span><a href="unidad1.html#u1-t2"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u1-t2" data-tema="u1-t2"></span></div>
+    <div class="tema-mapa"><span>1.3 Gráficos de movimiento (x-t, v-t, a-t)</span><a href="unidad1.html#u1-t3"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u1-t3" data-tema="u1-t3"></span></div>
+    <div class="tema-mapa"><span>1.4 Concepto de fuerza: peso, normal, roce, elástica</span><a href="unidad1.html#u1-t4"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u1-t4" data-tema="u1-t4"></span></div>
+    <div class="tema-mapa"><span>1.5 Leyes de Newton (1ª, 2ª y 3ª)</span><a href="unidad1.html#u1-t5"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u1-t5" data-tema="u1-t5"></span></div>
+    <div class="tema-mapa"><span>1.6 Diagrama de cuerpo libre</span><a href="unidad1.html#u1-t6"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u1-t6" data-tema="u1-t6"></span></div>
+    <div class="tema-mapa"><span>1.7 Equilibrio y no equilibrio (ΣF = 0 vs ΣF = ma)</span><a href="unidad1.html#u1-t7"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u1-t7" data-tema="u1-t7"></span></div>
+
+    <h3 style="color:var(--azul-oscuro); margin-top:1.5rem; margin-bottom:0.8rem; font-size:1.15rem;">Unidad 2 — Energía, Trabajo y Electrostática</h3>
+    <div class="tema-mapa"><span>2.1 Trabajo de una fuerza: W = F·d·cos(θ)</span><a href="unidad2.html#u2-t1"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u2-t1" data-tema="u2-t1"></span></div>
+    <div class="tema-mapa"><span>2.2 Energía cinética y potencial (gravitatoria y elástica)</span><a href="unidad2.html#u2-t2"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u2-t2" data-tema="u2-t2"></span></div>
+    <div class="tema-mapa"><span>2.3 Conservación de la energía mecánica</span><a href="unidad2.html#u2-t3"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u2-t3" data-tema="u2-t3"></span></div>
+    <div class="tema-mapa"><span>2.4 Carga eléctrica y Ley de Coulomb</span><a href="unidad2.html#u2-t4"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u2-t4" data-tema="u2-t4"></span></div>
+    <div class="tema-mapa"><span>2.5 Campo eléctrico</span><a href="unidad2.html#u2-t5"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u2-t5" data-tema="u2-t5"></span></div>
+    <div class="tema-mapa"><span>2.6 Potencial eléctrico y voltaje</span><a href="unidad2.html#u2-t6"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u2-t6" data-tema="u2-t6"></span></div>
+
+    <h3 style="color:var(--azul-oscuro); margin-top:1.5rem; margin-bottom:0.8rem; font-size:1.15rem;">Unidad 3 — Circuitos y Fluidos</h3>
+    <div class="tema-mapa"><span>3.1 Ley de Ohm: V = I·R</span><a href="unidad3.html#u3-t1"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u3-t1" data-tema="u3-t1"></span></div>
+    <div class="tema-mapa"><span>3.2 Resistencias en serie y paralelo</span><a href="unidad3.html#u3-t2"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u3-t2" data-tema="u3-t2"></span></div>
+    <div class="tema-mapa"><span>3.3 Circuitos RC y constante de tiempo τ</span><a href="unidad3.html#u3-t3"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u3-t3" data-tema="u3-t3"></span></div>
+    <div class="tema-mapa"><span>3.4 Presión hidrostática: P = ρ·g·h</span><a href="unidad3.html#u3-t4"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u3-t4" data-tema="u3-t4"></span></div>
+    <div class="tema-mapa"><span>3.5 Continuidad y Bernoulli (fluidos ideales)</span><a href="unidad3.html#u3-t5"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u3-t5" data-tema="u3-t5"></span></div>
+    <div class="tema-mapa"><span>3.6 Viscosidad y Ley de Poiseuille</span><a href="unidad3.html#u3-t6"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u3-t6" data-tema="u3-t6"></span></div>
+    <div class="tema-mapa"><span>3.7 Flujo laminar vs turbulento y Número de Reynolds</span><a href="unidad3.html#u3-t7"><button class="btn-ir">Ir al tema</button></a><span class="badge" id="badge-u3-t7" data-tema="u3-t7"></span></div>
+
+    <div style="margin-top:1.2rem; padding:1rem; background:var(--azul-claro); border-radius:var(--radius);">
+      <p style="margin:0; font-size:0.95rem;"><strong>¿Cómo sé que dominé un tema?</strong> Cuando respondas correctamente las 3 preguntas de su autoevaluación y puedas resolver la práctica autónoma sin ayuda, márcalo como <strong>Dominado ✓</strong>. El badge se actualiza solo.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Guía de Estudio de Física &middot; CBA0210 &middot; Progreso guardado en tu navegador (localStorage) &middot; 2026</p>
+  <p>Fuente: Programa oficial del curso de Física, Facultad de Medicina, Universidad de Chile.</p>
+</footer>
+
+<script src="app.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

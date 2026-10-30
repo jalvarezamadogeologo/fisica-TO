@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidad 1 — Cinemática y Dinámica · Física CBA0210</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Unidad 1 — Cinemática y Dinámica</h1>
+    <p class="sub">Física CBA0210 &middot; RA 1 y RA 4 &middot; Volver a <a href="index.html">Inicio</a></p>
+  </div>
+</header>
+
+<nav>
+  <ul class="nav-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="unidad1.html" class="activa">Unidad 1 — Cinemática y Dinámica</a></li>
+    <li><a href="unidad2.html">Unidad 2 — Energía, Trabajo y Electrostática</a></li>
+    <li><a href="unidad3.html">Unidad 3 — Circuitos y Fluidos</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section class="seccion ra">
+    <h3>Resultados de Aprendizaje de esta unidad</h3>
+    <p><strong>RA 1:</strong> Aplicar las leyes de Newton en modelos cinemáticos y dinámicos describiendo y prediciendo el movimiento de un cuerpo para desarrollar capacidad de abstracción necesaria para la comprensión de procesos fisiológicos.</p>
+    <p><strong>RA 4:</strong> Utilizar el método científico en experimentos guiados y grupales, recopilando y analizando datos experimentales, describiendo fuentes de error y estableciendo relaciones lógicas con modelos teóricos simplificados.</p>
+  </section>
+
+  <section class="seccion indicadores">
+    <h3>Indicadores de logro (lo que debes saber hacer al terminar)</h3>
+    <ul>
+      <li>Reconocer variables y seleccionar información relevante mediante el análisis crítico de situaciones y/o modelos.</li>
+      <li>Definir e interpretar sistemas de referencia y calcular vectores en ellos.</li>
+      <li>Calcular desplazamientos, velocidades y aceleraciones usando ecuaciones de movimiento.</li>
+      <li>Interpretar y generar gráficos de posición-tiempo, velocidad-tiempo y aceleración-tiempo.</li>
+      <li>Identificar las fuerzas relevantes que actúan sobre un cuerpo en una situación dada.</li>
+      <li>Construir diagramas de cuerpo libre.</li>
+      <li>Plantear y resolver problemas de movimiento usando e identificando componentes vectoriales.</li>
+      <li>Plantear y resolver problemas de dinámica, distinguiendo entre sistemas en equilibrio y no equilibrio.</li>
+      <li>Colaborar activamente con estudiantes de distintas carreras y comunicar aportes con evidencia.</li>
+    </ul>
+  </section>
+
+  <!-- ===================== TEMA 1.1 ===================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>1.1 Conceptos básicos: posición, desplazamiento, velocidad y aceleración</h2>
+
+      <h3>¿Qué es cada concepto?</h3>
+      <ul>
+        <li><strong>Posición:</strong> es el lugar donde se encuentra un objeto respecto a un sistema de referencia (punto de origen). Se representa con un vector <strong>r</strong>.</li>
+        <li><strong>Distancia recorrida:</strong> longitud total de la trayectoria (siempre positiva, escalar).</li>
+        <li><strong>Desplazamiento:</strong> cambio de posición (vector desde el punto inicial al final). Puede ser menor o igual a la distancia, e incluso cero si vuelve al inicio.</li>
+        <li><strong>Velocidad media:</strong> desplazamiento dividido entre el tiempo transcurrido. Vector.</li>
+        <li><strong>Aceleración media:</strong> cambio de velocidad dividido entre el tiempo. Vector.</li>
+      </ul>
+
+      <div class="formula">
+        <span class="etiqueta">Velocidad media y aceleración media</span>
+        <strong>v_m = Δx / Δt</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>a_m = Δv / Δt</strong><br>
+        <span class="nota">Δx = x_final − x_inicial &nbsp; Δt = t_final − t_inicial &nbsp; Δv = v_final − v_inicial</span>
+      </div>
+
+      <div class="diagrama">
+        <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg">
+          <line x1="60" y1="140" x2="460" y2="140" stroke="#999" stroke-width="2"/>
+          <text x="50" y="155" font-size="12" fill="#666">Sistema de referencia (suelo)</text>
+          <!-- punto inicial -->
+          <circle cx="100" cy="140" r="6" fill="#1f5c8a"/>
+          <text x="70" y="125" font-size="12" fill="#1f5c8a">Inicio</text>
+          <!-- punto final -->
+          <circle cx="420" cy="140" r="6" fill="#c62828"/>
+          <text x="425" y="125" font-size="12" fill="#c62828">Final</text>
+          <!-- flecha desplazamiento -->
+          <line x1="100" y1="140" x2="420" y2="140" stroke="#c62828" stroke-width="3" marker-end="url(#f1)"/>
+          <defs>
+            <marker id="f1" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+              <polygon points="0,0 10,5 0,10" fill="#c62828"/>
+            </marker>
+          </defs>
+          <text x="240" y="100" font-size="14" fill="#c62828" font-weight="bold">Δx = x_f − x_i</text>
+          <!-- velocidad -->
+          <line x1="100" y1="160" x2="260" y2="160" stroke="#2e7d32" stroke-width="3" marker-end="url(#f2)"/>
+          <defs>
+            <marker id="f2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+              <polygon points="0,0 10,5 0,10" fill="#2e7d32"/>
+            </marker>
+          </defs>
+          <text x="110" y="175" font-size="12" fill="#2e7d32">v (dirección del movimiento)</text>
+        </svg>
+        <div class="leyenda">Diagrama: desplazamiento (rojo) y velocidad (verde) de una partícula que se mueve en línea recta.</div>
+      </div>
+
+      <h3>Ejemplo resuelto</h3>
+      <p>Un paciente se desplaza en silla de ruedas desde la entrada del consultorio (x = 0 m) hasta la sala de espera (x = 42 m) en 14 s. ¿Cuál es su velocidad media?</p>
+      <div class="solucion" id="sol-u1-1">
+        <h5>Solución</h5>
+        <ol>
+          <li>Datos: x_i = 0 m, x_f = 42 m, Δt = 14 s.</li>
+          <li>Desplazamiento: Δx = 42 − 0 = 42 m.</li>
+          <li>Velocidad media: v_m = Δx / Δt = 42 / 14 = <strong>3 m/s</strong>.</li>
+        </ol>
+      </div>
+      <button class="btn-solucion" data-target="sol-u1-1">Ver solución ▼</button>
+
+      <h3>Ejercicios propuestos</h3>
+      <div class="ejercicio">
+        <h4>Ejercicio 1.1</h4>
+        <p>Un camión de reparto recorre 120 m en línea recta en 20 s y luego regresa 40 m en otros 10 s. Calcula: (a) la distancia total recorrida, (b) el desplazamiento total y (c) la velocidad media en todo el trayecto.</p>
+        <input type="number" id="e1-1-resp" placeholder="Velocidad media (m/s)">
+        <button class="btn-validar" data-target="e1-1">Validar respuesta</button>
+        <span id="e1-1-msg"></span>
+        <div class="solucion" id="sol-e1-1">
+          <h5>Solución</h5>
+          <ol>
+            <li>(a) Distancia = 120 + 40 = <strong>160 m</strong>.</li>
+            <li>(b) Desplazamiento = 120 − 40 = <strong>80 m</strong> (hacia adelante).</li>
+            <li>(c) Tiempo total = 20 + 10 = 30 s. v_m = Δx / Δt = 80 / 30 = <strong>2,67 m/s</strong>.</li>
+          </ol>
+        </div>
+      </div>
+      <button class="btn-solucion" data-target="sol-e1-1">Ver solución ▼</button>
+
+      <div class="caso">
+        <h4>Caso aplicado — Traslado de un paciente</h4>
+        <p>En kinesiología, al mover a un paciente de la cama a una silla de ruedas se registra el tiempo y el recorrido. Si el trayecto es de 6 m y se hace en 12 s, la velocidad media es de 0,5 m/s. Conocer esta velocidad permite planificar el tiempo de asistencia y valorar la fatiga del cuidador.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TEMA 1.2 ===================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>1.2 Cinemática en una y dos dimensiones</h2>
+
+      <h3>Cinemática en 1D: MRU y MRUA</h3>
+      <ul>
+        <li><strong>MRU (Movimiento Rectilíneo Uniforme):</strong> velocidad constante, aceleración cero. La posición varía linealmente con el tiempo.</li>
+        <li><strong>MRUA (Movimiento Rectilíneo Uniformemente Acelerado):</strong> aceleración constante (ej. caída libre sin rozamiento).</li>
+      </ul>
+
+      <div class="formula">
+        <span class="etiqueta">Ecuaciones del MRUA</span>
+        <strong>v = v₀ + a·t</strong><br>
+        <strong>x = x₀ + v₀·t + ½·a·t²</strong><br>
+        <strong>v² = v₀² + 2·a·Δx</strong>
+      </div>
+
+      <div class="diagrama">
+        <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg">
+          <!-- Eje x-t -->
+          <line x1="50" y1="180" x2="520" y2="180" stroke="#333" stroke-width="2"/>
+          <line x1="50" y1="180" x2="50" y2="40" stroke="#333" stroke-width="2"/>
+          <text x="530" y="195" font-size="12">t (s)</text>
+          <text x="20" y="45" font-size="12">x (m)</text>
+          <!-- MRU: linea recta pendiente constante -->
+          <line x1="50" y1="170" x2="500" y2="60" stroke="#1f5c8a" stroke-width="3"/>
+          <text x="40" y="110" font-size="12" fill="#1f5c8a">MRU (v constante)</text>
+          <!-- MRUA: parabola -->
+          <path d="M 50 170 Q 275 40 500 160" fill="none" stroke="#c62828" stroke-width="3"/>
+          <text x="290" y="190" font-size="12" fill="#c62828">MRUA (aceleración const.)</text>
+          <text x="240" y="30" font-size="11" fill="#666">Gráficos posición vs tiempo</text>
+        </svg>
+        <div class="leyenda">MRU: línea recta (pendiente constante = velocidad). MRUA: parábola (pendiente cambia = velocidad cambia).</div>
+      </div>
+
+      <h3>Ejemplo resuelto — Caída libre</h3>
+      <p>Se deja caer una gota de suero desde una altura de 1,25 m (sin rozamiento del aire). ¿Cuánto tarda en llegar al suelo y con qué velocidad impacta? (Usa g = 9,8 m/s², hacia abajo como positivo).</p>
+      <div class="solucion" id="sol-u1-2">
+        <h5>Solución</h5>
+        <ol>
+          <li>Datos: v₀ = 0, Δx = 1,25 m, a = g = 9,8 m/s².</li>
+          <li>Usando Δx = ½·g·t² → t = √(2·Δx/g) = √(2·1,25/9,8) = √0,255 ≈ <strong>0,505 s</strong>.</li>
+          <li>Velocidad: v = g·t = 9,8 · 0,505 ≈ <strong>4,95 m/s</strong>.</li>
+        </ol>
+      </div>
+      <button class="btn-solucion" data-target="sol-u1-2">Ver solución ▼</button>
+
+      <div class="calculadora">
+        <h4>Calculadora MRUA (caída libre / MRUA)</h4>
+        <label>Velocidad inicial v₀ (m/s):</label>
+        <input type="number" id="mrua-v0" value="0">
+        <label>Aceleración a (m/s²):</label>
+        <input type="number" id="mrua-a" value="9.8">
+        <label>Tiempo t (s):</label>
+        <input type="number" id="mrua-t" value="0.5">
+        <button id="btn-mrua">Calcular</button>
+        <div class="resultado" id="mrua-resultado"></div>
+      </div>
+
+      <h3>Ejercicios propuestos</h3>
+      <div class="ejercicio">
+        <h4>Ejercicio 1.2</h4>
+        <p>Un objeto cae en caída libre durante 2 s. ¿Qué distancia recorre y a qué velocidad llega? (g = 9,8 m/s²)</p>
+        <input type="number" id="e1-2-resp" placeholder="Distancia (m)">
+        <button class="btn-validar" data-target="e1-2">Validar respuesta</button>
+        <span id="e1-2-msg"></span>
+        <div class="solucion" id="sol-e1-2">
+          <h5>Solución</h5>
+          <ol>
+            <li>Distancia: y = ½·g·t² = ½·9,8·4 = <strong>19,6 m</strong>.</li>
+            <li>Velocidad: v = g·t = 9,8·2 = <strong>19,6 m/s</strong>.</li>
+          </ol>
+        </div>
+      </div>
+      <button class="btn-solucion" data-target="sol-e1-2">Ver solución ▼</button>
+
+      <div class="caso">
+        <h4>Caso aplicado — Caída de un objeto médico</h4>
+        <p>Si una jeringa se cae accidentalmente desde una mesa de 1,1 m de altura, tardará unos 0,47 s en golpear el suelo y alcanzará unos 4,6 m/s. Esto ayuda a entender por qué objetos pequeños pueden lesionar si caen desde cierta altura.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TEMA 1.3-1.4 ===================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>1.3 Concepto de fuerza y tipos de fuerza</h2>
+
+      <h3>¿Qué es una fuerza?</h3>
+      <p>Una fuerza es una interacción que puede cambiar el estado de movimiento o la forma de un cuerpo. Se mide en <strong>newtons (N)</strong>. 1 N es la fuerza necesaria para acelerar 1 kg a 1 m/s².</p>
+
+      <div class="formula">
+        <span class="etiqueta">Peso (fuerza gravitacional cerca de la Tierra)</span>
+        <strong>P = m·g</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <span class="nota">g ≈ 9,8 m/s²</span>
+      </div>
+
+      <h3>Fuerzas que encontrarás en este curso</h3>
+      <table>
+        <tr><th>Fuerza</th><th>Símbolo</th><th>Descripción</th></tr>
+        <tr><td>Gravitacional (peso)</td><td>P o W</td><td>Atracción de la Tierra sobre un cuerpo. Siempre hacia abajo.</td></tr>
+        <tr><td>Rozamiento / roce</td><td>f o Fr</td><td>Se opone al movimiento relativo entre dos superficies en contacto.</td></tr>
+        <tr><td>Elástica</td><td>F_e o F_k</td><td>Fuerza de un resorte o tejido deformado: F = −k·x (Ley de Hooke).</td></tr>
+        <tr><td>Normal</td><td>N</td><td>Fuerza de una superficie perpendicular al cuerpo que la apoya.</td></tr>
+        <tr><td>Aplicada</td><td>F_app</td><td>Fuerza que ejerce una persona o máquina sobre un objeto.</td></tr>
+      </table>
+
+      <div class="formula">
+        <span class="etiqueta">Ley de Hooke (fuerza elástica)</span>
+        <strong>F_e = −k·x</strong><br>
+        <span class="nota">k = constante del resorte (N/m), x = deformación desde el equilibrio (m)</span>
+      </div>
+
+      <div class="diagrama">
+        <svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg">
+          <!-- Techo -->
+          <rect x="220" y="20" width="120" height="12" fill="#666"/>
+          <!-- Resorte relajado -->
+          <line x1="280" y1="32" x2="280" y2="100" stroke="#1f5c8a" stroke-width="4"/>
+          <rect x="265" y="90" width="30" height="30" fill="#1f5c8a"/>
+          <text x="270" y="115" font-size="12" fill="#fff" text-anchor="middle">m</text>
+          <text x="285" y="40" font-size="11" fill="#1f5c8a">relajado</text>
+          <!-- Resorte estirado -->
+          <line x1="400" y1="32" x2="400" y2="160" stroke="#c62828" stroke-width="4"/>
+          <rect x="385" y="150" width="30" height="30" fill="#c62828"/>
+          <text x="400" y="175" font-size="12" fill="#fff" text-anchor="middle">m</text>
+          <line x1="400" y1="160" x2="400" y2="180" stroke="#c62828" stroke-width="3" marker-end="url(#fs)"/>
+          <text x="405" y="185" font-size="12" fill="#c62828">F_e = −k·x</text>
+          <defs>
+            <marker id="fs" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+              <polygon points="0,0 10,5 0,10" fill="#c62828"/>
+            </marker>
+          </defs>
+          <text x="420" y="50" font-size="11" fill="#c62828">estirado</text>
+          <text x="240" y="225" font-size="12" fill="#666">Un resorte se estira x metros; ejerce fuerza restauradora proporcional a x.</text>
+        </svg>
+        <div class="leyenda">Fuerza elástica: al estirar o comprimir un resorte, este ejerce una fuerza contraria a la deformación.</div>
+      </div>
+
+      <h3>Ejemplo resuelto — Ley de Hooke</h3>
+      <p>Un resorte de k = 200 N/m se estira 0,05 m (5 cm) al colgarse una masa. ¿Cuál es la fuerza elástica que ejerce el resorte?</p>
+      <div class="solucion" id="sol-u1-3">
+        <h5>Solución</h5>
+        <ol>
+          <li>F_e = −k·x = −200 · 0,05 = −10 N.</li>
+          <li>El signo negativo indica que la fuerza es contraria al estiramiento (hacia arriba). Magnitud: <strong>10 N</strong>.</li>
+        </ol>
+      </div>
+      <button class="btn-solucion" data-target="sol-u1-3">Ver solución ▼</button>
+
+      <h3>Ejercicios propuestos</h3>
+      <div class="ejercicio">
+        <h4>Ejercicio 1.3</h4>
+        <p>Una persona de 60 kg se sube a una báscula. ¿Cuál es su peso (fuerza gravitacional) sobre la Tierra? (g = 9,8 m/s²)</p>
+        <input type="number" id="e1-3-resp" placeholder="Peso (N)">
+        <button class="btn-validar" data-target="e1-3">Validar respuesta</button>
+        <span id="e1-3-msg"></span>
+        <div class="solucion" id="sol-e1-3">
+          <h5>Solución</h5>
+          <ol>
+            <li>P = m·g = 60 · 9,8 = <strong>588 N</strong>.</li>
+          </ol>
+        </div>
+      </div>
+      <button class="btn-solucion" data-target="sol-e1-3">Ver solución ▼</button>
+
+      <div class="caso">
+        <h4>Caso aplicado — Movilización de un paciente</h4>
+        <p>Para mover a un paciente de 70 kg en una camilla, el fisioterapeuta debe vencer el rozamiento entre las ruedas y el suelo, y aplicar una fuerza suficiente para acelerar la camilla desde el reposo. Si la camilla+paciente pesan unos 700 N, cualquier fuerza aplicada menor que esa no levantará al paciente, pero sí podrá moverlo horizontalmente si supera el rozamiento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TEMA 1.5-1.6-1.7 ===================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>1.4 Leyes de Newton y dinámica</h2>
+
+      <h3>Las tres leyes de Newton</h3>
+      <table>
+        <tr><th>Ley</th><th>Enunciado simplificado</th><th>Fórmula clave</th></tr>
+        <tr><td>1.ª (Inercia)</td><td>Un cuerpo permanece en reposo o en movimiento rectilíneo uniforme a menos que actúe una fuerza neta sobre él.</td><td>ΣF = 0 → v constante</td></tr>
+        <tr><td>2.ª (Fuerza y aceleración)</td><td>La aceleración de un cuerpo es proporcional a la fuerza neta y en sentido inversa a su masa.</td><td><strong>ΣF = m·a</strong></td></tr>
+        <tr><td>3.ª (Acción y reacción)</td><td>Si el cuerpo A ejerce una fuerza sobre el B, el B ejerce una fuerza igual y opuesta sobre el A.</td><td>F_AB = −F_BA</td></tr>
+      </table>
+
+      <h3>Diagrama de cuerpo libre (DCF)</h3>
+      <p>Es un dibujo que aísla al cuerpo de interés y muestra <strong>solo las fuerzas que actúan sobre él</strong>, como vectores aplicados en su centro.</p>
+
+      <div class="diagrama">
+        <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg">
+          <!-- Cuerpo -->
+          <rect x="240" y="100" width="80" height="60" fill="#1f5c8a" rx="6"/>
+          <text x="280" y="130" font-size="12" fill="#fff" text-anchor="middle">caja</text>
+          <!-- Fuerza aplicada -->
+          <line x1="240" y1="130" x2="170" y2="130" stroke="#c62828" stroke-width="4" marker-end="url(#fa)"/>
+          <text x="160" y="120" font-size="12" fill="#c62828">F_aplicada</text>
+          <!-- Rozamiento -->
+          <line x1="320" y1="130" x2="390" y2="130" stroke="#e89c1c" stroke-width="4" marker-end="url(#fb)"/>
+          <text x="400" y="120" font-size="12" fill="#e89c1c">rozamiento</text>
+          <!-- Peso -->
+          <line x1="280" y1="160" x2="280" y2="230" stroke="#2e7d32" stroke-width="4" marker-end="url(#fc)"/>
+          <text x="290" y="240" font-size="12" fill="#2e7d32">P = m·g</text>
+          <!-- Normal -->
+          <line x1="280" y1="100" x2="280" y2="30" stroke="#16a085" stroke-width="4" marker-end="url(#fd)"/>
+          <text x="290" y="20" font-size="12" fill="#16a085">N</text>
+          <defs>
+            <marker id="fa" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#c62828"/></marker>
+            <marker id="fb" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#e89c1c"/></marker>
+            <marker id="fc" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#2e7d32"/></marker>
+            <marker id="fd" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><polygon points="0,0 10,5 0,10" fill="#16a085"/></marker>
+          </defs>
+          <text x="230" y="255" font-size="11" fill="#666">DCF: fuerzas sobre la caja (aplicada, rozamiento, peso, normal).</text>
+        </svg>
+        <div class="leyenda">Ejemplo de cuerpo libre: caja sobre suelo horizontal con fuerza aplicada a la izquierda.</div>
+      </div>
+
+      <h3>Equilibrio y no equilibrio</h3>
+      <ul>
+        <li><strong>Equilibrio estático:</strong> el cuerpo está en reposo y ΣF = 0.</li>
+        <li><strong>Equilibrio dinámico:</strong> el cuerpo se mueve a velocidad constante y ΣF = 0.</li>
+        <li><strong>No equilibrio:</strong> hay aceleración, por lo que ΣF = m·a ≠ 0.</li>
+      </ul>
+
+      <h3>Ejemplo resuelto — Segunda ley de Newton</h3>
+      <p>Se aplica una fuerza neta de 120 N sobre una camilla de masa 30 kg. ¿Cuál es su aceleración?</p>
+      <div class="solucion" id="sol-u1-4">
+        <h5>Solución</h5>
+        <ol>
+          <li>ΣF = m·a → a = ΣF / m = 120 / 30 = <strong>4 m/s²</strong>.</li>
+          <li>La aceleración va en el mismo sentido que la fuerza neta aplicada.</li>
+        </ol>
+      </div>
+      <button class="btn-solucion" data-target="sol-u1-4">Ver solución ▼</button>
+
+      <h3>Ejercicios propuestos</h3>
+      <div class="ejercicio">
+        <h4>Ejercicio 1.4</h4>
+        <p>Un bloque de 5 kg sobre una superficie horizontal recibe una fuerza aplicada de 20 N hacia la derecha y una fuerza de rozamiento de 5 N hacia la izquierda. ¿Cuál es la aceleración del bloque?</p>
+        <input type="number" id="e1-4-resp" placeholder="Aceleración (m/s²)">
+        <button class="btn-validar" data-target="e1-4">Validar respuesta</button>
+        <span id="e1-4-msg"></span>
+        <div class="solucion" id="sol-e1-4">
+          <h5>Solución</h5>
+          <ol>
+            <li>Fuerza neta: ΣF = 20 − 5 = 15 N (hacia la derecha).</li>
+            <li>a = ΣF / m = 15 / 5 = <strong>3 m/s²</strong> hacia la derecha.</li>
+          </ol>
+        </div>
+      </div>
+      <button class="btn-solucion" data-target="sol-e1-4">Ver solución ▼</button>
+
+      <div class="caso">
+        <h4>Caso aplicado — Silla de ruedas en una rampa</h4>
+        <p>Al subir una silla de ruedas por una rampa, el usuario debe aplicar una fuerza que supere la componente del peso paralela a la rampa más el rozamiento. Si la rampa es muy inclinada (ángulo grande), esa componente aumenta y se necesita más fuerza. Esto explica por qué las rampas de acceso deben tener pendiente suave según las normas de accesibilidad.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Guía Didáctica de Física &middot; CBA0210 &middot; Unidad 1 — Cinemática y Dinámica &middot; 2026</p>
+  <p><a href="index.html">← Volver al inicio</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

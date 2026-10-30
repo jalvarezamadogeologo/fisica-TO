@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidad 3 — Circuitos y Fluidos · Física CBA0210</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Unidad 3 — Circuitos y Fluidos</h1>
+    <p class="sub">Física CBA0210 &middot; RA 2, RA 3 y RA 4 &middot; <a href="index.html">Volver al inicio</a></p>
+  </div>
+</header>
+
+<nav>
+  <ul class="nav-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="unidad1.html">Unidad 1 — Cinemática y Dinámica</a></li>
+    <li><a href="unidad2.html">Unidad 2 — Energía, Trabajo y Electrostática</a></li>
+    <li><a href="unidad3.html" class="activa">Unidad 3 — Circuitos y Fluidos</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section class="seccion ra">
+    <h3>Qué busca esta unidad</h3>
+    <p><strong>RA 2:</strong> aplicar conceptos de carga, campo y potencial al análisis de circuitos resistivos y RC, para explicar interacciones eléctricas elementales asociadas a procesos fisiológicos.</p>
+    <p><strong>RA 3:</strong> emplear los conceptos de presión, densidad y viscosidad, interpretando y prediciendo el comportamiento de fluidos estáticos y en movimiento, para comprender procesos fisiológicos.</p>
+    <p><strong>RA 4:</strong> utilizar el método científico en experimentos guiados y grupales, describiendo fuentes de error y estableciendo relaciones lógicas con modelos teóricos simplificados.</p>
+  </section>
+
+  <section class="seccion indicadores">
+    <h3>Al terminar la unidad deberías poder</h3>
+    <ul>
+      <li>Analizar y resolver circuitos resistivos en serie y en paralelo.</li>
+      <li>Predecir procesos de carga y descarga de capacitores en circuitos RC.</li>
+      <li>Calcular densidad y presión en fluidos estáticos.</li>
+      <li>Distinguir entre fluidos ideales y viscosos.</li>
+      <li>Calcular usando la ecuación de continuidad y el principio de Bernoulli.</li>
+      <li>Aplicar la ley de Poiseuille para describir fluidos viscosos.</li>
+      <li>Relacionar caudal, gradientes de presión y viscosidad con la circulación de fluidos corporales.</li>
+    </ul>
+  </section>
+
+  <!-- ============================ TEMA 3.1 ============================ -->
+  <section class="tema" id="u3-t1">
+    <h2><span class="num-tema">3.1</span> Ley de Ohm y circuitos resistivos: serie y paralelo</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Aplicar la ley de Ohm, calcular resistencia equivalente en serie y en paralelo, y analizar corriente, voltaje y potencia en cada componente de un circuito.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>En una tira de luces de Navidad antiguas, si se quema un ampolleta se apagan todas. ¿Por qué?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>Porque están conectadas <strong>en serie</strong>: hay un único camino para la corriente. Si ese camino se interrumpe en cualquier punto, la corriente deja de circular en todo el circuito. En una conexión en paralelo, en cambio, cada rama tiene su propio camino y las demás siguen funcionando. Esa diferencia geométrica es la que explica todo el tema.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>Tres magnitudes y una relación que las une</h4>
+      <p>En un circuito hay tres protagonistas:</p>
+      <ul>
+        <li><strong>Voltaje o diferencia de potencial (V):</strong> la "presión" eléctrica que impulsa las cargas. Se mide en volt.</li>
+        <li><strong>Corriente (I):</strong> cuánta carga pasa por segundo por una sección del conductor. Se mide en ampere (1 A = 1 C/s).</li>
+        <li><strong>Resistencia (R):</strong> la oposición al paso de la corriente. Se mide en ohm (Ω).</li>
+      </ul>
+      <p>La <strong>ley de Ohm</strong> afirma que, en un conductor óhmico a temperatura constante, la corriente es proporcional al voltaje e inversamente proporcional a la resistencia: I = V/R. Dicho de otro modo: más voltaje empuja más corriente; más resistencia la frena.</p>
+      <p>Hay una analogía hidráulica que ayuda y que se usará en el resto de la unidad: el voltaje es la diferencia de presión, la corriente es el caudal y la resistencia es el estrechamiento del tubo. Un tubo estrecho con la misma presión deja pasar menos flujo. Esa analogía no es solo didáctica: la ley de Poiseuille, más adelante, tiene exactamente la misma forma.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con el sistema circulatorio.</strong> El corazón genera una diferencia de presión (≈ 100 mmHg entre arteria y vena), la sangre es el caudal y las arteriolas son la resistencia variable que regula la distribución. Cuando las arteriolas se contraen, aumenta la resistencia y, con la misma presión, baja el flujo local. Ese es el mismo mecanismo que un reóstato en un circuito.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Ley de Ohm y potencia eléctrica</span>
+      <strong>V = I · R</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>P = V · I = I² · R = V² / R</strong>
+      <span class="nota">P en watt. Las tres formas son equivalentes; elige la que use los datos que tienes.</span>
+    </div>
+
+    <div class="formula">
+      <span class="etiqueta">Resistencia equivalente</span>
+      <strong>Serie: R<sub>T</sub> = R₁ + R₂ + R₃ + …</strong><br>
+      <strong>Paralelo: 1/R<sub>T</sub> = 1/R₁ + 1/R₂ + 1/R₃ + …</strong>
+      <span class="nota">En serie la corriente es la misma y los voltajes se suman. En paralelo el voltaje es el mismo y las corrientes se suman.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>V</td><td>Diferencia de potencial</td><td>V</td><td>Se mide entre dos puntos, no "en un punto"</td></tr>
+      <tr><td>I</td><td>Corriente</td><td>A</td><td>Se mide intercalando el instrumento en el camino</td></tr>
+      <tr><td>R</td><td>Resistencia</td><td>Ω</td><td>Siempre positiva</td></tr>
+      <tr><td>R<sub>T</sub></td><td>Resistencia equivalente</td><td>Ω</td><td>En paralelo, siempre menor que la menor de las resistencias</td></tr>
+      <tr><td>P</td><td>Potencia disipada</td><td>W</td><td>En una resistencia se transforma en calor</td></tr>
+    </table>
+
+    <table class="general">
+      <tr><th>Propiedad</th><th>Serie</th><th>Paralelo</th></tr>
+      <tr><td>Camino de la corriente</td><td>Uno solo</td><td>Varios, uno por rama</td></tr>
+      <tr><td>Corriente</td><td>Igual en todos los componentes</td><td>Se reparte; la suma es la corriente total</td></tr>
+      <tr><td>Voltaje</td><td>Se reparte y la suma es el total</td><td>Igual en todas las ramas</td></tr>
+      <tr><td>Resistencia equivalente</td><td>Mayor que la mayor</td><td>Menor que la menor</td></tr>
+      <tr><td>Si falla un componente</td><td>Se interrumpe todo</td><td>Los demás siguen funcionando</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo resolver un circuito</h4>
+      <ol>
+        <li>Dibuja el circuito y marca nodos y ramas. Identifica qué está en serie (misma corriente) y qué en paralelo (mismo voltaje).</li>
+        <li>Reduce por partes: calcula resistencias equivalentes de los grupos más internos.</li>
+        <li>Con la resistencia total y el voltaje de la fuente, obtén la corriente total con I = V/R.</li>
+        <li>Vuelve hacia atrás: reparte voltajes en serie y corrientes en paralelo.</li>
+        <li>Verifica con dos controles: la suma de caídas de voltaje iguala el voltaje de la fuente; la potencia total iguala la suma de potencias.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Dos resistencias en serie</h4>
+      <p>Una fuente de 12 V alimenta dos resistencias de 10 Ω y 20 Ω en serie. Calcula la resistencia equivalente, la corriente y el voltaje en cada resistencia.</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Resistencia equivalente</span>
+        <p>R<sub>T</sub> = 10 + 20 = <strong>30 Ω</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Corriente</span>
+        <p>I = V/R<sub>T</sub> = 12 / 30 = <strong>0,4 A</strong>. Es la misma en ambas resistencias, porque están en serie.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Voltaje en cada una</span>
+        <p>V₁ = I·R₁ = 0,4 · 10 = <strong>4 V</strong>.<br>
+        V₂ = I·R₂ = 0,4 · 20 = <strong>8 V</strong>.<br>
+        Control: 4 + 8 = 12 V, igual al voltaje de la fuente.</p>
+      </div>
+    </div>
+
+    <div class="ejemplo">
+      <h4>Las mismas resistencias en paralelo</h4>
+      <p>Ahora las resistencias de 10 Ω y 20 Ω se conectan en paralelo a la misma fuente de 12 V.</p>
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Resistencia equivalente</span>
+        <p>1/R<sub>T</sub> = 1/10 + 1/20 = 0,10 + 0,05 = 0,15 Ω⁻¹ → R<sub>T</sub> = <strong>6,67 Ω</strong>.</p>
+        <p class="porque">Menor que 10 Ω, la menor de las dos: en paralelo siempre hay más caminos, así que la oposición total disminuye.</p>
+      </div>
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Corrientes</span>
+        <p>Como el voltaje es el mismo en ambas ramas (12 V):<br>
+        I₁ = 12/10 = <strong>1,2 A</strong>; I₂ = 12/20 = <strong>0,6 A</strong>.<br>
+        Corriente total: 1,8 A, que coincide con V/R<sub>T</sub> = 12/6,67 = 1,8 A.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Sumar resistencias en paralelo como si estuvieran en serie.</li>
+        <li>Suponer que la corriente se "gasta" al pasar por una resistencia. La corriente que entra a un nodo es la que sale.</li>
+        <li>Aplicar V = IR con una V que no es la del componente (por ejemplo, el voltaje total en una resistencia de una serie).</li>
+        <li>Creer que una resistencia mayor disipa más potencia siempre. Depende de si el voltaje es el mismo o la corriente es la misma.</li>
+        <li>Olvidar que en paralelo la resistencia equivalente es menor que la menor de las resistencias.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.1</h4>
+      <p class="enunciado">Dos resistencias de 4 Ω y 6 Ω se conectan en serie a una fuente de 20 V. ¿Cuál es la corriente del circuito, en ampere?</p>
+      <input type="number" step="any" id="e3-1-resp" placeholder="Corriente (A)" data-enter-valida="e3-1">
+      <button class="btn-validar" data-target="e3-1" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e3-1-msg"></span>
+      <button class="btn-solucion" data-target="e3-1-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e3-1-sol" data-valor="2">
+        <h5>Solución</h5>
+        <ol>
+          <li>R<sub>T</sub> = 4 + 6 = 10 Ω.</li>
+          <li>I = V/R<sub>T</sub> = 20 / 10 = <strong>2 A</strong>.</li>
+          <li>Control: las caídas son 8 V y 12 V, que suman 20 V.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u3-t1" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u3-t1">
+      <h5>Pista</h5>
+      <ol>
+        <li>En serie, las resistencias se suman.</li>
+        <li>Con la resistencia total, aplica I = V/R.</li>
+        <li>Verifica repartiendo el voltaje: I·4 e I·6 deben sumar 20 V.</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.2</h4>
+      <p class="enunciado">Dos resistencias de 6 Ω y 3 Ω se conectan en paralelo. ¿Cuál es la resistencia equivalente, en ohm?</p>
+      <input type="number" step="any" id="p-u3-t1-resp" placeholder="Resistencia (Ω)" data-enter-valida="p-u3-t1">
+      <button class="btn-validar" data-target="p-u3-t1" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u3-t1-msg"></span>
+      <button class="btn-solucion" data-target="p-u3-t1-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u3-t1-sol" data-valor="2">
+        <h5>Solución</h5>
+        <ol>
+          <li>1/R<sub>T</sub> = 1/6 + 1/3 = 1/6 + 2/6 = 3/6 = 0,5 Ω⁻¹.</li>
+          <li>R<sub>T</sub> = <strong>2 Ω</strong>.</li>
+          <li>Control: 2 Ω es menor que 3 Ω, la menor de las dos. Si hubieras obtenido 9 Ω, habrías sumado como en serie.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u3-t1" data-correctas="3"
+          data-resp1="b" data-exp1="En serie hay un único camino, así que la carga que pasa por una resistencia debe pasar por las demás: la corriente es la misma."
+          data-resp2="a" data-exp2="En paralelo se agregan caminos, por lo que la oposición total siempre es menor que la menor de las resistencias."
+          data-resp3="c" data-exp3="1 A = 1 C/s: la corriente es carga por unidad de tiempo.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> En un circuito en serie con tres resistencias distintas, la corriente:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t1-p1" value="a"> a) Se reparte según el valor de cada resistencia.</label>
+            <label><input type="radio" name="u3-t1-p1" value="b"> b) Es la misma en las tres.</label>
+            <label><input type="radio" name="u3-t1-p1" value="c"> c) Es mayor en la resistencia de menor valor.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t1-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> La resistencia equivalente de dos resistencias en paralelo:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t1-p2" value="a"> a) Es menor que la menor de ellas.</label>
+            <label><input type="radio" name="u3-t1-p2" value="b"> b) Es la suma de ambas.</label>
+            <label><input type="radio" name="u3-t1-p2" value="c"> c) Es igual a la mayor de ellas.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t1-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Un ampere equivale a:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t1-p3" value="a"> a) Un joule por segundo.</label>
+            <label><input type="radio" name="u3-t1-p3" value="b"> b) Un volt por ohm cuadrado.</label>
+            <label><input type="radio" name="u3-t1-p3" value="c"> c) Un coulomb por segundo.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t1-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u3-t1"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: monitores y resistencias de seguridad</h4>
+      <p>Los equipos de monitorización conectados al paciente incorporan resistencias en serie para limitar la corriente que podría circular por el cuerpo en caso de falla. La ley de Ohm permite dimensionarlas: una corriente de fuga peligrosa depende del voltaje y de la resistencia total del camino. También explica por qué un electrodo mal adherido altera la señal: aumenta la resistencia de contacto y, con ella, la caída de voltaje en esa interfaz, de modo que el registro deja de reflejar lo que ocurre en el corazón.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u3-t1"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u3-t1" data-tema="u3-t1" data-set-estado="dominado">
+        <label for="chk-u3-t1">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 3.2 ============================ -->
+  <section class="tema" id="u3-t2">
+    <h2><span class="num-tema">3.2</span> Circuitos RC: carga, descarga y constante de tiempo</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Describir el comportamiento de un capacitor en un circuito RC, calcular la constante de tiempo y predecir el voltaje durante la carga y la descarga.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Cuando conectas una batería a un capacitor descargado, ¿la corriente es la misma en todo momento?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>No. Al inicio el capacitor está descargado y se comporta casi como un cable: la corriente es máxima. A medida que se carga, el voltaje en sus placas se opone a la batería y la corriente disminuye progresivamente. Cuando el capacitor alcanza el voltaje de la fuente, la corriente se hace cero y el proceso termina. Ese comportamiento gradual, no instantáneo, es lo que describe este tema.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>Un capacitor no cambia su voltaje de golpe</h4>
+      <p>El <strong>capacitor</strong> almacena carga eléctrica en dos placas separadas por un aislante. Su capacidad C se mide en farad (F) y relaciona carga y voltaje: Q = C·V. Cuando se conecta a una fuente a través de una resistencia, la carga no pasa instantáneamente: el resistor limita la corriente y el proceso se vuelve gradual.</p>
+      <p>El resultado es una curva exponencial. Durante la carga, el voltaje del capacitor crece acercándose asintóticamente al de la fuente; durante la descarga, decae hacia cero. La rapidez de ese proceso está dada por la <strong>constante de tiempo τ = R·C</strong>, que se mide en segundos.</p>
+      <p>El significado de τ es concreto y útil: <strong>en un tiempo τ el capacitor alcanza aproximadamente el 63 % de la carga final</strong> (o conserva el 37 % en la descarga). En términos prácticos, a los 5τ el proceso se considera terminado (más del 99 %). No es un valor arbitrario: es la escala natural del sistema.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con llenar un estanque con una llave.</strong> Si el estanque tiene un desagüe que depende de la altura del agua, al principio entra rápido porque está vacío, y luego entra más lento a medida que el nivel sube y la contrapresión aumenta. R sería la llave (resistencia al flujo) y C la capacidad del estanque. La constante de tiempo es cuánto tarda en llenarse "la mayor parte".
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Constante de tiempo y carga del capacitor</span>
+      <strong>τ = R · C</strong><br>
+      <strong>Carga: V<sub>C</sub>(t) = V₀ · (1 − e<sup>−t/τ</sup>)</strong><br>
+      <strong>Descarga: V<sub>C</sub>(t) = V₀ · e<sup>−t/τ</sup></strong>
+      <span class="nota">Con R en ohm y C en farad, τ resulta en segundos. Si C se da en microfarad, usa C × 10⁻⁶.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>τ</td><td>Constante de tiempo</td><td>s</td><td>Escala del proceso: 63 % en un τ, 99 % en 5τ</td></tr>
+      <tr><td>R</td><td>Resistencia del circuito</td><td>Ω</td><td>Mayor R, más lento el proceso</td></tr>
+      <tr><td>C</td><td>Capacitancia</td><td>F</td><td>1 µF = 10⁻⁶ F; mayor C, más carga almacenada</td></tr>
+      <tr><td>V₀</td><td>Voltaje de la fuente (o inicial en la descarga)</td><td>V</td><td>Valor al que tiende o desde el que parte</td></tr>
+      <tr><td>e</td><td>Número de Euler</td><td>—</td><td>≈ 2,718; e⁻¹ ≈ 0,368</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo resolver un problema de RC</h4>
+      <ol>
+        <li>Convierte C a farad y R a ohm antes de multiplicar.</li>
+        <li>Calcula τ = R·C. Ese valor ya te dice si el proceso es rápido o lento.</li>
+        <li>Identifica si es carga (parte de 0 y sube) o descarga (parte de V₀ y baja).</li>
+        <li>Aplica la exponencial correspondiente. Con t = τ el resultado es 63 % o 37 %; úsalo como control.</li>
+        <li>Verifica los extremos: en t = 0 y en t muy grande la fórmula debe dar el valor esperado.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Carga de un capacitor</h4>
+      <p>Un capacitor de 100 µF se carga a través de una resistencia de 10 kΩ, conectado a una fuente de 10 V. ¿Cuál es la constante de tiempo y qué voltaje tiene el capacitor a 1 s?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Conversión y constante de tiempo</span>
+        <p>R = 10 000 Ω; C = 100 × 10⁻⁶ F = 1 × 10⁻⁴ F.<br>
+        τ = 10 000 · 1 × 10⁻⁴ = <strong>1 s</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Voltaje a 1 s</span>
+        <p>Como t = τ, el exponente es −1:<br>
+        V<sub>C</sub> = 10 · (1 − e⁻¹) = 10 · (1 − 0,368) = <strong>6,32 V</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Interpretación</span>
+        <p>A 1 s el capacitor tiene el 63,2 % del voltaje final. A 5 s tendría el 99,3 %, es decir 9,93 V: prácticamente cargado. Ese es el criterio habitual para decir que el proceso terminó.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Usar microfaradios sin convertir: τ resultaría un millón de veces menor.</li>
+        <li>Confundir carga con descarga e invertir la exponencial.</li>
+        <li>Creer que el capacitor se carga instantáneamente al cerrar el circuito.</li>
+        <li>Pensar que la corriente es constante durante el proceso. Disminuye a medida que el capacitor se carga.</li>
+        <li>Suponer que τ es el tiempo total de carga. En τ solo se alcanza el 63 %.</li>
+        <li>Olvidar que al duplicar R <em>o</em> duplicar C se duplica τ: la dependencia es del producto.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.3</h4>
+      <p class="enunciado">Un circuito RC tiene R = 2 kΩ y C = 470 µF. ¿Cuál es la constante de tiempo, en segundos?</p>
+      <input type="number" step="any" id="e3-2-resp" placeholder="τ (s)" data-enter-valida="e3-2">
+      <button class="btn-validar" data-target="e3-2" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e3-2-msg"></span>
+      <button class="btn-solucion" data-target="e3-2-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e3-2-sol" data-valor="0.94">
+        <h5>Solución</h5>
+        <ol>
+          <li>R = 2000 Ω; C = 470 × 10⁻⁶ F.</li>
+          <li>τ = 2000 · 4,7 × 10⁻⁴ = <strong>0,94 s</strong>.</li>
+          <li>Interpretación: el capacitor alcanzará el 63 % de su carga en menos de un segundo y se considerará cargado a los 4,7 s.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u3-t2" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u3-t2">
+      <h5>Pista</h5>
+      <ol>
+        <li>2 kΩ son 2000 Ω; 470 µF son 470 × 10⁻⁶ F.</li>
+        <li>Multiplica ambos valores: el resultado está en segundos.</li>
+        <li>Control de orden de magnitud: si obtienes 940 s, olvidaste el factor 10⁻⁶.</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.4</h4>
+      <p class="enunciado">Un capacitor de 250 µF se carga a través de 4 kΩ desde una fuente de 12 V. ¿Qué voltaje tiene el capacitor exactamente después de transcurrido un tiempo igual a τ? (en volt; dos decimales)</p>
+      <input type="number" step="any" id="p-u3-t2-resp" placeholder="Voltaje (V)" data-enter-valida="p-u3-t2">
+      <button class="btn-validar" data-target="p-u3-t2" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u3-t2-msg"></span>
+      <button class="btn-solucion" data-target="p-u3-t2-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u3-t2-sol" data-valor="7.58">
+        <h5>Solución</h5>
+        <ol>
+          <li>τ = 4000 · 250 × 10⁻⁶ = 1,0 s.</li>
+          <li>En t = τ, V<sub>C</sub> = V₀(1 − e⁻¹) = 12 · 0,632 = <strong>7,58 V</strong>.</li>
+          <li>No hace falta el valor de τ para responder: en un tiempo τ siempre se alcanza el 63,2 %, independientemente de R y C.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u3-t2" data-correctas="3"
+          data-resp1="b" data-exp1="τ = R·C: al aumentar R el proceso se hace más lento, porque la corriente de carga es menor."
+          data-resp2="c" data-exp2="A los 5τ el capacitor está por sobre el 99 % de su carga final; se considera el proceso terminado."
+          data-resp3="a" data-exp3="ohm por farad equivale a segundo, porque 1 Ω = 1 V/A y 1 F = 1 C/V, y A = C/s.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> Si en un circuito RC se duplica la resistencia manteniendo el capacitor, la constante de tiempo:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t2-p1" value="a"> a) Se reduce a la mitad.</label>
+            <label><input type="radio" name="u3-t2-p1" value="b"> b) Se duplica.</label>
+            <label><input type="radio" name="u3-t2-p1" value="c"> c) No cambia.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t2-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> Después de un tiempo igual a 5τ, el capacitor:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t2-p2" value="a"> a) Tiene la mitad de su carga final.</label>
+            <label><input type="radio" name="u3-t2-p2" value="b"> b) Sigue cargándose al mismo ritmo inicial.</label>
+            <label><input type="radio" name="u3-t2-p2" value="c"> c) Está cargado en más del 99 % y el proceso se considera terminado.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t2-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> La constante de tiempo τ se mide en:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t2-p3" value="a"> a) Segundos.</label>
+            <label><input type="radio" name="u3-t2-p3" value="b"> b) Volt.</label>
+            <label><input type="radio" name="u3-t2-p3" value="c"> c) Farad.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t2-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u3-t2"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: la membrana celular como capacitor</h4>
+      <p>La membrana celular es un aislante delgado entre dos medios conductores, exactamente la geometría de un capacitor. Su capacitancia específica es del orden de 1 µF/cm², y la resistencia de los canales iónicos equivale a la R del circuito. Por eso el potencial de membrana no cambia de forma instantánea: tiene una constante de tiempo propia, del orden de milisegundos. Esa constante explica por qué la integración temporal de las señales en una neurona es posible: las cargas sinápticas se suman durante un intervalo antes de disiparse, y si suman suficiente, se desencadena el potencial de acción. También explica el efecto de los anestésicos locales: al bloquear canales de sodio, aumentan la resistencia efectiva y modifican la dinámica temporal de la membrana.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u3-t2"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u3-t2" data-tema="u3-t2" data-set-estado="dominado">
+        <label for="chk-u3-t2">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 3.3 ============================ -->
+  <section class="tema" id="u3-t3">
+    <h2><span class="num-tema">3.3</span> Densidad, presión y presión hidrostática</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Calcular densidad y presión, aplicar la ecuación de la presión hidrostática y distinguir presión absoluta de presión manométrica.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>¿Por qué duele más el oído al fondo de una piscina que en la superficie?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>Porque la presión del agua aumenta con la profundidad: cada metro adicional de agua agrega una presión equivalente a unos 9,8 kPa (≈ 74 mmHg). La presión no depende del volumen total de la piscina ni de su forma, solo de la densidad del fluido, la gravedad y la profundidad. A 3 m bajo el agua, la presión es aproximadamente un 30 % mayor que en la superficie.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>La presión es fuerza repartida sobre un área</h4>
+      <p>La <strong>presión</strong> es la fuerza perpendicular por unidad de área: P = F/A. Se mide en pascal (1 Pa = 1 N/m²). Es una magnitud escalar, pero tiene dirección de aplicación: siempre perpendicular a la superficie.</p>
+      <p>Su utilidad clínica es inmediata: la misma fuerza aplicada sobre un área pequeña genera una presión enorme. Por eso una aguja penetra con poca fuerza y una superficie ancha la tolera sin daño. De ahí que la presión arterial se exprese en mmHg: es la altura de una columna de mercurio que equilibra esa presión.</p>
+      <p>En un fluido en reposo, la <strong>presión hidrostática</strong> depende solo de tres cosas: densidad del fluido, gravedad y profundidad (P = ρgh). No depende del área ni de la forma del recipiente, un resultado que suele sorprender: la presión a 1 m de profundidad es la misma en una piscina que en un estanque angosto. Lo que cambia es la fuerza total sobre una superficie, porque esa sí depende del área.</p>
+      <p>Conviene distinguir dos formas de expresar la presión. La <strong>presión absoluta</strong> incluye la presión atmosférica; la <strong>manométrica</strong> se mide respecto de la atmosférica. La mayoría de los equipos clínicos informan presión manométrica.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con una fila de personas.</strong> Imagina una fila apretada: cada persona empuja a la de adelante con el peso de todas las que tiene detrás. En un fluido ocurre lo mismo: la presión en un punto soporta el peso de la columna que tiene encima. Por eso crece linealmente con la profundidad y no depende del ancho del recipiente.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Densidad, presión y presión hidrostática</span>
+      <strong>ρ = m / V</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>P = F / A</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>P<sub>h</sub> = ρ · g · h</strong>
+      <span class="nota">Presión absoluta: P<sub>abs</sub> = P<sub>atm</sub> + ρgh. Presión manométrica: P<sub>man</sub> = ρgh.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>ρ</td><td>Densidad</td><td>kg/m³</td><td>Agua ≈ 1000; sangre ≈ 1060; aire ≈ 1,2</td></tr>
+      <tr><td>P</td><td>Presión</td><td>Pa</td><td>1 atm = 101 325 Pa = 760 mmHg</td></tr>
+      <tr><td>h</td><td>Profundidad o altura de columna</td><td>m</td><td>Se mide desde la superficie libre</td></tr>
+      <tr><td>A</td><td>Área de aplicación</td><td>m²</td><td>A menor área, mayor presión para la misma fuerza</td></tr>
+    </table>
+
+    <table class="general">
+      <tr><th>Equivalencia</th><th>Valor</th></tr>
+      <tr><td>1 atm</td><td>101 325 Pa = 760 mmHg ≈ 10,3 m de columna de agua</td></tr>
+      <tr><td>1 mmHg</td><td>133,3 Pa</td></tr>
+      <tr><td>1 kPa</td><td>1000 Pa = 7,5 mmHg</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo resolver un problema de presión</h4>
+      <ol>
+        <li>Identifica si te piden presión (P = F/A) o presión hidrostática (ρgh).</li>
+        <li>Convierte la profundidad a metros y la densidad a kg/m³.</li>
+        <li>Calcula en pascal y convierte a mmHg solo si el contexto lo pide (divide por 133,3).</li>
+        <li>Pregúntate si el resultado es absoluto o manométrico, y dilo explícitamente.</li>
+        <li>Verifica el orden de magnitud: 10 cm de agua son unos 1 kPa (7,5 mmHg); 1 m de agua, unos 9,8 kPa (74 mmHg).</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Presión en los pies de una persona de pie</h4>
+      <p>Estima la presión hidrostática adicional en los vasos de los pies de una persona de 1,70 m, suponiendo que el corazón está a 1,3 m sobre los pies y que la sangre tiene densidad 1060 kg/m³.</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Aplicar la fórmula</span>
+        <p>P = ρ·g·h = 1060 · 9,8 · 1,3 = <strong>13 504 Pa</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Convertir a mmHg</span>
+        <p>13 504 / 133,3 = <strong>≈ 101 mmHg</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Interpretación clínica</span>
+        <p>Los vasos de los pies soportan unos 100 mmHg más que los del corazón solo por la altura de la columna de sangre. Eso explica el edema en personas que permanecen mucho tiempo de pie y el efecto de elevar las piernas: al reducir h, se reduce la presión. También explica por qué la presión arterial se mide a la altura del corazón: cambiar la altura del brazo cambia la lectura.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Creer que la presión hidrostática depende del volumen o de la forma del recipiente. Solo depende de ρ, g y h.</li>
+        <li>Usar la densidad en g/cm³ sin convertir (1 g/cm³ = 1000 kg/m³).</li>
+        <li>Sumar la presión atmosférica cuando piden presión manométrica, o al revés.</li>
+        <li>Confundir presión con fuerza: la misma presión sobre un área mayor produce más fuerza.</li>
+        <li>Medir h desde el fondo en lugar de desde la superficie libre.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.5</h4>
+      <p class="enunciado">¿Cuál es la presión hidrostática a 2 m de profundidad en agua? (ρ = 1000 kg/m³; g = 9,8 m/s²; respuesta en Pa)</p>
+      <input type="number" step="any" id="e3-3-resp" placeholder="Presión (Pa)" data-enter-valida="e3-3">
+      <button class="btn-validar" data-target="e3-3" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e3-3-msg"></span>
+      <button class="btn-solucion" data-target="e3-3-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e3-3-sol" data-valor="19600">
+        <h5>Solución</h5>
+        <ol>
+          <li>P = ρ·g·h = 1000 · 9,8 · 2.</li>
+          <li>P = <strong>19 600 Pa</strong> ≈ 19,6 kPa.</li>
+          <li>En mmHg: 19 600 / 133,3 ≈ 147 mmHg, equivalente a unas dos atmósferas de presión manométrica.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u3-t3" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u3-t3">
+      <h5>Pista</h5>
+      <ol>
+        <li>La fórmula es P = ρ·g·h, con h en metros.</li>
+        <li>Multiplica 1000 por 9,8 y luego por 2.</li>
+        <li>Control: 10 m de agua equivalen a unos 98 kPa, así que 2 m deben dar cerca de una quinta parte.</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.6</h4>
+      <p class="enunciado">¿Cuál es la presión hidrostática a 3 m de profundidad en agua, usando g = 10 m/s² y ρ = 1000 kg/m³? (en Pa)</p>
+      <input type="number" step="any" id="p-u3-t3-resp" placeholder="Presión (Pa)" data-enter-valida="p-u3-t3">
+      <button class="btn-validar" data-target="p-u3-t3" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u3-t3-msg"></span>
+      <button class="btn-solucion" data-target="p-u3-t3-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u3-t3-sol" data-valor="30000">
+        <h5>Solución</h5>
+        <ol>
+          <li>P = 1000 · 10 · 3.</li>
+          <li>P = <strong>30 000 Pa</strong> = 30 kPa.</li>
+          <li>Comparación: es un 50 % más que a 2 m con la misma densidad, porque la profundidad es un 50 % mayor: la relación es lineal.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u3-t3" data-correctas="3"
+          data-resp1="b" data-exp1="P = ρgh no contiene el área: la presión es la misma a igual profundidad, aunque la fuerza total sobre una superficie sí dependa del área."
+          data-resp2="a" data-exp2="La relación es lineal: al duplicar h, se duplica la presión hidrostática."
+          data-resp3="c" data-exp3="1 atm equivale a 101 325 Pa, que es la presión atmosférica estándar a nivel del mar.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> La presión hidrostática en un punto de un fluido en reposo depende de:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t3-p1" value="a"> a) El área de la superficie del recipiente.</label>
+            <label><input type="radio" name="u3-t3-p1" value="b"> b) La densidad del fluido, la gravedad y la profundidad.</label>
+            <label><input type="radio" name="u3-t3-p1" value="c"> c) El volumen total de fluido.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t3-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> Si se duplica la profundidad en un mismo líquido, la presión hidrostática:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t3-p2" value="a"> a) Se duplica.</label>
+            <label><input type="radio" name="u3-t3-p2" value="b"> b) Se cuadruplica.</label>
+            <label><input type="radio" name="u3-t3-p2" value="c"> c) No cambia.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t3-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Una atmósfera equivale aproximadamente a:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t3-p3" value="a"> a) 760 Pa.</label>
+            <label><input type="radio" name="u3-t3-p3" value="b"> b) 1013 Pa.</label>
+            <label><input type="radio" name="u3-t3-p3" value="c"> c) 101 325 Pa.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t3-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u3-t3"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: medición de la presión arterial</h4>
+      <p>El esfigmomanómetro mide presión manométrica: la diferencia entre la presión en el manguito y la atmosférica. Como la presión hidrostática depende de la altura, la posición del brazo respecto del corazón altera la lectura: cada 10 cm de diferencia equivalen a unos 7,5 mmHg. Por eso el protocolo exige apoyar el brazo a la altura del corazón. El mismo principio explica por qué no se debe medir con el paciente sentado con el brazo colgando ni de pie con el brazo sostenido en alto. Es un ejemplo donde un error de 10 cm de física se traduce en un error clínico de varios mmHg.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u3-t3"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u3-t3" data-tema="u3-t3" data-set-estado="dominado">
+        <label for="chk-u3-t3">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 3.4 ============================ -->
+  <section class="tema" id="u3-t4">
+    <h2><span class="num-tema">3.4</span> Flujo y ecuación de continuidad</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Calcular caudal, aplicar la ecuación de continuidad y explicar por qué la velocidad cambia al variar la sección de un conducto.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Si tapas parcialmente la salida de una manguera con el pulgar, el agua sale más rápido. ¿Se está moviendo más agua?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>No: sale la <strong>misma cantidad</strong> de agua por segundo, pero más rápido. Al reducir el área de salida, la misma cantidad de fluido debe pasar por un espacio más pequeño, así que aumenta su velocidad. Es exactamente lo que dice la ecuación de continuidad: el producto área por velocidad se mantiene constante. Lo que cambia no es el volumen por segundo, sino la velocidad con que ese volumen pasa.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>Lo que entra tiene que salir</h4>
+      <p>Para un fluido incompresible que circula por un tubo sin fugas, la cantidad de fluido que atraviesa una sección por unidad de tiempo debe ser la misma en todos los puntos del tubo. Ese es el <strong>caudal Q</strong>, que se mide en m³/s (o L/min, en clínica).</p>
+      <p>El caudal se calcula como el área de la sección multiplicada por la velocidad del fluido: Q = A·v. Si el tubo se estrecha, el área disminuye y, para mantener el mismo caudal, la velocidad debe aumentar. Eso es la <strong>ecuación de continuidad</strong>: A₁v₁ = A₂v₂.</p>
+      <p>Esta relación explica fenómenos cotidianos y fisiológicos. En una manguera, el pulgar reduce A y aumenta v. En el sistema circulatorio, la aorta tiene un área pequeña y la sangre circula rápido; al ramificarse en millones de capilares, el área total aumenta enormemente y la velocidad cae a fracciones de milímetro por segundo, lo que permite el intercambio de gases y nutrientes. Nota que la velocidad baja en los capilares aunque el caudal total sea el mismo: lo que cambia es el área total sumada de todas las ramas, no el área de una sola.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con el tráfico.</strong> Si tres pistas se reducen a una, los autos deben avanzar más rápido para que el flujo (autos por minuto) se mantenga. Pero si se agregan muchas calles laterales, cada auto va más lento aunque el número total de autos por minuto siga igual. El caudal es el flujo total; la velocidad, lo que ocurre en cada punto.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Caudal y ecuación de continuidad</span>
+      <strong>Q = A · v</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>A₁ · v₁ = A₂ · v₂</strong>
+      <span class="nota">Q en m³/s; A en m²; v en m/s. 1 L/min = 1,67 × 10⁻⁵ m³/s.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>Q</td><td>Caudal (volumen por tiempo)</td><td>m³/s</td><td>Constante a lo largo de un tubo sin ramificaciones</td></tr>
+      <tr><td>A</td><td>Área de la sección transversal</td><td>m²</td><td>De un círculo: A = π·r²</td></tr>
+      <tr><td>v</td><td>Velocidad media del fluido</td><td>m/s</td><td>Aumenta cuando A disminuye</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo resolver un problema de continuidad</h4>
+      <ol>
+        <li>Convierte todas las áreas a m² (1 cm² = 10⁻⁴ m²; 1 cm² no es 10⁻² m²).</li>
+        <li>Calcula el caudal en una sección conocida con Q = A·v.</li>
+        <li>Usa la continuidad para obtener la velocidad en la otra sección: v₂ = Q/A₂.</li>
+        <li>Verifica la dirección del cambio: si el área disminuye, la velocidad debe aumentar.</li>
+        <li>Si hay ramificaciones, suma las áreas de todas las ramas para obtener el área total.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>De la aorta a los capilares</h4>
+      <p>La aorta tiene un radio aproximado de 1 cm y la sangre circula por ella a 0,3 m/s. (a) ¿Cuál es el caudal? (b) Si el área total del lecho capilar es de 0,25 m², ¿a qué velocidad circula la sangre en los capilares?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Área de la aorta</span>
+        <p>A = π·r² = π · (0,01)² = <strong>3,14 × 10⁻⁴ m²</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Caudal</span>
+        <p>Q = A·v = 3,14 × 10⁻⁴ · 0,3 = 9,42 × 10⁻⁵ m³/s.<br>
+        Equivale a 94,2 mL/s ≈ 5,7 L/min: un gasto cardíaco de orden fisiológico.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Velocidad en los capilares</span>
+        <p>v = Q / A<sub>total</sub> = 9,42 × 10⁻⁵ / 0,25 = <strong>3,8 × 10⁻⁴ m/s</strong> ≈ 0,38 mm/s.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 4. Interpretación</span>
+        <p>La velocidad cae unas 800 veces entre la aorta y los capilares, aunque el caudal es el mismo. Esa lentitud es funcional: da tiempo al intercambio de gases y nutrientes a través de una pared capilar muy delgada.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Confundir caudal con velocidad. El caudal es volumen por tiempo; la velocidad, distancia por tiempo.</li>
+        <li>Convertir mal las áreas: 1 cm² = 10⁻⁴ m², no 10⁻² m².</li>
+        <li>Calcular el área con el diámetro en lugar del radio (A = πr², no πd²).</li>
+        <li>Creer que el caudal disminuye al estrecharse un tubo sin fugas. Se mantiene; lo que cambia es la velocidad.</li>
+        <li>Olvidar sumar las áreas cuando hay muchas ramas en paralelo.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.7</h4>
+      <p class="enunciado">Un líquido circula por un tubo de 4 cm² de sección a 2 m/s. El tubo se estrecha a 1 cm². ¿Cuál es la velocidad en la parte estrecha, en m/s?</p>
+      <input type="number" step="any" id="e3-4-resp" placeholder="Velocidad (m/s)" data-enter-valida="e3-4">
+      <button class="btn-validar" data-target="e3-4" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e3-4-msg"></span>
+      <button class="btn-solucion" data-target="e3-4-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e3-4-sol" data-valor="8">
+        <h5>Solución</h5>
+        <ol>
+          <li>Continuidad: A₁v₁ = A₂v₂ → 4 · 2 = 1 · v₂ (las unidades de área se cancelan si son las mismas).</li>
+          <li>v₂ = <strong>8 m/s</strong>.</li>
+          <li>El área se redujo a la cuarta parte, así que la velocidad se cuadruplica.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u3-t4" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u3-t4">
+      <h5>Pista</h5>
+      <ol>
+        <li>Puedes trabajar con cm² directamente, porque la unidad se cancela en la razón A₁/A₂.</li>
+        <li>Despeja v₂ = (A₁/A₂) · v₁.</li>
+        <li>Control: el área bajó de 4 a 1, es decir a la cuarta parte; la velocidad debe multiplicarse por 4.</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.8</h4>
+      <p class="enunciado">Un fluido circula a 1,5 m/s por una sección de 0,02 m². Si la sección se reduce a 0,005 m², ¿cuál es la nueva velocidad, en m/s?</p>
+      <input type="number" step="any" id="p-u3-t4-resp" placeholder="Velocidad (m/s)" data-enter-valida="p-u3-t4">
+      <button class="btn-validar" data-target="p-u3-t4" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u3-t4-msg"></span>
+      <button class="btn-solucion" data-target="p-u3-t4-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u3-t4-sol" data-valor="6">
+        <h5>Solución</h5>
+        <ol>
+          <li>Caudal: Q = 0,02 · 1,5 = 0,03 m³/s.</li>
+          <li>v₂ = Q / A₂ = 0,03 / 0,005 = <strong>6 m/s</strong>.</li>
+          <li>El área se redujo a la cuarta parte y la velocidad se cuadruplicó: la relación es inversa.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u3-t4" data-correctas="3"
+          data-resp1="a" data-exp1="En un tubo sin fugas ni ramificaciones, el caudal es constante: lo que entra en una sección sale en la siguiente."
+          data-resp2="b" data-exp2="Por continuidad, si el área disminuye la velocidad debe aumentar para mantener el mismo caudal."
+          data-resp3="c" data-exp3="El caudal se mide en volumen por unidad de tiempo; en el SI, m³/s.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> En un tubo horizontal sin ramificaciones, el caudal:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t4-p1" value="a"> a) Es el mismo en todas las secciones.</label>
+            <label><input type="radio" name="u3-t4-p1" value="b"> b) Aumenta donde el tubo se estrecha.</label>
+            <label><input type="radio" name="u3-t4-p1" value="c"> c) Disminuye donde el tubo se ensancha.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t4-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> Si la sección de un conducto se reduce a la mitad, la velocidad del fluido:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t4-p2" value="a"> a) Se reduce a la mitad.</label>
+            <label><input type="radio" name="u3-t4-p2" value="b"> b) Se duplica.</label>
+            <label><input type="radio" name="u3-t4-p2" value="c"> c) No cambia.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t4-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> El caudal se expresa en:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t4-p3" value="a"> a) m/s.</label>
+            <label><input type="radio" name="u3-t4-p3" value="b"> b) m²/s.</label>
+            <label><input type="radio" name="u3-t4-p3" value="c"> c) m³/s.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t4-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u3-t4"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: por qué los capilares son lentos</h4>
+      <p>El lecho capilar tiene un área transversal total enorme, aunque cada capilar sea microscópico. Por continuidad, la velocidad de la sangre allí es cientos de veces menor que en la aorta, y eso es precisamente lo que permite el intercambio: la difusión necesita tiempo de contacto. Cuando ese lecho se destruye o se cierra (por ejemplo, en un shock o en una obstrucción extensa), el área disponible disminuye y la velocidad local aumenta, con menos tiempo de intercambio. La continuidad también explica la trombosis por estasis: en zonas de flujo muy lento, la probabilidad de que las plaquetas se agreguen aumenta.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u3-t4"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u3-t4" data-tema="u3-t4" data-set-estado="dominado">
+        <label for="chk-u3-t4">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 3.5 ============================ -->
+  <section class="tema" id="u3-t5">
+    <h2><span class="num-tema">3.5</span> Fluidos ideales y ecuación de Bernoulli</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Aplicar la ecuación de Bernoulli a fluidos ideales y explicar la relación entre velocidad, altura y presión en un conducto.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>¿Por qué una cortina de ducha se pega hacia adentro cuando el agua corre?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>Porque el aire que corre junto al chorro de agua tiene mayor velocidad y, en un fluido en movimiento, donde la velocidad es mayor la presión es menor. La presión del aire en la cara interna de la cortina queda menor que la del baño, y la diferencia la empuja hacia el chorro. Es la misma razón por la que dos vehículos que se cruzan a gran velocidad tienden a acercarse. La ecuación de Bernoulli pone número a ese efecto.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>La energía del fluido se reparte entre presión, velocidad y altura</h4>
+      <p>La ecuación de Bernoulli es, en el fondo, un principio de conservación de la energía aplicado a un fluido: la energía total de una porción de fluido se reparte en tres formas y la suma permanece constante a lo largo de una línea de corriente.</p>
+      <ul>
+        <li><strong>Presión (P):</strong> energía asociada al empuje del fluido. Corresponde al trabajo por unidad de volumen.</li>
+        <li><strong>Cinética (½ρv²):</strong> energía por estar en movimiento.</li>
+        <li><strong>Potencial (ρgh):</strong> energía por la altura.</li>
+      </ul>
+      <p>De ahí surge la regla más citada del tema: <strong>donde el fluido va más rápido, la presión es menor</strong>, siempre que la altura no cambie. No es que "la velocidad succione": es que la energía total se conserva y, si una parte se destina a la velocidad, queda menos para la presión.</p>
+      <p>Sus supuestos importan tanto como la fórmula: fluido ideal (sin viscosidad), incompresible, en régimen estacionario y a lo largo de una misma línea de corriente. En la sangre, ninguno de esos supuestos se cumple del todo, y por eso Bernoulli da una aproximación y no la respuesta final. Aun así, permite explicar correctamente fenómenos como el efecto Venturi y la caída de presión en una estenosis.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con un presupuesto fijo.</strong> Tienes una cantidad de dinero para repartir en tres cuentas: presión, velocidad y altura. Si aumentas el gasto en una, necesariamente baja otra. Subir la velocidad obliga a bajar la presión, del mismo modo que subir la altura (en un tubo que asciende) obliga a bajar la presión o la velocidad.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Ecuación de Bernoulli</span>
+      <strong>P₁ + ½ρv₁² + ρgh₁ = P₂ + ½ρv₂² + ρgh₂</strong>
+      <span class="nota">Cada término está en pascal. En un tubo horizontal (h₁ = h₂) se simplifica a P₁ + ½ρv₁² = P₂ + ½ρv₂².</span>
+    </div>
+
+    <div class="formula">
+      <span class="etiqueta">Diferencia de presión al cambiar la velocidad</span>
+      <strong>P₂ = P₁ + ½ρ · (v₁² − v₂²)</strong>
+      <span class="nota">Si v₂ > v₁, el paréntesis es negativo y P₂ < P₁: donde va más rápido, hay menos presión.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>P</td><td>Presión del fluido</td><td>Pa</td><td>Es presión absoluta o manométrica según el problema</td></tr>
+      <tr><td>ρ</td><td>Densidad del fluido</td><td>kg/m³</td><td>Sangre ≈ 1060; agua ≈ 1000</td></tr>
+      <tr><td>v</td><td>Velocidad del fluido</td><td>m/s</td><td>Se eleva al cuadrado</td></tr>
+      <tr><td>h</td><td>Altura del punto</td><td>m</td><td>Su efecto se suma al de la presión</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo aplicar Bernoulli</h4>
+      <ol>
+        <li>Elige dos puntos sobre una misma línea de corriente: uno con datos conocidos y otro con la incógnita.</li>
+        <li>Usa la continuidad para obtener la velocidad en el segundo punto si no la tienes.</li>
+        <li>Define un nivel de referencia para las alturas y mantenlo.</li>
+        <li>Escribe la ecuación completa y cancela los términos iguales en ambos lados.</li>
+        <li>Verifica el resultado: si la velocidad aumentó, la presión debe haber bajado.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Estrechamiento en un tubo horizontal</h4>
+      <p>Agua (ρ = 1000 kg/m³) circula por un tubo horizontal. En la sección 1 la presión es 120 kPa y la velocidad 1 m/s. En la sección 2 la velocidad es 4 m/s. ¿Cuál es la presión en la sección 2?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Simplificar</span>
+        <p>Tubo horizontal: h₁ = h₂, los términos ρgh se cancelan.<br>
+        P₂ = P₁ + ½ρ(v₁² − v₂²).</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Calcular</span>
+        <p>½ · 1000 · (1 − 16) = 500 · (−15) = −7500 Pa.<br>
+        P₂ = 120 000 − 7500 = <strong>112 500 Pa</strong> = 112,5 kPa.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Interpretación</span>
+        <p>La presión cayó 7,5 kPa (≈ 56 mmHg) al cuadruplicarse la velocidad. El resultado no es un "efecto de succión" misterioso: es el costo energético de acelerar el fluido, pagado con presión.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Invertir la relación: creer que donde va más rápido hay más presión.</li>
+        <li>Aplicar Bernoulli a un fluido muy viscoso o a un tramo con pérdidas grandes. En esos casos sirve como aproximación, no como resultado exacto.</li>
+        <li>Olvidar el término ρgh cuando el tubo asciende o desciende.</li>
+        <li>Mezclar presiones absolutas y manométricas en la misma ecuación.</li>
+        <li>Usar velocidades en cm/s sin convertir.</li>
+        <li>Comparar puntos que no están sobre la misma línea de corriente en un flujo complejo.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.9</h4>
+      <p class="enunciado">En un tubo horizontal, la presión en la sección 1 es 150 kPa y la velocidad 0,5 m/s. En la sección 2 la velocidad es 2,5 m/s. Con ρ = 1000 kg/m³, ¿cuál es la presión en la sección 2, en kPa?</p>
+      <input type="number" step="any" id="e3-5-resp" placeholder="Presión (kPa)" data-enter-valida="e3-5">
+      <button class="btn-validar" data-target="e3-5" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e3-5-msg"></span>
+      <button class="btn-solucion" data-target="e3-5-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e3-5-sol" data-valor="147">
+        <h5>Solución</h5>
+        <ol>
+          <li>P₂ = P₁ + ½ρ(v₁² − v₂²) = 150 000 + 500 · (0,25 − 6,25).</li>
+          <li>P₂ = 150 000 − 3000 = 147 000 Pa.</li>
+          <li>P₂ = <strong>147 kPa</strong>. La caída de 3 kPa corresponde a unos 22 mmHg.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u3-t5" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u3-t5">
+      <h5>Pista</h5>
+      <ol>
+        <li>Al ser horizontal, puedes ignorar los términos de altura.</li>
+        <li>Eleva al cuadrado ambas velocidades: 0,25 y 6,25.</li>
+        <li>½ρ = 500. Multiplica por la diferencia y réstalo de 150 000 Pa.</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.10</h4>
+      <p class="enunciado">En un tubo horizontal con agua (ρ = 1000 kg/m³), la velocidad pasa de 1 m/s a 3 m/s. ¿Cuánto disminuye la presión, en Pa?</p>
+      <input type="number" step="any" id="p-u3-t5-resp" placeholder="Disminución de presión (Pa)" data-enter-valida="p-u3-t5">
+      <button class="btn-validar" data-target="p-u3-t5" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u3-t5-msg"></span>
+      <button class="btn-solucion" data-target="p-u3-t5-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u3-t5-sol" data-valor="4000">
+        <h5>Solución</h5>
+        <ol>
+          <li>ΔP = ½ρ(v₂² − v₁²) = 500 · (9 − 1).</li>
+          <li>ΔP = <strong>4000 Pa</strong> = 4 kPa.</li>
+          <li>La presión disminuye 4 kPa (≈ 30 mmHg) al triplicarse la velocidad.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u3-t5" data-correctas="3"
+          data-resp1="b" data-exp1="En un tubo horizontal, P + ½ρv² es constante: al aumentar v, P debe disminuir."
+          data-resp2="c" data-exp2="Bernoulli supone fluido incompresible, no viscoso y flujo estacionario; con gran viscosidad o turbulencia es solo una aproximación."
+          data-resp3="a" data-exp3="½ρv² tiene unidades de pascal y representa energía cinética por unidad de volumen.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> En un tubo horizontal por el que circula un fluido ideal, en la zona donde la velocidad es mayor:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t5-p1" value="a"> a) La presión es mayor.</label>
+            <label><input type="radio" name="u3-t5-p1" value="b"> b) La presión es menor.</label>
+            <label><input type="radio" name="u3-t5-p1" value="c"> c) La presión no cambia.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t5-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> La ecuación de Bernoulli supone que el fluido es:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t5-p2" value="a"> a) Compresible y turbulento.</label>
+            <label><input type="radio" name="u3-t5-p2" value="b"> b) Viscoso y en reposo.</label>
+            <label><input type="radio" name="u3-t5-p2" value="c"> c) Incompresible, no viscoso y en flujo estacionario.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t5-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> El término ½ρv² de la ecuación de Bernoulli representa:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t5-p3" value="a"> a) Energía cinética por unidad de volumen.</label>
+            <label><input type="radio" name="u3-t5-p3" value="b"> b) Presión hidrostática.</label>
+            <label><input type="radio" name="u3-t5-p3" value="c"> c) Caudal por unidad de área.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t5-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u3-t5"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: estenosis y caída de presión</h4>
+      <p>Cuando una arteria se estrecha, la sangre debe acelerarse para mantener el caudal. Según Bernoulli, en la zona estrecha la presión cae, y esa caída puede ser suficiente para reducir la perfusión distal, sobre todo si el territorio depende de esa presión. En una estenosis coronaria crítica, la combinación de alta velocidad, baja presión y turbulencia explica la isquemia que aparece justo cuando aumenta la demanda. El mismo principio fundamenta la estimación no invasiva de la severidad de una estenosis por ecografía Doppler: la velocidad medida se traduce en una diferencia de presión mediante la ecuación de Bernoulli simplificada.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u3-t5"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u3-t5" data-tema="u3-t5" data-set-estado="dominado">
+        <label for="chk-u3-t5">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 3.6 ============================ -->
+  <section class="tema" id="u3-t6">
+    <h2><span class="num-tema">3.6</span> Viscosidad, fluidos reales y ley de Poiseuille</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Describir la viscosidad, aplicar la ley de Poiseuille y explicar por qué el radio del conducto domina la resistencia al flujo.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>La miel y el agua fluyen de forma muy distinta por el mismo tubo. ¿Qué propiedad física explica la diferencia?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>La <strong>viscosidad</strong>: la resistencia interna del fluido a deformarse y a deslizarse en capas. La miel tiene una viscosidad miles de veces mayor que el agua, así que con la misma diferencia de presión fluye mucho menos. En la ley de Poiseuille, la viscosidad aparece en el denominador: si se duplica, el caudal se reduce a la mitad. En la sangre, la viscosidad depende además del hematocrito, del calibre del vaso y de la velocidad.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>En un fluido real, no todo el tubo fluye igual</h4>
+      <p>En un fluido ideal, todas las capas se moverían con la misma velocidad. En un fluido real, la capa en contacto con la pared se adhiere a ella (velocidad cero) y la velocidad aumenta hacia el centro del tubo, formando un perfil en forma de bala redondeada. Esa diferencia entre capas es la <strong>viscosidad</strong>, medida en pascal segundo (Pa·s): el agua tiene ≈ 1,0 × 10⁻³ Pa·s; la sangre completa, del orden de 3 a 4 × 10⁻³ Pa·s.</p>
+      <p>La <strong>ley de Poiseuille</strong> describe el caudal en un tubo cilíndrico con flujo laminar: depende de la diferencia de presión, del radio elevado a la <strong>cuarta potencia</strong>, e inversamente del largo y de la viscosidad. El exponente cuatro es el dato más importante del tema: reducir el radio a la mitad no reduce el caudal a la mitad, sino a la dieciseisava parte (1/2⁴ = 1/16).</p>
+      <p>Esa sensibilidad extrema al radio es la base de la regulación del flujo en el organismo: pequeñas variaciones en el calibre de una arteriola producen cambios enormes en la resistencia. También explica por qué una placa que reduce la luz en un 50 % no reduce el flujo a la mitad, sino a una fracción mucho menor, y por qué se necesita forzar la presión para mantener la perfusión.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con una tubería de agua doméstica.</strong> Si cambias la llave por una más larga, el flujo baja; si usas un tubo más angosto, el flujo baja muchísimo más. Comparado con la longitud, el radio manda: pasar de un tubo de 1 cm a uno de 0,5 cm reduce el caudal 16 veces, mientras que duplicar el largo solo lo reduce a la mitad. Es la misma razón por la que una arteria ocluida parcialmente tiene un efecto desproporcionado.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Ley de Poiseuille</span>
+      <strong>Q = π · r⁴ · ΔP / (8 · η · L)</strong>
+      <span class="nota">Q en m³/s; r y L en m; ΔP en Pa; η en Pa·s. Solo válida para flujo laminar en tubo cilíndrico.</span>
+    </div>
+
+    <div class="formula">
+      <span class="etiqueta">Resistencia al flujo (analogía con la ley de Ohm)</span>
+      <strong>R = 8 · η · L / (π · r⁴)</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Q = ΔP / R</strong>
+      <span class="nota">Misma forma que I = V/R. La resistencia depende de la geometría y de la viscosidad, no de la presión aplicada.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>Q</td><td>Caudal</td><td>m³/s</td><td>Proporcional a ΔP y a r⁴</td></tr>
+      <tr><td>r</td><td>Radio del tubo</td><td>m</td><td>Elevado a la cuarta: la variable más influyente</td></tr>
+      <tr><td>ΔP</td><td>Diferencia de presión entre extremos</td><td>Pa</td><td>Es el "motor" del flujo</td></tr>
+      <tr><td>η</td><td>Viscosidad dinámica</td><td>Pa·s</td><td>Agua ≈ 10⁻³; sangre ≈ 3–4 × 10⁻³</td></tr>
+      <tr><td>L</td><td>Longitud del tubo</td><td>m</td><td>A mayor largo, mayor resistencia</td></tr>
+    </table>
+
+    <table class="general">
+      <tr><th>Si cambia…</th><th>Efecto sobre el caudal</th><th>Factor</th></tr>
+      <tr><td>Se duplica ΔP</td><td>Se duplica</td><td>× 2</td></tr>
+      <tr><td>Se duplica L</td><td>Se reduce a la mitad</td><td>× 1/2</td></tr>
+      <tr><td>Se duplica η</td><td>Se reduce a la mitad</td><td>× 1/2</td></tr>
+      <tr><td>Se duplica r</td><td>Aumenta 16 veces</td><td>× 16</td></tr>
+      <tr><td>Se reduce r a la mitad</td><td>Se reduce a la dieciseisava parte</td><td>× 1/16</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo resolver un problema de Poiseuille</h4>
+      <ol>
+        <li>Convierte el radio a metros: 1 mm = 10⁻³ m, y recuerda que va elevado a la cuarta.</li>
+        <li>Convierte ΔP a pascal y η a Pa·s.</li>
+        <li>Verifica que el problema sea de flujo laminar. Si el número de Reynolds es alto, Poiseuille no aplica.</li>
+        <li>Sustituye y revisa el orden de magnitud: caudales fisiológicos son del orden de mL/s.</li>
+        <li>Si la pregunta es comparativa, usa razones (r₂/r₁)⁴ en lugar de recalcular todo.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Caudal en un tubo delgado</h4>
+      <p>Un tubo de radio 1 mm y longitud 10 cm transporta un fluido de viscosidad 1 × 10⁻³ Pa·s con una diferencia de presión de 100 Pa. ¿Cuál es el caudal?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Datos en unidades del SI</span>
+        <p>r = 1 × 10⁻³ m; L = 0,10 m; η = 1 × 10⁻³ Pa·s; ΔP = 100 Pa.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Sustituir</span>
+        <p>r⁴ = (10⁻³)⁴ = 10⁻¹² m⁴.<br>
+        Q = π · 10⁻¹² · 100 / (8 · 10⁻³ · 0,10) = 3,14 × 10⁻¹⁰ / 8 × 10⁻⁴.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Resultado</span>
+        <p>Q = <strong>3,9 × 10⁻⁷ m³/s</strong> ≈ 0,39 mL/s.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 4. Interpretación</span>
+        <p>Si el radio se redujera a la mitad (0,5 mm), el caudal caería a 0,025 mL/s: dieciséis veces menos, con la misma presión. Esa es la razón por la que una pequeña reducción de calibre tiene consecuencias desproporcionadas.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Elevar el radio al cuadrado en lugar de a la cuarta.</li>
+        <li>Usar el diámetro como radio.</li>
+        <li>Olvidar convertir milímetros a metros antes de elevar a la cuarta: el error es de 10¹².</li>
+        <li>Aplicar Poiseuille en régimen turbulento o en tubos no cilíndricos.</li>
+        <li>Creer que la resistencia depende de la presión aplicada. Depende de la geometría y de la viscosidad.</li>
+        <li>Confundir viscosidad con densidad: son propiedades distintas.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.11</h4>
+      <p class="enunciado">Un tubo de radio 2 mm y 0,2 m de largo conduce un fluido de viscosidad 1 × 10⁻³ Pa·s bajo una diferencia de presión de 200 Pa. ¿Cuál es el caudal, en mL/s?</p>
+      <input type="number" step="any" id="e3-6-resp" placeholder="Caudal (mL/s)" data-enter-valida="e3-6">
+      <button class="btn-validar" data-target="e3-6" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e3-6-msg"></span>
+      <button class="btn-solucion" data-target="e3-6-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e3-6-sol" data-valor="6.28">
+        <h5>Solución</h5>
+        <ol>
+          <li>r = 2 × 10⁻³ m → r⁴ = 16 × 10⁻¹² m⁴.</li>
+          <li>Q = π · 16 × 10⁻¹² · 200 / (8 · 10⁻³ · 0,2) = 1,005 × 10⁻⁸ / 1,6 × 10⁻³.</li>
+          <li>Q = 6,28 × 10⁻⁶ m³/s = <strong>6,28 mL/s</strong>.</li>
+          <li>Al duplicar el radio respecto del ejemplo, el caudal aumentó 16 veces (0,39 → 6,28 mL/s).</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u3-t6" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u3-t6">
+      <h5>Pista</h5>
+      <ol>
+        <li>Convierte 2 mm a metros y eleva ese valor a la cuarta potencia.</li>
+        <li>El denominador es 8·η·L = 8 · 10⁻³ · 0,2 = 1,6 × 10⁻³.</li>
+        <li>El resultado en m³/s se multiplica por 1000 para expresarlo en litros por segundo y por 1000 de nuevo para mL/s (es decir, × 10⁶).</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.12</h4>
+      <p class="enunciado">Si el radio de un vaso se reduce a la mitad, manteniendo la misma longitud y viscosidad, ¿por qué factor debe multiplicarse la diferencia de presión para mantener el mismo caudal?</p>
+      <input type="number" step="any" id="p-u3-t6-resp" placeholder="Factor" data-enter-valida="p-u3-t6">
+      <button class="btn-validar" data-target="p-u3-t6" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u3-t6-msg"></span>
+      <button class="btn-solucion" data-target="p-u3-t6-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u3-t6-sol" data-valor="16">
+        <h5>Solución</h5>
+        <ol>
+          <li>Q ∝ ΔP · r⁴. Para mantener Q constante, ΔP debe crecer en la misma proporción en que cae r⁴.</li>
+          <li>r se reduce a la mitad: r⁴ cae a (1/2)⁴ = 1/16.</li>
+          <li>Por lo tanto ΔP debe multiplicarse por <strong>16</strong>.</li>
+          <li>Consecuencia clínica: una reducción del 50 % del radio exige 16 veces más presión para el mismo flujo, algo que el organismo rara vez puede sostener.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u3-t6" data-correctas="3"
+          data-resp1="c" data-exp1="Poiseuille: Q ∝ r⁴. Es una dependencia muy fuerte, la razón por la que el calibre regula el flujo."
+          data-resp2="b" data-exp2="Q ∝ 1/L: al duplicar la longitud, el caudal se reduce a la mitad."
+          data-resp3="a" data-exp3="La resistencia al flujo depende de la geometría (r, L) y de la viscosidad; no de la presión aplicada.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> Según la ley de Poiseuille, el caudal es proporcional a:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t6-p1" value="a"> a) El radio del tubo.</label>
+            <label><input type="radio" name="u3-t6-p1" value="b"> b) El cuadrado del radio.</label>
+            <label><input type="radio" name="u3-t6-p1" value="c"> c) La cuarta potencia del radio.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t6-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> Si se duplica la longitud de un tubo manteniendo todo lo demás constante, el caudal:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t6-p2" value="a"> a) Se duplica.</label>
+            <label><input type="radio" name="u3-t6-p2" value="b"> b) Se reduce a la mitad.</label>
+            <label><input type="radio" name="u3-t6-p2" value="c"> c) Se reduce a la cuarta parte.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t6-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> La resistencia al flujo de un vaso depende de:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t6-p3" value="a"> a) Su geometría y la viscosidad del fluido, no de la presión aplicada.</label>
+            <label><input type="radio" name="u3-t6-p3" value="b"> b) La presión aplicada principalmente.</label>
+            <label><input type="radio" name="u3-t6-p3" value="c"> c) Solo la densidad del fluido.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t6-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u3-t6"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: resistencia vascular y presión arterial</h4>
+      <p>En el organismo, la mayor parte de la resistencia vascular está en las arteriolas, precisamente porque son cortas y de calibre pequeño. Una reducción del radio de un 10 % aumenta la resistencia en cerca de un 50 %, porque el efecto va con la cuarta potencia. Eso explica dos hechos clínicos: la hipertensión de origen vascular periférico y la eficacia de los fármacos vasodilatadores, que actúan sobre el radio y no sobre la presión. También explica por qué la viscosidad importa: en un paciente con hematocrito muy elevado, el mismo gradiente de presión produce menos flujo, y por eso la policitemia aumenta el riesgo trombótico.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u3-t6"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u3-t6" data-tema="u3-t6" data-set-estado="dominado">
+        <label for="chk-u3-t6">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 3.7 ============================ -->
+  <section class="tema" id="u3-t7">
+    <h2><span class="num-tema">3.7</span> Flujo laminar y turbulento: número de Reynolds</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Distinguir flujo laminar de turbulento, calcular el número de Reynolds e interpretar su significado en conductos y vasos sanguíneos.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Si abres mucho la llave de agua, el chorro pasa de transparente y liso a blanquecino y ruidoso. ¿Qué cambió?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>Cambió el <strong>régimen de flujo</strong>. A baja velocidad las capas se deslizan ordenadamente (laminar); al aumentar la velocidad aparecen remolinos y mezcla (turbulento). El chorro se ve blanco porque la turbulencia incorpora aire y dispersa la luz, y se oye ruido porque las partículas chocan de forma desordenada. El número de Reynolds cuantifica exactamente ese paso.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>Orden contra caos: un solo número lo resume</h4>
+      <p>El <strong>flujo laminar</strong> es ordenado: las capas de fluido se deslizan unas sobre otras sin mezclarse, y las líneas de corriente no se cruzan. El <strong>flujo turbulento</strong> es desordenado: aparecen remolinos, se mezclan las capas y la velocidad fluctúa en cada punto. Ambos pueden tener el mismo caudal; lo que cambia es la estructura interna del movimiento.</p>
+      <p>El <strong>número de Reynolds (Re)</strong> es un número sin unidades que compara las fuerzas de inercia con las fuerzas viscosas. Si la inercia domina (velocidad alta, densidad alta, tubo ancho), el flujo tiende a ser turbulento. Si la viscosidad domina (fluido espeso, velocidad baja, tubo delgado), el flujo tiende a ser laminar.</p>
+      <p>Los valores de referencia en un tubo son: Re por debajo de aproximadamente 2000 indica flujo laminar; por encima de 4000, turbulento; entre ambos, una zona de transición donde el régimen puede oscilar. La turbulencia tiene consecuencias prácticas: aumenta mucho la resistencia al flujo (por eso Poiseuille deja de valer), produce ruido y vibración, y puede dañar el endotelio.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con una fila de personas.</strong> Si todos caminan ordenados, la fila avanza sin choques (laminar). Si alguien corre, empuja y se producen remolinos humanos: nadie avanza en línea recta y se pierde eficiencia (turbulento). Correr más rápido (mayor velocidad) o ir más apretados (mayor densidad) favorece el desorden; un piso resbaladizo que amortigua el roce (mayor viscosidad) lo desfavorece.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Número de Reynolds</span>
+      <strong>Re = ρ · v · D / η</strong>
+      <span class="nota">Re es adimensional. D es el diámetro del tubo (en metros), no el radio. Algunos textos usan el radio y ajustan el valor crítico.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>ρ</td><td>Densidad del fluido</td><td>kg/m³</td><td>Sangre ≈ 1060; agua ≈ 1000</td></tr>
+      <tr><td>v</td><td>Velocidad media</td><td>m/s</td><td>A mayor velocidad, más turbulencia</td></tr>
+      <tr><td>D</td><td>Diámetro del conducto</td><td>m</td><td>Tubo más ancho favorece la turbulencia</td></tr>
+      <tr><td>η</td><td>Viscosidad dinámica</td><td>Pa·s</td><td>A mayor viscosidad, más laminar</td></tr>
+    </table>
+
+    <table class="general">
+      <tr><th>Rango de Re</th><th>Régimen</th><th>Consecuencia práctica</th></tr>
+      <tr><td>Re &lt; 2000</td><td>Laminar</td><td>Poiseuille válida; flujo silencioso y eficiente</td></tr>
+      <tr><td>2000 – 4000</td><td>Transición</td><td>El régimen puede oscilar; resultados poco predecibles</td></tr>
+      <tr><td>Re &gt; 4000</td><td>Turbulento</td><td>Mayor resistencia, ruido, vibración; Poiseuille no aplica</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo interpretar un Reynolds</h4>
+      <ol>
+        <li>Convierte el diámetro a metros y la viscosidad a Pa·s.</li>
+        <li>Calcula Re y compáralo con los umbrales 2000 y 4000.</li>
+        <li>Traduce el resultado: laminar significa que puedes usar Poiseuille; turbulento, que no.</li>
+        <li>Si el problema pide predecir un cambio, analiza qué variable cambia: v y D suben Re; η lo baja.</li>
+        <li>Recuerda que Re no tiene unidades: si obtienes kg/m·s o similar, hay un error de conversión.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Reynolds en la aorta</h4>
+      <p>La sangre (ρ = 1060 kg/m³, η = 3,5 × 10⁻³ Pa·s) circula por la aorta (D = 2,5 cm) a 0,5 m/s. ¿Qué régimen de flujo presenta?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Conversión</span>
+        <p>D = 0,025 m; η = 3,5 × 10⁻³ Pa·s.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Cálculo</span>
+        <p>Re = 1060 · 0,5 · 0,025 / 3,5 × 10⁻³ = 13,25 / 0,0035 = <strong>≈ 3786</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Interpretación</span>
+        <p>El valor cae en la zona de transición, cerca del límite turbulento. Eso es coherente con la fisiología: en la aorta el flujo es casi laminar en reposo, pero se vuelve turbulento durante la sístole, cuando la velocidad aumenta. Esa turbulencia transitoria es normal y explica por qué en la auscultación puede haber un soplo funcional en situaciones de alto gasto.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Usar el radio en lugar del diámetro sin ajustar el criterio.</li>
+        <li>Expresar Re con unidades. Es adimensional.</li>
+        <li>Olvidar convertir centímetros a metros: el error es de 100 veces.</li>
+        <li>Usar la viscosidad del agua para la sangre.</li>
+        <li>Aplicar Poiseuille en régimen turbulento, donde la relación con el radio ya no es r⁴.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.13</h4>
+      <p class="enunciado">Agua (ρ = 1000 kg/m³, η = 1 × 10⁻³ Pa·s) circula a 0,1 m/s por un tubo de 1 cm de diámetro. ¿Cuál es el número de Reynolds?</p>
+      <input type="number" step="any" id="e3-7-resp" placeholder="Re" data-enter-valida="e3-7">
+      <button class="btn-validar" data-target="e3-7" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e3-7-msg"></span>
+      <button class="btn-solucion" data-target="e3-7-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e3-7-sol" data-valor="1000">
+        <h5>Solución</h5>
+        <ol>
+          <li>D = 0,01 m.</li>
+          <li>Re = 1000 · 0,1 · 0,01 / 10⁻³ = 1 / 10⁻³.</li>
+          <li>Re = <strong>1000</strong>, claramente laminar (por debajo de 2000).</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u3-t7" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u3-t7">
+      <h5>Pista</h5>
+      <ol>
+        <li>1 cm de diámetro son 0,01 m.</li>
+        <li>Multiplica 1000 · 0,1 · 0,01 en el numerador.</li>
+        <li>Divide por 10⁻³; el resultado no lleva unidades.</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 3.14</h4>
+      <p class="enunciado">Agua (ρ = 1000 kg/m³, η = 1 × 10⁻³ Pa·s) circula a 0,1 m/s por un tubo de 2 cm de diámetro. ¿Cuál es el número de Reynolds?</p>
+      <input type="number" step="any" id="p-u3-t7-resp" placeholder="Re" data-enter-valida="p-u3-t7">
+      <button class="btn-validar" data-target="p-u3-t7" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u3-t7-msg"></span>
+      <button class="btn-solucion" data-target="p-u3-t7-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u3-t7-sol" data-valor="2000">
+        <h5>Solución</h5>
+        <ol>
+          <li>D = 0,02 m.</li>
+          <li>Re = 1000 · 0,1 · 0,02 / 10⁻³ = 2 / 10⁻³.</li>
+          <li>Re = <strong>2000</strong>, exactamente en el límite del régimen laminar: comienza la zona de transición.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u3-t7" data-correctas="3"
+          data-resp1="b" data-exp1="Re alto indica que dominan las fuerzas de inercia sobre las viscosas, condición que favorece la turbulencia."
+          data-resp2="a" data-exp2="Re es un cociente entre fuerzas, por lo tanto no tiene unidades."
+          data-resp3="c" data-exp3="Re = ρvD/η: al aumentar la viscosidad, el denominador crece y Re disminuye, favoreciendo el flujo laminar.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> Un número de Reynolds alto indica:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t7-p1" value="a"> a) Flujo laminar.</label>
+            <label><input type="radio" name="u3-t7-p1" value="b"> b) Tendencia a flujo turbulento.</label>
+            <label><input type="radio" name="u3-t7-p1" value="c"> c) Ausencia de movimiento.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t7-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> El número de Reynolds es:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t7-p2" value="a"> a) Adimensional.</label>
+            <label><input type="radio" name="u3-t7-p2" value="b"> b) Se mide en pascal.</label>
+            <label><input type="radio" name="u3-t7-p2" value="c"> c) Se mide en m/s.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t7-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Si aumenta la viscosidad del fluido, el número de Reynolds:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u3-t7-p3" value="a"> a) Aumenta.</label>
+            <label><input type="radio" name="u3-t7-p3" value="b"> b) No cambia.</label>
+            <label><input type="radio" name="u3-t7-p3" value="c"> c) Disminuye.</label>
+          </div>
+          <div class="feedback" id="fb-u3-t7-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u3-t7"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: soplos, vibraciones y daño endotelial</h4>
+      <p>La turbulencia produce ruido audible con el estetoscopio: eso es, en esencia, un soplo cardíaco. Cuando la sangre pasa por una válvula estrechada o por una comunicación anómala, la velocidad aumenta y el Reynolds supera el umbral, generando vibraciones que se transmiten a la pared torácica. Por eso la auscultación permite detectar estenosis sin imagen. Además, la turbulencia tiene un costo biológico: aumenta la resistencia al flujo, incrementa la pérdida de energía y expone al endotelio a esfuerzos de cizallamiento anómalos, factores que participan en la disfunción endotelial y en la formación de placa. El mismo número que decide si el flujo es ordenado o caótico sirve para explicar un hallazgo clínico y un mecanismo de enfermedad.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u3-t7"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u3-t7" data-tema="u3-t7" data-set-estado="dominado">
+        <label for="chk-u3-t7">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Guía de Estudio de Física &middot; CBA0210 &middot; Unidad 3 — Circuitos y Fluidos</p>
+  <p><a href="index.html">Volver al inicio</a> &middot; <a href="unidad2.html">Ir a la Unidad 2</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

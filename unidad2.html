@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidad 2 — Energía, Trabajo y Electrostática · Física CBA0210</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Unidad 2 — Energía, Trabajo y Electrostática</h1>
+    <p class="sub">Física CBA0210 &middot; RA 2 y RA 4 &middot; <a href="index.html">Volver al inicio</a></p>
+  </div>
+</header>
+
+<nav>
+  <ul class="nav-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="unidad1.html">Unidad 1 — Cinemática y Dinámica</a></li>
+    <li><a href="unidad2.html" class="activa">Unidad 2 — Energía, Trabajo y Electrostática</a></li>
+    <li><a href="unidad3.html">Unidad 3 — Circuitos y Fluidos</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section class="seccion ra">
+    <h3>Qué busca esta unidad</h3>
+    <p><strong>RA 2:</strong> aplicar conceptos de carga eléctrica, gradiente, campo y potencial analizando los cambios de energía, trabajo mecánico, circuitos resistivos y RC, para explicar interacciones eléctricas elementales asociadas a procesos fisiológicos.</p>
+    <p><strong>RA 4:</strong> utilizar el método científico en experimentos guiados y grupales, describiendo fuentes de error y estableciendo relaciones lógicas con modelos teóricos simplificados.</p>
+  </section>
+
+  <section class="seccion indicadores">
+    <h3>Al terminar la unidad deberías poder</h3>
+    <ul>
+      <li>Describir, calcular e interpretar el trabajo mecánico realizado por una fuerza.</li>
+      <li>Relacionar el trabajo mecánico con los cambios de energía cinética y de energía potencial.</li>
+      <li>Aplicar el principio de conservación de la energía en sistemas mecánicos y eléctricos.</li>
+      <li>Representar e interpretar un campo eléctrico.</li>
+      <li>Calcular campos, fuerzas eléctricas y diferencias de potencial.</li>
+      <li>Relacionar el potencial eléctrico con la energía y el trabajo eléctrico.</li>
+    </ul>
+  </section>
+
+  <!-- ============================ TEMA 2.1 ============================ -->
+  <section class="tema" id="u2-t1">
+    <h2><span class="num-tema">2.1</span> Trabajo de una fuerza</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Calcular el trabajo realizado por una fuerza constante sobre un cuerpo que se desplaza, interpretar su signo y distinguir trabajo neto de trabajo de cada fuerza.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Sostienes una caja de 10 kg en el aire, inmóvil, durante cinco minutos. ¿Realizas trabajo?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>No. Haces fuerza, pero el punto de aplicación de esa fuerza no se desplaza: la caja no se mueve. En física, el trabajo mide <strong>transferencia de energía</strong> mediante una fuerza a lo largo de un desplazamiento. Sin desplazamiento no hay transferencia, por más que duelan los brazos. Sí hay trabajo, en cambio, mientras levantas la caja desde el suelo.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>El trabajo es energía que pasa de un sistema a otro</h4>
+      <p>Cuando una fuerza actúa sobre un cuerpo que se desplaza, puede transferirle energía (acelerándolo, levantándolo, comprimiendo un resorte) o quitarle energía (frenándolo). Esa transferencia es el <strong>trabajo</strong>, y se mide en joule (J), la misma unidad que la energía. Esto no es casualidad: el trabajo es uno de los mecanismos por los que la energía cambia de forma o de dueño.</p>
+      <p>La clave está en la dirección. De una fuerza solo cuenta la <strong>componente que va a lo largo del desplazamiento</strong>; la componente perpendicular no aporta ni quita energía. Por eso el trabajo depende del ángulo entre fuerza y desplazamiento, y por eso una fuerza puede hacer trabajo positivo (a favor del movimiento), nulo (perpendicular) o negativo (en contra).</p>
+      <p>El <strong>trabajo neto</strong> es la suma algebraica de los trabajos de todas las fuerzas. No es lo mismo que "el trabajo de la fuerza aplicada": si empujas una caja y el roce la frena, el trabajo neto es la diferencia entre ambos, y es lo que finalmente cambia la energía cinética.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con una cuenta compartida.</strong> El trabajo positivo es plata que entra a la cuenta del cuerpo; el trabajo negativo, plata que sale; el trabajo nulo, una transferencia que no ocurrió porque el movimiento fue perpendicular. El saldo (energía cinética) depende de la suma de entradas y salidas, no de cuántas operaciones hiciste.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Trabajo de una fuerza constante</span>
+      <strong>W = F · d · cos θ</strong>
+      <span class="nota">θ es el ángulo entre la fuerza y el desplazamiento. Equivale a W = F<sub>‖</sub> · d, con F<sub>‖</sub> la componente de la fuerza en la dirección del movimiento.</span>
+    </div>
+
+    <div class="formula">
+      <span class="etiqueta">Trabajo neto, teorema trabajo-energía y potencia</span>
+      <strong>W<sub>neto</sub> = Σ W<sub>i</sub> = ΔK</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>P = W / t</strong>
+      <span class="nota">P es potencia, en watt (W): 1 W = 1 J/s. ΔK es el cambio de energía cinética, que se estudia en el tema 2.2.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>W</td><td>Trabajo</td><td>J (joule)</td><td>Escalar: puede ser positivo, negativo o cero</td></tr>
+      <tr><td>F</td><td>Magnitud de la fuerza</td><td>N</td><td>Si la fuerza varía, hay que integrar o promediar</td></tr>
+      <tr><td>d</td><td>Desplazamiento del punto de aplicación</td><td>m</td><td>No es "distancia total" si el cuerpo va y vuelve</td></tr>
+      <tr><td>θ</td><td>Ángulo entre F y d</td><td>grados</td><td>θ = 0° → máximo; 90° → cero; 180° → negativo máximo</td></tr>
+    </table>
+
+    <table class="general">
+      <tr><th>Situación</th><th>Ángulo</th><th>Trabajo</th><th>Ejemplo</th></tr>
+      <tr><td>Fuerza en el mismo sentido del movimiento</td><td>0°</td><td>Máximo positivo: W = F·d</td><td>Empujar una camilla hacia adelante</td></tr>
+      <tr><td>Fuerza perpendicular</td><td>90°</td><td>Cero</td><td>La normal o el peso de un cuerpo que se desliza horizontal</td></tr>
+      <tr><td>Fuerza en sentido contrario</td><td>180°</td><td>Negativo: W = −F·d</td><td>El roce cinético sobre un cuerpo que se desliza</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo calcular trabajo sin equivocarse</h4>
+      <ol>
+        <li>Identifica la fuerza concreta cuyo trabajo te piden (peso, normal, roce, aplicada, tensión).</li>
+        <li>Determina el desplazamiento del punto donde se aplica esa fuerza.</li>
+        <li>Calcula el ángulo entre ambos vectores, no el ángulo de la fuerza con la horizontal.</li>
+        <li>Aplica W = F·d·cos θ conservando el signo. Si hay varias fuerzas, repite y suma algebraicamente.</li>
+        <li>Control: si el cuerpo se mueve a velocidad constante, el trabajo neto debe ser cero.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Empujar una camilla con roce</h4>
+      <p>Se empuja una camilla con una fuerza de 120 N inclinada 30° sobre la horizontal, a lo largo de 4 m. El roce cinético opone 40 N. Calcula el trabajo de la fuerza aplicada, el del roce y el trabajo neto.</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Trabajo de la fuerza aplicada</span>
+        <p>W<sub>F</sub> = F·d·cos 30° = 120 · 4 · 0,866 = <strong>+415,7 J</strong>.</p>
+        <p class="porque">Solo la componente horizontal (120·cos 30° = 103,9 N) empuja en la dirección del movimiento. La componente vertical no transfiere energía horizontal.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Trabajo del roce</span>
+        <p>El roce es opuesto al desplazamiento (θ = 180°, cos 180° = −1):<br>
+        W<sub>roce</sub> = 40 · 4 · (−1) = <strong>−160 J</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Trabajo del peso y de la normal</span>
+        <p>Ambos son perpendiculares al desplazamiento horizontal, así que θ = 90° y cos 90° = 0:<br>
+        W<sub>peso</sub> = 0 J &nbsp;&middot;&nbsp; W<sub>normal</sub> = 0 J.</p>
+        <p class="porque">Este resultado sorprende, pero es correcto: cargar una caja horizontalmente no cambia su energía potencial ni su energía cinética por acción del peso.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 4. Trabajo neto</span>
+        <p>W<sub>neto</sub> = 415,7 − 160 = <strong>+255,7 J</strong>.</p>
+        <p class="porque">Ese trabajo neto es la energía que ganó la camilla en forma de movimiento: si su masa es 30 kg, su energía cinética aumentó en 255,7 J.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Calcular W = F·d sin considerar el ángulo. Con 30° de inclinación, el error es del 13 %; con 60°, del 50 %.</li>
+        <li>Creer que sostener, empujar una pared o llevar una carga horizontal implican trabajo.</li>
+        <li>Sumar trabajos como magnitudes positivas e ignorar los signos del roce y del peso en subidas.</li>
+        <li>Usar la distancia total recorrida en lugar del desplazamiento cuando el cuerpo cambia de sentido.</li>
+        <li>Confundir trabajo con potencia: el mismo trabajo hecho en la mitad del tiempo requiere el doble de potencia.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 2.1</h4>
+      <p class="enunciado">Una masa de 5 kg se deja caer 2 m. ¿Cuál es el trabajo realizado por el peso? (g = 9,8 m/s²)</p>
+      <input type="number" step="any" id="e2-1-resp" placeholder="Trabajo (J)" data-enter-valida="e2-1">
+      <button class="btn-validar" data-target="e2-1" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e2-1-msg"></span>
+      <button class="btn-solucion" data-target="e2-1-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e2-1-sol" data-valor="98">
+        <h5>Solución</h5>
+        <ol>
+          <li>El peso vale P = m·g = 49 N y apunta hacia abajo.</li>
+          <li>El desplazamiento también es hacia abajo: θ = 0°, cos 0° = 1.</li>
+          <li>W = 49 · 2 = <strong>98 J</strong>.</li>
+          <li>Ese trabajo es exactamente la energía potencial que el cuerpo pierde al bajar 2 m: m·g·h = 5 · 9,8 · 2 = 98 J.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u2-t1" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u2-t1">
+      <h5>Pista</h5>
+      <ol>
+        <li>Calcula primero el peso con P = m·g.</li>
+        <li>Fíjate en que el peso y el desplazamiento van en el mismo sentido: el ángulo es 0°.</li>
+        <li>Compara el resultado con m·g·h; deben coincidir.</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 2.2</h4>
+      <p class="enunciado">Una fuerza de 50 N actúa formando 60° con la horizontal y desplaza un objeto 10 m en dirección horizontal. ¿Qué trabajo realiza esa fuerza, en joule?</p>
+      <input type="number" step="any" id="p-u2-t1-resp" placeholder="Trabajo (J)" data-enter-valida="p-u2-t1">
+      <button class="btn-validar" data-target="p-u2-t1" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u2-t1-msg"></span>
+      <button class="btn-solucion" data-target="p-u2-t1-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u2-t1-sol" data-valor="250">
+        <h5>Solución</h5>
+        <ol>
+          <li>W = F·d·cos 60° = 50 · 10 · 0,5.</li>
+          <li>W = <strong>250 J</strong>.</li>
+          <li>La mitad de la fuerza se "pierde" en la dirección vertical: por eso el trabajo es la mitad de lo que sería con la fuerza horizontal.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u2-t1" data-correctas="3"
+          data-resp1="b" data-exp1="Sin desplazamiento del punto de aplicación no hay transferencia de energía: el trabajo es cero."
+          data-resp2="c" data-exp2="El roce se opone al desplazamiento (θ = 180°), así que su trabajo es negativo: le quita energía al cuerpo."
+          data-resp3="a" data-exp3="W = m·g·h = 10 · 9,8 · 2 = 196 J. Es el trabajo mínimo, suponiendo que se levanta a velocidad constante.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> Una persona sostiene una maleta inmóvil con el brazo extendido. El trabajo de la fuerza que ejerce es:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t1-p1" value="a"> a) Máximo, porque la fuerza es grande.</label>
+            <label><input type="radio" name="u2-t1-p1" value="b"> b) Cero, porque no hay desplazamiento.</label>
+            <label><input type="radio" name="u2-t1-p1" value="c"> c) Negativo, porque la fuerza apunta hacia arriba.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t1-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> El trabajo realizado por la fuerza de roce sobre un cuerpo que se desliza es:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t1-p2" value="a"> a) Siempre positivo.</label>
+            <label><input type="radio" name="u2-t1-p2" value="b"> b) Siempre cero.</label>
+            <label><input type="radio" name="u2-t1-p2" value="c"> c) Siempre negativo.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t1-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> ¿Cuál es el trabajo mínimo necesario para levantar una caja de 10 kg hasta 2 m de altura? (g = 9,8 m/s²)</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t1-p3" value="a"> a) 196 J</label>
+            <label><input type="radio" name="u2-t1-p3" value="b"> b) 20 J</label>
+            <label><input type="radio" name="u2-t1-p3" value="c"> c) 98 J</label>
+          </div>
+          <div class="feedback" id="fb-u2-t1-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u2-t1"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: el trabajo respiratorio</h4>
+      <p>En mecánica, el trabajo es fuerza por desplazamiento. En un gas, la versión equivalente es <strong>presión por cambio de volumen</strong> (W = P·ΔV): no se empuja un pistón, se comprime un volumen. El trabajo respiratorio se estima así: los músculos generan una presión que moviliza un volumen de aire, y el producto tiene unidades de energía. Cuando la vía aérea se estrecha, la presión necesaria para mover el mismo volumen aumenta, y con ella el trabajo y el consumo de oxígeno de los músculos respiratorios. Eso explica por qué un paciente con obstrucción puede fatigarse aunque su intercambio gaseoso aún sea aceptable: está gastando energía en vencer resistencia.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u2-t1"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u2-t1" data-tema="u2-t1" data-set-estado="dominado">
+        <label for="chk-u2-t1">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 2.2 ============================ -->
+  <section class="tema" id="u2-t2">
+    <h2><span class="num-tema">2.2</span> Energía cinética</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Calcular la energía cinética de un cuerpo, aplicar el teorema trabajo-energía y explicar por qué la velocidad influye de forma cuadrática.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Si duplicas la velocidad de un auto, ¿se duplica la distancia que necesita para frenar?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>No: se <strong>cuadruplica</strong>. La energía cinética depende del cuadrado de la velocidad (K = ½mv²), así que al duplicar v hay cuatro veces más energía que disipar. Si la fuerza de frenado es la misma, el auto necesita cuatro veces más distancia. Este resultado, que se deduce en este tema, es la base física de los límites de velocidad urbanos.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>La energía de movimiento, y por qué la velocidad pesa más que la masa</h4>
+      <p>Todo cuerpo en movimiento tiene <strong>energía cinética</strong>: la capacidad de realizar trabajo en virtud de su velocidad. Es un escalar, siempre positivo o cero, y crece con la masa pero sobre todo con la velocidad, porque esta aparece al cuadrado.</p>
+      <p>Esa dependencia cuadrática tiene consecuencias prácticas enormes. Pasar de 50 a 100 km/h no duplica el daño potencial: lo cuadruplica. Duplicar la masa de un vehículo, en cambio, solo duplica la energía. De ahí que la velocidad sea el factor más crítico en la gravedad de un impacto, por encima del tamaño del vehículo.</p>
+      <p>El <strong>teorema trabajo-energía</strong> conecta este tema con el anterior: el trabajo neto realizado sobre un cuerpo es igual al cambio de su energía cinética (W<sub>neto</sub> = ΔK). Es una de las herramientas más útiles del curso, porque permite resolver problemas de fuerzas sin calcular aceleraciones ni tiempos.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con una motocicleta y un camión.</strong> Un camión lento y una moto rápida pueden tener la misma energía cinética: la moto compensa con velocidad lo que le falta en masa. Pero al frenar, la moto necesita mucha más distancia relativa a su tamaño, porque su energía se concentra en poca masa y a alta velocidad. La fórmula no distingue "vehículo grande" de "vehículo rápido": mide energía.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Energía cinética y teorema trabajo-energía</span>
+      <strong>K = ½ · m · v²</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>W<sub>neto</sub> = ΔK = K<sub>f</sub> − K<sub>i</sub></strong>
+      <span class="nota">La energía cinética nunca es negativa. Un ΔK negativo significa que el cuerpo perdió energía (frenó).</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>K</td><td>Energía cinética</td><td>J</td><td>Escalar, K ≥ 0</td></tr>
+      <tr><td>m</td><td>Masa</td><td>kg</td><td>Debe estar en kilogramos, no en gramos</td></tr>
+      <tr><td>v</td><td>Rapidez</td><td>m/s</td><td>Al cuadrado: el signo de la velocidad no importa</td></tr>
+      <tr><td>W<sub>neto</sub></td><td>Trabajo de la fuerza neta</td><td>J</td><td>Positivo acelera; negativo frena</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo resolver con energía cinética</h4>
+      <ol>
+        <li>Convierte todas las velocidades a m/s y las masas a kg.</li>
+        <li>Calcula K en el estado inicial y en el final, si ambos son conocidos.</li>
+        <li>Si te dan fuerzas y distancias, usa W<sub>neto</sub> = ΔK para evitar el cálculo de aceleraciones.</li>
+        <li>Si te dan velocidades y piden una fuerza o una distancia, despeja de la misma ecuación.</li>
+        <li>Verifica: si el cuerpo frena, ΔK debe ser negativo y el trabajo neto también.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Distancia de frenado y velocidad</h4>
+      <p>Un auto de 1200 kg viaja a 20 m/s y frena con una fuerza constante de 6000 N. Calcula su energía cinética inicial y la distancia que necesita para detenerse. Repite para 40 m/s.</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Energía cinética a 20 m/s</span>
+        <p>K = ½ · 1200 · 20² = ½ · 1200 · 400 = <strong>240 000 J</strong> = 240 kJ.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Distancia de frenado a 20 m/s</span>
+        <p>El trabajo del frenado debe igualar la energía a disipar: F·d = K → d = K/F = 240 000 / 6000 = <strong>40 m</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Los mismos cálculos a 40 m/s</span>
+        <p>K = ½ · 1200 · 1600 = <strong>960 000 J</strong> (cuatro veces más).<br>
+        d = 960 000 / 6000 = <strong>160 m</strong> (cuatro veces más).</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 4. Lectura</span>
+        <p>Duplicar la velocidad cuadruplica la energía y la distancia de frenado. Ninguna otra variable del problema produce un efecto tan grande, y eso es lo que justifica reducir la velocidad y no solo mejorar los frenos.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Usar la velocidad en km/h. A 72 km/h, K calculada con "72" en lugar de "20" da un resultado 12,96 veces mayor.</li>
+        <li>Olvidar el factor ½.</li>
+        <li>Creer que K puede ser negativa porque la velocidad lo sea: la velocidad se eleva al cuadrado.</li>
+        <li>Usar la masa en gramos. Con 500 g, usar 500 en lugar de 0,5 da un resultado mil veces mayor.</li>
+        <li>Confundir W<sub>neto</sub> con el trabajo de una sola fuerza cuando hay varias actuando.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 2.3</h4>
+      <p class="enunciado">¿Cuál es la energía cinética de una pelota de 0,5 kg que se mueve a 4 m/s?</p>
+      <input type="number" step="any" id="e2-2-resp" placeholder="Energía cinética (J)" data-enter-valida="e2-2">
+      <button class="btn-validar" data-target="e2-2" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e2-2-msg"></span>
+      <button class="btn-solucion" data-target="e2-2-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e2-2-sol" data-valor="4">
+        <h5>Solución</h5>
+        <ol>
+          <li>K = ½ · m · v² = ½ · 0,5 · 16.</li>
+          <li>K = <strong>4 J</strong>.</li>
+          <li>Si la velocidad se duplicara a 8 m/s, la energía sería 16 J: cuatro veces más, no el doble.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u2-t2" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u2-t2">
+      <h5>Pista</h5>
+      <ol>
+        <li>Eleva la velocidad al cuadrado antes de multiplicar.</li>
+        <li>Multiplica por la masa y divide por dos.</li>
+        <li>Control de unidades: kg · (m/s)² = kg·m²/s² = J.</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 2.4</h4>
+      <p class="enunciado">Un objeto de 2 kg se mueve a 3 m/s. ¿Cuál es su energía cinética, en joule?</p>
+      <input type="number" step="any" id="p-u2-t2-resp" placeholder="Energía cinética (J)" data-enter-valida="p-u2-t2">
+      <button class="btn-validar" data-target="p-u2-t2" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u2-t2-msg"></span>
+      <button class="btn-solucion" data-target="p-u2-t2-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u2-t2-sol" data-valor="9">
+        <h5>Solución</h5>
+        <ol>
+          <li>K = ½ · 2 · 3² = ½ · 2 · 9.</li>
+          <li>K = <strong>9 J</strong>.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u2-t2" data-correctas="3"
+          data-resp1="c" data-exp1="K ∝ v². Al duplicar v, la energía cinética se multiplica por cuatro."
+          data-resp2="a" data-exp2="La energía cinética es un escalar y depende de v², por lo que nunca puede ser negativa."
+          data-resp3="b" data-exp3="El teorema trabajo-energía establece que el trabajo neto es igual al cambio de energía cinética.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> Si se duplica la rapidez de un cuerpo manteniendo la masa, su energía cinética:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t2-p1" value="a"> a) Se duplica.</label>
+            <label><input type="radio" name="u2-t2-p1" value="b"> b) No cambia.</label>
+            <label><input type="radio" name="u2-t2-p1" value="c"> c) Se cuadruplica.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t2-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> Respecto de la energía cinética, es correcto afirmar que:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t2-p2" value="a"> a) Es un escalar y nunca es negativa.</label>
+            <label><input type="radio" name="u2-t2-p2" value="b"> b) Puede ser negativa si el cuerpo se mueve hacia atrás.</label>
+            <label><input type="radio" name="u2-t2-p2" value="c"> c) Depende linealmente de la velocidad.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t2-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> El trabajo neto realizado sobre un cuerpo es igual a:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t2-p3" value="a"> a) Su cantidad de movimiento.</label>
+            <label><input type="radio" name="u2-t2-p3" value="b"> b) El cambio de su energía cinética.</label>
+            <label><input type="radio" name="u2-t2-p3" value="c"> c) Su energía potencial gravitatoria.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t2-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u2-t2"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: energía de impacto en una caída</h4>
+      <p>Cuando una persona cae, la energía cinética al impactar es la que debe absorber el cuerpo o la superficie. Para una masa dada, esa energía crece con el cuadrado de la velocidad de impacto, y la velocidad de impacto crece con la raíz de la altura. De ahí una regla útil en prevención: bajar la altura a la mitad reduce la velocidad en un factor de 1,4, pero la energía del impacto en un factor de 2. En un servicio de urgencia, esa diferencia decide entre una contusión y una fractura. El mismo razonamiento explica por qué las superficies blandas o las rodillas flexionadas reducen el daño: aumentan la distancia y el tiempo de frenado, y por lo tanto disminuyen la fuerza media necesaria para absorber la misma energía.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u2-t2"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u2-t2" data-tema="u2-t2" data-set-estado="dominado">
+        <label for="chk-u2-t2">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 2.3 ============================ -->
+  <section class="tema" id="u2-t3">
+    <h2><span class="num-tema">2.3</span> Energías potenciales y conservación de la energía</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Calcular energía potencial gravitatoria y elástica, aplicar el principio de conservación de la energía mecánica y contabilizar la energía disipada por el roce.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>En una montaña rusa, ¿en qué punto va más rápido el carro?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>En el punto más bajo. Allí la energía potencial gravitatoria es mínima y la cinética es máxima, porque la energía mecánica total se conserva (despreciando el roce). Si el carro sube, gana potencial a costa de velocidad; si baja, ocurre lo contrario. Toda la unidad se puede resumir en ese intercambio.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>La energía almacenada por la posición o la configuración</h4>
+      <p>Hay energía que no se ve en el movimiento, sino en la <strong>posición</strong> o en el estado de un sistema. Dos formas aparecen en el programa:</p>
+      <ul>
+        <li><strong>Potencial gravitatoria (U<sub>g</sub>):</strong> un cuerpo elevado tiene energía almacenada porque la gravedad puede hacerlo caer. Depende de su masa, de g y de la altura respecto de un nivel de referencia que tú eliges.</li>
+        <li><strong>Potencial elástica (U<sub>e</sub>):</strong> un resorte estirado o comprimido, o un tendón deformado, almacena energía que puede devolver al recuperar su forma. Depende de la rigidez y del cuadrado de la deformación.</li>
+      </ul>
+      <p>El <strong>principio de conservación</strong> dice que la energía mecánica (cinética más potencial) permanece constante si sobre el cuerpo solo actúan fuerzas conservativas, como la gravedad o un resorte ideal. El roce no es conservativo: transforma energía mecánica en energía térmica, y por eso la energía mecánica disminuye. No desaparece: cambia de forma. Escribir "se pierde" es un error conceptual frecuente; lo correcto es "se disipa como calor".</p>
+      <p>Un detalle que simplifica muchos problemas: la <strong>altura de referencia es arbitraria</strong>. Puedes poner el cero donde te convenga, porque lo que entra en las ecuaciones es la diferencia de altura, no su valor absoluto. Lo que no se puede es cambiar de referencia a mitad del ejercicio.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con una cuenta de ahorro y una de gasto.</strong> La energía potencial es el saldo guardado; la cinética, el dinero en circulación. Sin comisiones (sin roce), el total se mantiene: puedes convertir una en otra libremente. El roce actúa como una comisión: el total baja, y esa diferencia se fue en "gastos" (calor), no se evaporó.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Energías potenciales</span>
+      <strong>U<sub>g</sub> = m · g · h</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>U<sub>e</sub> = ½ · k · x²</strong>
+      <span class="nota">h se mide desde el nivel de referencia elegido. x es la deformación desde la longitud natural del resorte.</span>
+    </div>
+
+    <div class="formula">
+      <span class="etiqueta">Conservación y balance con roce</span>
+      <strong>K₁ + U₁ = K₂ + U₂</strong> (sin fuerzas no conservativas)<br>
+      <strong>E<sub>inicial</sub> = E<sub>final</sub> + E<sub>disipada</sub></strong> (con roce u otras fuerzas no conservativas)
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>U<sub>g</sub></td><td>Energía potencial gravitatoria</td><td>J</td><td>Depende del nivel de referencia elegido</td></tr>
+      <tr><td>h</td><td>Altura sobre el nivel de referencia</td><td>m</td><td>Puede ser negativa si el cuerpo está bajo ese nivel</td></tr>
+      <tr><td>U<sub>e</sub></td><td>Energía potencial elástica</td><td>J</td><td>Depende de x², como K depende de v²</td></tr>
+      <tr><td>k</td><td>Constante del resorte</td><td>N/m</td><td>Resorte rígido: k grande</td></tr>
+      <tr><td>E<sub>disipada</sub></td><td>Energía transformada en calor u otras formas</td><td>J</td><td>Se calcula como diferencia, o con W del roce</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo resolver con conservación de la energía</h4>
+      <ol>
+        <li>Define el sistema y elige un nivel de referencia para h, y déjalo fijo.</li>
+        <li>Identifica dos estados: el inicial y el final del tramo que te interesa.</li>
+        <li>Escribe K y U en cada estado. Si hay resorte, incluye U<sub>e</sub>.</li>
+        <li>Pregúntate si el roce actúa. Si no actúa, iguala las energías. Si actúa, agrega el término disipado o calcula su trabajo.</li>
+        <li>Despeja la incógnita y verifica: si el cuerpo sube, debe perder velocidad; si baja, ganarla.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Caída y velocidad, sin depender de la masa</h4>
+      <p>Un objeto se suelta desde 20 m de altura. Sin roce, ¿con qué velocidad llega al suelo? (g = 9,8 m/s²)</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Estados</span>
+        <p>Arriba: v = 0 → K₁ = 0; h = 20 m → U₁ = m·g·20.<br>
+        Abajo: h = 0 → U₂ = 0; K₂ = ½mv².</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Conservación</span>
+        <p>m·g·h = ½·m·v². La masa se cancela a ambos lados:<br>
+        v = √(2·g·h) = √(2 · 9,8 · 20) = √392 = <strong>19,8 m/s</strong>.</p>
+        <p class="porque">Que la masa se cancele confirma lo del tema 1.2: en caída libre todos los cuerpos llegan con la misma velocidad, si se desprecia el aire.</p>
+      </div>
+    </div>
+
+    <div class="ejemplo">
+      <h4>Resorte que lanza un bloque</h4>
+      <p>Un resorte de k = 2000 N/m se comprime 0,10 m y lanza un bloque de 0,5 kg sobre una superficie horizontal sin roce. ¿Con qué velocidad sale?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Energía almacenada</span>
+        <p>U<sub>e</sub> = ½ · k · x² = ½ · 2000 · (0,10)² = ½ · 2000 · 0,01 = <strong>10 J</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Transferencia a energía cinética</span>
+        <p>10 = ½ · 0,5 · v² → v² = 40 → v = <strong>6,32 m/s</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Control</span>
+        <p>Si se comprimiera el doble (0,20 m), la energía sería cuatro veces mayor (40 J) y la velocidad solo el doble (12,6 m/s), por la raíz cuadrada. La deformación pesa más que la velocidad resultante.</p>
+      </div>
+    </div>
+
+    <div class="ejemplo">
+      <h4>Balance con roce</h4>
+      <p>Un bloque de 2 kg baja por una rampa desde 5 m de altura y llega abajo con 8 m/s. ¿Cuánta energía se disipó por el roce?</p>
+      <div class="paso">
+        <span class="titulo-paso">Planteo</span>
+        <p>E inicial = m·g·h = 2 · 9,8 · 5 = 98 J.<br>
+        E final = ½·m·v² = ½ · 2 · 64 = 64 J.<br>
+        E disipada = 98 − 64 = <strong>34 J</strong>.</p>
+      </div>
+      <div class="paso">
+        <span class="titulo-paso">Interpretación</span>
+        <p>Sin roce, el bloque habría llegado a 9,9 m/s. La diferencia de energía no desapareció: se transformó en calor en la superficie y en el bloque, lo que se puede detectar como un leve aumento de temperatura.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Cambiar el nivel de referencia a mitad del problema.</li>
+        <li>Afirmar que la energía "se pierde" con el roce. Se transforma en energía térmica.</li>
+        <li>Aplicar conservación cuando hay roce sin incluir el término disipado.</li>
+        <li>Olvidar la energía cinética inicial: un cuerpo que ya se movía parte con K₁ ≠ 0.</li>
+        <li>Creer que la normal o la tensión pueden cambiar la energía mecánica. Al ser perpendiculares al movimiento, no realizan trabajo.</li>
+        <li>Usar U<sub>e</sub> = ½kx en lugar de ½kx².</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 2.5</h4>
+      <p class="enunciado">Una pelota se suelta desde 5 m de altura. Sin considerar el roce del aire, ¿con qué velocidad llega al suelo? (g = 9,8 m/s²; un decimal)</p>
+      <input type="number" step="any" id="e2-3-resp" placeholder="Velocidad (m/s)" data-enter-valida="e2-3">
+      <button class="btn-validar" data-target="e2-3" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e2-3-msg"></span>
+      <button class="btn-solucion" data-target="e2-3-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e2-3-sol" data-valor="9.9">
+        <h5>Solución</h5>
+        <ol>
+          <li>m·g·h = ½·m·v² → v = √(2·g·h).</li>
+          <li>v = √(2 · 9,8 · 5) = √98 = <strong>9,9 m/s</strong>.</li>
+          <li>La masa no interviene: una pelota de 1 kg y otra de 10 kg llegan con la misma velocidad.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u2-t3" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u2-t3">
+      <h5>Pista</h5>
+      <ol>
+        <li>Iguala la energía potencial de arriba con la cinética de abajo.</li>
+        <li>La masa aparece en ambos lados: se cancela.</li>
+        <li>Despeja v = √(2gh) y calcula con g = 9,8.</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 2.6</h4>
+      <p class="enunciado">Un objeto cae desde 45 m de altura. Sin roce y usando g = 10 m/s², ¿con qué velocidad llega al suelo, en m/s?</p>
+      <input type="number" step="any" id="p-u2-t3-resp" placeholder="Velocidad (m/s)" data-enter-valida="p-u2-t3">
+      <button class="btn-validar" data-target="p-u2-t3" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u2-t3-msg"></span>
+      <button class="btn-solucion" data-target="p-u2-t3-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u2-t3-sol" data-valor="30">
+        <h5>Solución</h5>
+        <ol>
+          <li>v = √(2·g·h) = √(2 · 10 · 45) = √900.</li>
+          <li>v = <strong>30 m/s</strong> (108 km/h).</li>
+          <li>Coherencia con el tema 1.2: el tiempo de caída fue 3 s y v = g·t = 30 m/s.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u2-t3" data-correctas="3"
+          data-resp1="b" data-exp1="Sin fuerzas no conservativas, la energía mecánica total (K + U) permanece constante durante todo el movimiento."
+          data-resp2="c" data-exp2="U = m·g·h: depende de la masa, de la gravedad local y de la altura medida desde el nivel de referencia elegido."
+          data-resp3="a" data-exp3="El roce transforma energía mecánica en térmica; la energía total se conserva, pero la mecánica disminuye.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> Durante una caída libre, la energía mecánica total del cuerpo:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t3-p1" value="a"> a) Aumenta.</label>
+            <label><input type="radio" name="u2-t3-p1" value="b"> b) Se conserva.</label>
+            <label><input type="radio" name="u2-t3-p1" value="c"> c) Disminuye.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t3-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> La energía potencial gravitatoria de un cuerpo depende de:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t3-p2" value="a"> a) Solo su masa.</label>
+            <label><input type="radio" name="u2-t3-p2" value="b"> b) Solo su altura.</label>
+            <label><input type="radio" name="u2-t3-p2" value="c"> c) Su masa, la gravedad y la altura respecto del nivel de referencia.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t3-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Cuando actúa el roce, la energía mecánica del sistema:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t3-p3" value="a"> a) Disminuye, porque parte se transforma en energía térmica.</label>
+            <label><input type="radio" name="u2-t3-p3" value="b"> b) Se conserva igual que en caída libre.</label>
+            <label><input type="radio" name="u2-t3-p3" value="c"> c) Aumenta, porque el roce aporta energía.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t3-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u2-t3"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: tendones como resortes</h4>
+      <p>El tendón de Aquiles almacena energía elástica durante la fase de apoyo y la devuelve al despegar: funciona como un resorte con U<sub>e</sub> = ½kx². Ese mecanismo reduce el costo energético de la carrera y explica por qué la marcha y la carrera no son "la misma marcha más rápida". También explica por qué un tendón rígido o lesionado cambia el patrón de movimiento: si almacena menos energía, el músculo debe aportar más trabajo activo en cada paso. En rehabilitación, la progresión de carga busca recuperar esa capacidad elástica de forma gradual, porque el tejido necesita adaptarse tanto a la fuerza como a la energía que debe absorber.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u2-t3"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u2-t3" data-tema="u2-t3" data-set-estado="dominado">
+        <label for="chk-u2-t3">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 2.4 ============================ -->
+  <section class="tema" id="u2-t4">
+    <h2><span class="num-tema">2.4</span> Carga eléctrica y ley de Coulomb</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Describir la carga eléctrica, aplicar la ley de Coulomb y componer fuerzas eléctricas entre varias cargas.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Frotas un globo con tu ropa y lo acercas a tu cabello: el cabello se levanta. ¿Qué ocurrió?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>El frotamiento transfirió electrones entre la ropa y el globo, dejando al globo con carga neta. Esa carga atrae cargas de signo opuesto en el cabello, y la atracción es suficiente para vencer el peso de los pelos. No se "creó" carga: se <em>transfirió</em>. La carga total del sistema se conserva, y ese es uno de los dos principios que gobiernan toda la electrostática.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>Dos tipos de carga y una fuerza que depende de la distancia al cuadrado</h4>
+      <p>La materia contiene cargas positivas (protones) y negativas (electrones). Dos hechos gobiernan el comportamiento:</p>
+      <ul>
+        <li><strong>Cargas del mismo signo se repelen; de signo opuesto se atraen.</strong> Es la diferencia esencial con la gravedad, que siempre atrae.</li>
+        <li><strong>La carga se conserva y está cuantizada.</strong> No se crea ni se destruye, solo se transfiere, y siempre en múltiplos de la carga elemental e = 1,6 × 10⁻¹⁹ C.</li>
+      </ul>
+      <p>La <strong>ley de Coulomb</strong> describe la fuerza entre dos cargas puntuales: es proporcional al producto de las cargas e inversamente proporcional al cuadrado de la distancia. Duplicar una carga duplica la fuerza; duplicar la distancia la reduce a la cuarta parte. Ese "al cuadrado" es la razón por la que la fuerza eléctrica es intensa a corta distancia y despreciable a distancia macroscópica.</p>
+      <p>Cuando hay más de dos cargas, las fuerzas se suman <strong>vectorialmente</strong> (principio de superposición): cada par interactúa como si las demás no existieran, y luego se compone el resultado. Esto es lo que hace que un problema de tres cargas sea de geometría y no de fórmulas nuevas.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con imanes.</strong> Dos imanes se alinean solos: polos iguales se rechazan, distintos se atraen. La diferencia es que la fuerza eléctrica actúa entre cargas, puede ser muchísimo más intensa y se puede apantallar (por eso los materiales conductores modifican el campo). Un imán de refrigerador no te sirve para calcular una membrana celular; una carga sí.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Ley de Coulomb</span>
+      <strong>F = k · |q₁ · q₂| / r²</strong>
+      <span class="nota">k = 9,0 × 10⁹ N·m²/C². La fórmula da la magnitud; el sentido se determina por los signos: iguales repelen, opuestas atraen.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>F</td><td>Fuerza eléctrica entre las cargas</td><td>N</td><td>Par de acción y reacción: igual magnitud en ambas cargas</td></tr>
+      <tr><td>q₁, q₂</td><td>Cargas</td><td>C</td><td>Usar valor absoluto para la magnitud</td></tr>
+      <tr><td>r</td><td>Distancia entre las cargas</td><td>m</td><td>Se eleva al cuadrado: es la variable más sensible</td></tr>
+      <tr><td>k</td><td>Constante de Coulomb</td><td>N·m²/C²</td><td>9,0 × 10⁹ en el vacío o en aire</td></tr>
+    </table>
+
+    <table class="general">
+      <tr><th>Comparación</th><th>Fuerza gravitatoria</th><th>Fuerza eléctrica</th></tr>
+      <tr><td>Signo</td><td>Siempre atractiva</td><td>Atractiva o repulsiva</td></tr>
+      <tr><td>Dependencia de la distancia</td><td>1/r²</td><td>1/r²</td></tr>
+      <tr><td>Intensidad relativa</td><td>Muy débil</td><td>Muy intensa a escala atómica (unas 10³⁶ veces mayor entre protón y electrón)</td></tr>
+      <tr><td>Efecto de la masa o carga</td><td>Proporcional a las masas</td><td>Proporcional a las cargas</td></tr>
+      <tr><td>Apantallamiento</td><td>No</td><td>Sí, mediante conductores</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo resolver un problema de Coulomb</h4>
+      <ol>
+        <li>Convierte las cargas a coulomb: 1 µC = 10⁻⁶ C, 1 nC = 10⁻⁹ C.</li>
+        <li>Convierte la distancia a metros. Si está en cm, divide por 100 <em>antes</em> de elevar al cuadrado.</li>
+        <li>Calcula la magnitud con los valores absolutos.</li>
+        <li>Determina la dirección: sobre la línea que une las cargas, alejándose si son iguales y acercándose si son opuestas.</li>
+        <li>Si hay más de dos cargas, dibuja cada fuerza y súmalas vectorialmente.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Fuerza entre dos cargas puntuales</h4>
+      <p>Dos cargas de +2 µC y +3 µC están separadas 10 cm. ¿Qué fuerza ejercen entre sí?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Conversión</span>
+        <p>q₁ = 2 × 10⁻⁶ C; q₂ = 3 × 10⁻⁶ C; r = 0,10 m.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Magnitud</span>
+        <p>F = 9 × 10⁹ · (2 × 10⁻⁶ · 3 × 10⁻⁶) / (0,10)²<br>
+        F = 9 × 10⁹ · 6 × 10⁻¹² / 0,01 = <strong>5,4 N</strong>.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Dirección</span>
+        <p>Ambas cargas son positivas, así que la fuerza es <strong>repulsiva</strong>: cada una empuja a la otra alejándola.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 4. Control</span>
+        <p>5,4 N para cargas del orden de microcoulomb a 10 cm es un valor apreciable (equivale al peso de medio kilogramo). Si hubieras obtenido 5,4 × 10⁻⁶ N, el error estaría en haber usado centímetros sin convertir.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Usar el radio en centímetros. Al elevarlo al cuadrado, el error se amplifica por 10 000.</li>
+        <li>Olvidar convertir microcoulomb o nanocoulomb a coulomb.</li>
+        <li>Poner signos negativos dentro de la fórmula y confundir la magnitud con la dirección.</li>
+        <li>Creer que la fuerza se anula porque las cargas son iguales. Al contrario: es máxima y repulsiva.</li>
+        <li>Sumar magnitudes sin considerar la dirección cuando hay tres o más cargas.</li>
+        <li>Confundir carga (C) con corriente (A). La corriente es carga en movimiento por unidad de tiempo.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 2.7</h4>
+      <p class="enunciado">Dos cargas de +1 µC cada una están separadas 0,3 m. ¿Cuál es la magnitud de la fuerza entre ellas, en newton?</p>
+      <input type="number" step="any" id="e2-4-resp" placeholder="Fuerza (N)" data-enter-valida="e2-4">
+      <button class="btn-validar" data-target="e2-4" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e2-4-msg"></span>
+      <button class="btn-solucion" data-target="e2-4-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e2-4-sol" data-valor="0.1">
+        <h5>Solución</h5>
+        <ol>
+          <li>F = 9 × 10⁹ · (10⁻⁶ · 10⁻⁶) / 0,09.</li>
+          <li>F = 9 × 10⁹ · 10⁻¹² / 0,09 = 9 × 10⁻³ / 0,09.</li>
+          <li>F = <strong>0,1 N</strong>, repulsiva.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u2-t4" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u2-t4">
+      <h5>Pista</h5>
+      <ol>
+        <li>1 µC = 10⁻⁶ C. Con dos cargas iguales, el producto es 10⁻¹².</li>
+        <li>r² = 0,3² = 0,09 m².</li>
+        <li>Multiplica 9 × 10⁹ por 10⁻¹² y divide por 0,09.</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 2.8</h4>
+      <p class="enunciado">Dos cargas de +2 µC cada una están separadas 0,2 m. ¿Cuál es la magnitud de la fuerza entre ellas, en newton?</p>
+      <input type="number" step="any" id="p-u2-t4-resp" placeholder="Fuerza (N)" data-enter-valida="p-u2-t4">
+      <button class="btn-validar" data-target="p-u2-t4" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u2-t4-msg"></span>
+      <button class="btn-solucion" data-target="p-u2-t4-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u2-t4-sol" data-valor="0.9">
+        <h5>Solución</h5>
+        <ol>
+          <li>Producto de cargas: 2 × 10⁻⁶ · 2 × 10⁻⁶ = 4 × 10⁻¹² C².</li>
+          <li>r² = 0,04 m².</li>
+          <li>F = 9 × 10⁹ · 4 × 10⁻¹² / 0,04 = 0,036 / 0,04 = <strong>0,9 N</strong>.</li>
+          <li>Comparación útil: al duplicar las cargas y reducir la distancia, la fuerza pasó de 0,1 N a 0,9 N.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u2-t4" data-correctas="3"
+          data-resp1="b" data-exp1="La unidad de carga eléctrica en el SI es el coulomb (C); el ampere mide corriente y el volt, potencial."
+          data-resp2="c" data-exp2="F ∝ 1/r². Si r se duplica, la fuerza se reduce a 1/4."
+          data-resp3="a" data-exp3="Cargas de signo opuesto se atraen; del mismo signo se repelen.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> La unidad de carga eléctrica en el Sistema Internacional es:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t4-p1" value="a"> a) El volt.</label>
+            <label><input type="radio" name="u2-t4-p1" value="b"> b) El coulomb.</label>
+            <label><input type="radio" name="u2-t4-p1" value="c"> c) El ampere.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t4-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> Si se duplica la distancia entre dos cargas manteniendo sus valores, la fuerza eléctrica:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t4-p2" value="a"> a) Se duplica.</label>
+            <label><input type="radio" name="u2-t4-p2" value="b"> b) Se reduce a la mitad.</label>
+            <label><input type="radio" name="u2-t4-p2" value="c"> c) Se reduce a la cuarta parte.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t4-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Dos cargas de signo opuesto:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t4-p3" value="a"> a) Se atraen.</label>
+            <label><input type="radio" name="u2-t4-p3" value="b"> b) Se repelen.</label>
+            <label><input type="radio" name="u2-t4-p3" value="c"> c) No interactúan.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t4-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u2-t4"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: electricidad estática en el entorno clínico</h4>
+      <p>El cuerpo humano acumula carga por frotamiento y por inducción, y esa carga puede descargarse de forma abrupta al tocar un objeto conductor. En un pabellón con gases inflamables u oxígeno enriquecido, una chispa de esa descarga es un riesgo real de ignición, y de ahí las pulseras antiestáticas, el calzado conductivo y el control de humedad. La ley de Coulomb también explica por qué la descarga ocurre al acercarse: la fuerza crece con 1/r², de modo que basta una distancia mínima para que el aire deje de aislar y se produzca la ruptura dieléctrica. No es un fenómeno anecdótico: es una consecuencia directa de la dependencia con la distancia.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u2-t4"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u2-t4" data-tema="u2-t4" data-set-estado="dominado">
+        <label for="chk-u2-t4">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 2.5 ============================ -->
+  <section class="tema" id="u2-t5">
+    <h2><span class="num-tema">2.5</span> Campo eléctrico</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Interpretar el campo eléctrico como una propiedad del espacio, calcular su valor para cargas puntuales y describir el campo uniforme entre placas paralelas.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Si acercas una carga a otra sin tocarla, ¿cómo "sabe" la primera que la segunda está ahí?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>Porque la segunda carga modifica el espacio a su alrededor creando un <strong>campo eléctrico</strong>, y la primera interactúa con ese campo. Es una forma de describir la acción a distancia sin inventar un mecanismo invisible: el campo es la propiedad del espacio que determina qué fuerza sentiría cualquier carga colocada allí. Su ventaja práctica es que se calcula una vez y sirve para cualquier carga de prueba.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>El campo es la fuerza por unidad de carga</h4>
+      <p>Una carga crea a su alrededor una "condición" del espacio: en cada punto hay una dirección y una intensidad de fuerza eléctrica por unidad de carga. Eso es el <strong>campo eléctrico E</strong>, un vector. Si colocas una carga q en un punto donde el campo vale E, la fuerza que siente es F = q·E.</p>
+      <p>Esta definición tiene una consecuencia importante: <strong>el campo no depende de la carga de prueba</strong>. Existe por la presencia de las cargas fuente, no por quien lo mide. Si duplicas la carga de prueba, se duplica la fuerza, pero el campo en ese punto sigue siendo el mismo.</p>
+      <p>Para representarlo se usan <strong>líneas de campo</strong>: salen de las cargas positivas y entran en las negativas, nunca se cruzan, y su densidad indica la intensidad. Donde las líneas están más juntas, el campo es más intenso. Entre dos placas paralelas con cargas opuestas el campo es aproximadamente <strong>uniforme</strong>: misma dirección, mismo sentido y misma intensidad en todos los puntos, lo que simplifica mucho los cálculos.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con un mapa de viento.</strong> El campo eléctrico es como un mapa que indica, en cada punto, hacia dónde y con qué fuerza "empuja" el ambiente eléctrico. Una hoja colocada en el mapa no lo modifica: solo revela cómo es. Cambiar la hoja (la carga de prueba) cambia lo que le ocurre a la hoja, no el mapa.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Definición y campo de una carga puntual</span>
+      <strong>E = F / q₀</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>E = k · |q| / r²</strong>
+      <span class="nota">E se mide en N/C (equivale a V/m). La dirección es radial: hacia afuera si la carga es positiva, hacia ella si es negativa.</span>
+    </div>
+
+    <div class="formula">
+      <span class="etiqueta">Campo uniforme entre placas paralelas</span>
+      <strong>E = ΔV / d</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>F = q · E</strong>
+      <span class="nota">ΔV es la diferencia de potencial entre las placas y d su separación. El campo apunta de la placa positiva a la negativa.</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>E</td><td>Campo eléctrico</td><td>N/C o V/m</td><td>Vector; existe aunque no haya carga de prueba</td></tr>
+      <tr><td>q₀</td><td>Carga de prueba</td><td>C</td><td>Se supone pequeña para no alterar el campo</td></tr>
+      <tr><td>q</td><td>Carga fuente</td><td>C</td><td>La que genera el campo</td></tr>
+      <tr><td>r</td><td>Distancia a la carga fuente</td><td>m</td><td>El campo decae como 1/r²</td></tr>
+      <tr><td>ΔV</td><td>Diferencia de potencial entre placas</td><td>V</td><td>Se desarrolla en el tema 2.6</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo resolver problemas de campo eléctrico</h4>
+      <ol>
+        <li>Distingue la carga fuente (la que crea el campo) de la carga de prueba (la que lo siente).</li>
+        <li>Convierte cargas a coulomb y distancias a metros.</li>
+        <li>Calcula E con la fórmula de carga puntual si la fuente es puntual; usa E = ΔV/d si es un campo uniforme entre placas.</li>
+        <li>Obtén la fuerza con F = q·E, cuidando el signo: una carga negativa siente fuerza opuesta al campo.</li>
+        <li>Verifica la dirección con un dibujo: las líneas salen de positivas y entran en negativas.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Campo de una carga puntual y fuerza sobre otra carga</h4>
+      <p>Una carga de +4 µC está aislada. (a) ¿Cuál es el campo eléctrico a 0,2 m de ella? (b) ¿Qué fuerza sentiría una carga de +2 µC colocada en ese punto?</p>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 1. Campo</span>
+        <p>E = k·|q|/r² = 9 × 10⁹ · 4 × 10⁻⁶ / (0,2)²<br>
+        E = 36 000 / 0,04 = <strong>9 × 10⁵ N/C</strong>, alejándose de la carga.</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 2. Fuerza</span>
+        <p>F = q·E = 2 × 10⁻⁶ · 9 × 10⁵ = <strong>1,8 N</strong>, en el mismo sentido del campo (porque la carga de prueba es positiva).</p>
+      </div>
+
+      <div class="paso">
+        <span class="titulo-paso">Paso 3. Control</span>
+        <p>Es coherente con Coulomb entre las dos cargas: F = 9 × 10⁹ · 8 × 10⁻¹² / 0,04 = 1,8 N. Los dos caminos deben coincidir siempre; si no, hay un error de conversión.</p>
+      </div>
+    </div>
+
+    <div class="ejemplo">
+      <h4>Campo uniforme entre placas</h4>
+      <p>Dos placas paralelas separadas 2 cm tienen una diferencia de potencial de 100 V. ¿Cuál es el campo entre ellas y qué fuerza siente una carga de 1 nC?</p>
+      <div class="paso">
+        <span class="titulo-paso">Planteo</span>
+        <p>E = ΔV/d = 100 / 0,02 = <strong>5000 V/m</strong> (o N/C).<br>
+        F = q·E = 1 × 10⁻⁹ · 5000 = <strong>5 × 10⁻⁶ N</strong>.</p>
+      </div>
+      <div class="paso">
+        <span class="titulo-paso">Sentido</span>
+        <p>El campo va de la placa positiva a la negativa. Una carga positiva se mueve en ese sentido; una negativa, en sentido contrario. Este arreglo es el modelo de un capacitor, que se estudia en la unidad 3.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Confundir campo con fuerza: el campo existe sin carga de prueba; la fuerza requiere una carga.</li>
+        <li>Creer que el campo depende del valor de la carga de prueba. No: la fuerza cambia, el campo no.</li>
+        <li>Invertir el sentido de las líneas: salen de las positivas, entran en las negativas.</li>
+        <li>Usar la distancia en centímetros, con el consiguiente error de 10 000 veces.</li>
+        <li>Aplicar la fórmula de carga puntual en un campo uniforme o viceversa.</li>
+        <li>Olvidar que una carga negativa siente fuerza en sentido opuesto al campo.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 2.9</h4>
+      <p class="enunciado">¿Cuál es la magnitud del campo eléctrico a 0,1 m de una carga de +1 µC, en N/C?</p>
+      <input type="number" step="any" id="e2-5-resp" placeholder="Campo (N/C)" data-enter-valida="e2-5">
+      <button class="btn-validar" data-target="e2-5" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e2-5-msg"></span>
+      <button class="btn-solucion" data-target="e2-5-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e2-5-sol" data-valor="900000">
+        <h5>Solución</h5>
+        <ol>
+          <li>E = 9 × 10⁹ · 1 × 10⁻⁶ / (0,1)².</li>
+          <li>E = 9000 / 0,01 = <strong>9 × 10⁵ N/C</strong>, es decir 900 000 N/C.</li>
+          <li>Si la distancia se duplicara a 0,2 m, el campo bajaría a 2,25 × 10⁵ N/C.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u2-t5" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u2-t5">
+      <h5>Pista</h5>
+      <ol>
+        <li>1 µC = 10⁻⁶ C y 0,1 m al cuadrado es 0,01 m².</li>
+        <li>Multiplica 9 × 10⁹ por 10⁻⁶.</li>
+        <li>Divide el resultado por 0,01.</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 2.10</h4>
+      <p class="enunciado">¿Cuál es la magnitud del campo eléctrico a 0,3 m de una carga de +1 µC, en N/C?</p>
+      <input type="number" step="any" id="p-u2-t5-resp" placeholder="Campo (N/C)" data-enter-valida="p-u2-t5">
+      <button class="btn-validar" data-target="p-u2-t5" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u2-t5-msg"></span>
+      <button class="btn-solucion" data-target="p-u2-t5-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u2-t5-sol" data-valor="100000">
+        <h5>Solución</h5>
+        <ol>
+          <li>E = 9 × 10⁹ · 10⁻⁶ / 0,09.</li>
+          <li>E = 9000 / 0,09 = <strong>1 × 10⁵ N/C</strong> = 100 000 N/C.</li>
+          <li>Comparación: al triplicar la distancia respecto del ejercicio 2.9, el campo se redujo a la novena parte, como corresponde a 1/r².</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u2-t5" data-correctas="3"
+          data-resp1="a" data-exp1="Por convención, las líneas de campo salen de las cargas positivas y entran en las negativas."
+          data-resp2="b" data-exp2="E = F/q es fuerza por unidad de carga: por eso se mide en N/C y no depende de la carga de prueba."
+          data-resp3="c" data-exp3="E ∝ 1/r². Al duplicar la distancia, el campo se reduce a la cuarta parte.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> Las líneas de campo eléctrico:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t5-p1" value="a"> a) Salen de las cargas positivas y entran en las negativas.</label>
+            <label><input type="radio" name="u2-t5-p1" value="b"> b) Entran en las cargas positivas y salen de las negativas.</label>
+            <label><input type="radio" name="u2-t5-p1" value="c"> c) Son circulares alrededor de cualquier carga.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t5-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> El campo eléctrico se define como:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t5-p2" value="a"> a) La energía por unidad de carga.</label>
+            <label><input type="radio" name="u2-t5-p2" value="b"> b) La fuerza por unidad de carga.</label>
+            <label><input type="radio" name="u2-t5-p2" value="c"> c) La carga por unidad de volumen.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t5-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Si se duplica la distancia a una carga puntual, la intensidad del campo eléctrico:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t5-p3" value="a"> a) Se duplica.</label>
+            <label><input type="radio" name="u2-t5-p3" value="b"> b) Se reduce a la mitad.</label>
+            <label><input type="radio" name="u2-t5-p3" value="c"> c) Se reduce a la cuarta parte.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t5-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u2-t5"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: el electrocardiograma mide un campo</h4>
+      <p>La actividad eléctrica del corazón genera un campo eléctrico que se propaga por el cuerpo. Los electrodos del ECG no "leen la corriente del corazón" directamente: registran diferencias de potencial en la superficie, producidas por ese campo. Por eso la posición de los electrodos importa tanto: cada derivación observa el mismo dipolo desde una dirección distinta, y la comparación entre derivaciones permite localizar el origen de una alteración. Cuando se habla de "eje eléctrico del corazón", se está describiendo literalmente la orientación de un vector de campo, no una metáfora.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u2-t5"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u2-t5" data-tema="u2-t5" data-set-estado="dominado">
+        <label for="chk-u2-t5">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TEMA 2.6 ============================ -->
+  <section class="tema" id="u2-t6">
+    <h2><span class="num-tema">2.6</span> Energía y potencial eléctrico</h2>
+
+    <div class="objetivo">
+      <h4>Objetivo</h4>
+      <p>Calcular energía potencial eléctrica, potencial y diferencia de potencial; relacionar el potencial con el trabajo eléctrico y con el campo uniforme.</p>
+    </div>
+
+    <div class="activacion">
+      <h4>Para activar lo que ya sabes</h4>
+      <p>Una batería de 9 V "empuja" corriente por un circuito. ¿Qué significa exactamente ese 9 V?</p>
+      <details>
+        <summary>Ver respuesta</summary>
+        <p>Significa que la batería mantiene una <strong>diferencia de potencial</strong> de 9 J/C entre sus terminales: cada coulomb de carga que atraviesa el circuito entrega o recibe 9 joule de energía. El volt no mide cuánta carga hay ni cuánta corriente circula, sino <em>cuánta energía por unidad de carga</em> está disponible. Es la razón por la que el potencial es la magnitud que impulsa el movimiento de cargas.</p>
+      </details>
+    </div>
+
+    <h3>La idea central</h3>
+
+    <div class="idea">
+      <h4>El potencial es energía por unidad de carga</h4>
+      <p>Así como el campo eléctrico es fuerza por unidad de carga, el <strong>potencial eléctrico V</strong> es energía potencial por unidad de carga. Su unidad es el volt: 1 V = 1 J/C. Un punto con potencial alto significa que una carga positiva colocada allí tiene mucha energía potencial disponible.</p>
+      <p>Lo que produce efectos medibles no es el potencial absoluto, sino la <strong>diferencia de potencial</strong> ΔV entre dos puntos. El trabajo que realiza el campo para mover una carga q entre esos puntos es W = q·ΔV. Si la carga es positiva y va de mayor a menor potencial, el campo hace trabajo positivo (la carga gana energía cinética). Si va en sentido contrario, hay que aportar trabajo externo.</p>
+      <p>Las <strong>superficies equipotenciales</strong> son conjuntos de puntos con el mismo potencial; son siempre perpendiculares a las líneas de campo. Y en un campo uniforme, el potencial cambia de forma lineal con la distancia: de ahí la relación E = ΔV/d, que conecta este tema con el anterior.</p>
+    </div>
+
+    <div class="analogia">
+      <strong>Analogía con una represa.</strong> El potencial es la altura del agua; la diferencia de potencial es el desnivel entre dos puntos; el campo eléctrico es la pendiente del terreno. Lo que mueve la turbina no es la altura absoluta, sino el desnivel. Y dos puntos a la misma altura (superficie equipotencial) no producen flujo entre sí, por mucha altura que tengan ambos.
+    </div>
+
+    <h3>De la idea a la fórmula</h3>
+
+    <div class="formula">
+      <span class="etiqueta">Potencial, energía potencial y trabajo eléctrico</span>
+      <strong>V = k · q / r</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>U = k · q₁ · q₂ / r</strong><br>
+      <strong>W = q · ΔV</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>E = ΔV / d</strong>
+      <span class="nota">V y U son escalares con signo: el potencial de una carga negativa es negativo. La energía potencial de dos cargas del mismo signo es positiva (se repelen).</span>
+    </div>
+
+    <table class="lectura">
+      <tr><th>Símbolo</th><th>Qué es</th><th>Unidad</th><th>Observación</th></tr>
+      <tr><td>V</td><td>Potencial eléctrico en un punto</td><td>V (volt)</td><td>Escalar; se mide respecto de un origen arbitrario (a menudo el infinito)</td></tr>
+      <tr><td>ΔV</td><td>Diferencia de potencial</td><td>V</td><td>Es lo que produce efectos físicos</td></tr>
+      <tr><td>U</td><td>Energía potencial eléctrica del par de cargas</td><td>J</td><td>Positiva si las cargas se repelen, negativa si se atraen</td></tr>
+      <tr><td>W</td><td>Trabajo eléctrico sobre la carga q</td><td>J</td><td>W = q·ΔV, con signo</td></tr>
+      <tr><td>d</td><td>Distancia entre placas o puntos del campo uniforme</td><td>m</td><td>E = ΔV/d solo vale en campo uniforme</td></tr>
+    </table>
+
+    <div class="metodo">
+      <h4>Cómo resolver problemas de potencial</h4>
+      <ol>
+        <li>Decide si el problema trata de potencial en un punto (V = kq/r) o de energía entre dos cargas (U = kq₁q₂/r).</li>
+        <li>Convierte cargas a coulomb y distancias a metros.</li>
+        <li>Conserva los signos: el potencial de una carga negativa es negativo y disminuye al acercarse.</li>
+        <li>Para trabajo, usa W = q·ΔV y revisa el signo según el sentido del desplazamiento.</li>
+        <li>En campo uniforme, relaciona ΔV con E y d; no mezcles esta fórmula con la de carga puntual.</li>
+      </ol>
+    </div>
+
+    <h3>Ejemplo resuelto</h3>
+
+    <div class="ejemplo">
+      <h4>Potencial de una carga puntual</h4>
+      <p>¿Cuál es el potencial eléctrico a 0,2 m de una carga de +4 µC?</p>
+      <div class="paso">
+        <span class="titulo-paso">Planteo</span>
+        <p>V = k·q/r = 9 × 10⁹ · 4 × 10⁻⁶ / 0,2 = 36 000 / 0,2 = <strong>1,8 × 10⁵ V</strong>.</p>
+      </div>
+      <div class="paso">
+        <span class="titulo-paso">Interpretación</span>
+        <p>Una carga de +1 C colocada allí tendría 1,8 × 10⁵ J de energía potencial, lo que muestra por qué el coulomb es una unidad enorme para uso práctico y se trabaja con microcoulomb.</p>
+      </div>
+    </div>
+
+    <div class="ejemplo">
+      <h4>Trabajo para mover una carga entre placas</h4>
+      <p>Se mueve una carga de +2 µC entre dos placas cuya diferencia de potencial es 100 V. ¿Cuánto trabajo realiza el campo?</p>
+      <div class="paso">
+        <span class="titulo-paso">Planteo</span>
+        <p>W = q·ΔV = 2 × 10⁻⁶ · 100 = <strong>2 × 10⁻⁴ J</strong> (0,2 mJ).</p>
+      </div>
+      <div class="paso">
+        <span class="titulo-paso">Sentido</span>
+        <p>Si la carga positiva va de la placa positiva a la negativa, el campo hace trabajo positivo y la carga gana energía cinética. Si se moviera en sentido contrario, el trabajo del campo sería negativo y habría que aportar energía externa.</p>
+      </div>
+    </div>
+
+    <div class="ejemplo">
+      <h4>Energía potencial de un par de cargas</h4>
+      <p>¿Cuál es la energía potencial eléctrica de las cargas de +2 µC y +3 µC separadas 10 cm?</p>
+      <div class="paso">
+        <span class="titulo-paso">Planteo</span>
+        <p>U = k·q₁·q₂/r = 9 × 10⁹ · 6 × 10⁻¹² / 0,10 = <strong>0,54 J</strong>.</p>
+      </div>
+      <div class="paso">
+        <span class="titulo-paso">Interpretación</span>
+        <p>El signo es positivo porque ambas cargas se repelen: para acercarlas habría que aportar energía, y al soltarlas el sistema devuelve esa energía en forma de movimiento.</p>
+      </div>
+    </div>
+
+    <div class="errores">
+      <h4>Errores frecuentes</h4>
+      <ul>
+        <li>Confundir potencial con energía. El volt es energía por unidad de carga; el joule es energía.</li>
+        <li>Sumar potenciales como vectores. El potencial es escalar: se suman algebraicamente.</li>
+        <li>Usar V = kq/r en un campo uniforme, o E = ΔV/d con una carga puntual.</li>
+        <li>Olvidar el signo de las cargas al calcular U o V.</li>
+        <li>Creer que un potencial alto implica mucha carga: son magnitudes distintas.</li>
+        <li>Ignorar el signo en W = q·ΔV, lo que invierte la interpretación del trabajo.</li>
+      </ul>
+    </div>
+
+    <h3>Práctica guiada</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 2.11</h4>
+      <p class="enunciado">¿Cuánto trabajo se requiere para mover una carga de 1 µC a través de una diferencia de potencial de 12 V, en joule?</p>
+      <input type="number" step="any" id="e2-6-resp" placeholder="Trabajo (J)" data-enter-valida="e2-6">
+      <button class="btn-validar" data-target="e2-6" type="button">Validar respuesta</button>
+      <span class="msg-validacion" id="e2-6-msg"></span>
+      <button class="btn-solucion" data-target="e2-6-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="e2-6-sol" data-valor="0.000012">
+        <h5>Solución</h5>
+        <ol>
+          <li>W = q·ΔV = 1 × 10⁻⁶ · 12.</li>
+          <li>W = <strong>1,2 × 10⁻⁵ J</strong> = 0,000012 J.</li>
+          <li>Es una energía pequeña en términos macroscópicos, pero enorme a escala de una sola partícula cargada.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn-pista" data-target="pista-u2-t6" type="button">Ver pista ▼</button>
+    <div class="pista" id="pista-u2-t6">
+      <h5>Pista</h5>
+      <ol>
+        <li>1 µC = 10⁻⁶ C.</li>
+        <li>Multiplica la carga por la diferencia de potencial.</li>
+        <li>El resultado será del orden de 10⁻⁵ J: exprésalo en notación científica para evitar errores de ceros.</li>
+      </ol>
+    </div>
+
+    <h3>Práctica autónoma</h3>
+
+    <div class="practica">
+      <h4>Ejercicio 2.12</h4>
+      <p class="enunciado">¿Cuál es el potencial eléctrico, en volt, a 0,1 m de una carga de +1 µC?</p>
+      <input type="number" step="any" id="p-u2-t6-resp" placeholder="Potencial (V)" data-enter-valida="p-u2-t6">
+      <button class="btn-validar" data-target="p-u2-t6" type="button">Validar</button>
+      <span class="msg-validacion" id="p-u2-t6-msg"></span>
+      <button class="btn-solucion" data-target="p-u2-t6-sol" type="button">Ver solución ▼</button>
+      <div class="solucion" id="p-u2-t6-sol" data-valor="90000">
+        <h5>Solución</h5>
+        <ol>
+          <li>V = k·q/r = 9 × 10⁹ · 10⁻⁶ / 0,1.</li>
+          <li>V = 9000 / 0,1 = <strong>9 × 10⁴ V</strong> = 90 000 V.</li>
+          <li>Coherencia con el tema 2.5: E = 9 × 10⁵ N/C en ese mismo punto, y V/r = 90 000/0,1 = 9 × 10⁵ V/m. Ambas cifras describen el mismo campo.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Autoevaluación</h3>
+
+    <form class="autoevaluacion-form" data-tema="u2-t6" data-correctas="3"
+          data-resp1="b" data-exp1="El volt equivale a joule por coulomb: mide energía por unidad de carga, no energía total."
+          data-resp2="c" data-exp2="En un campo uniforme, E = ΔV/d: la diferencia de potencial repartida en la separación entre placas."
+          data-resp3="a" data-exp3="V = kq/r: al aumentar r, el potencial de una carga positiva disminuye, acercándose a cero en el infinito.">
+      <div class="autoevaluacion">
+        <h4>Comprueba si lo dominas</h4>
+        <p class="indicacion">Tres preguntas conceptuales. Al enviar verás la explicación de cada una.</p>
+
+        <div class="pregunta">
+          <label><strong>1.</strong> El potencial eléctrico es:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t6-p1" value="a"> a) La energía total almacenada en un punto.</label>
+            <label><input type="radio" name="u2-t6-p1" value="b"> b) La energía potencial por unidad de carga.</label>
+            <label><input type="radio" name="u2-t6-p1" value="c"> c) La fuerza por unidad de carga.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t6-p1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> En un campo eléctrico uniforme, la relación entre campo y potencial es:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t6-p2" value="a"> a) E = kq/r².</label>
+            <label><input type="radio" name="u2-t6-p2" value="b"> b) E = q·ΔV.</label>
+            <label><input type="radio" name="u2-t6-p2" value="c"> c) E = ΔV/d.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t6-p2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Al alejarse de una carga positiva, el potencial eléctrico:</label>
+          <div class="opciones">
+            <label><input type="radio" name="u2-t6-p3" value="a"> a) Disminuye.</label>
+            <label><input type="radio" name="u2-t6-p3" value="b"> b) Aumenta.</label>
+            <label><input type="radio" name="u2-t6-p3" value="c"> c) No cambia, porque solo depende de la carga.</label>
+          </div>
+          <div class="feedback" id="fb-u2-t6-p3"></div>
+        </div>
+
+        <div class="resultado-auto" id="resultado-auto-u2-t6"></div>
+        <button type="submit">Revisar mis respuestas</button>
+      </div>
+    </form>
+
+    <div class="caso">
+      <h4>Conexión con la salud: el potencial de membrana</h4>
+      <p>Una célula mantiene una diferencia de potencial de unos 70 mV entre el interior y el exterior de su membrana, con el interior negativo. Si la membrana tiene unos 5 nm de espesor, el campo eléctrico equivalente es E = ΔV/d = 0,070 / 5 × 10⁻⁹ ≈ <strong>1,4 × 10⁷ V/m</strong>: del orden de catorce millones de volt por metro, una cifra enorme para una distancia tan pequeña. Ese campo es el que actúa sobre los canales iónicos y el que cambia durante un potencial de acción. También permite calcular la energía necesaria para mover un ion: W = q·ΔV ≈ 1,6 × 10⁻¹⁹ × 0,07 ≈ 1,1 × 10⁻²⁰ J por ion. A escala macroscópica es insignificante; a escala celular es la energía que gobierna la excitabilidad.</p>
+    </div>
+
+    <div class="estado-tema">
+      <span class="badge" data-badge-tema="u2-t6"></span>
+      <div class="checklist">
+        <input type="checkbox" id="chk-u2-t6" data-tema="u2-t6" data-set-estado="dominado">
+        <label for="chk-u2-t6">Marco este tema como dominado</label>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Guía de Estudio de Física &middot; CBA0210 &middot; Unidad 2 — Energía, Trabajo y Electrostática</p>
+  <p><a href="index.html">Volver al inicio</a> &middot; <a href="unidad1.html">Ir a la Unidad 1</a> &middot; <a href="unidad3.html">Ir a la Unidad 3</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

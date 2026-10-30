@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidad 3 — Circuitos y Fluidos · Física CBA0210</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Unidad 3 — Circuitos y Fluidos</h1>
+    <p class="sub">Física CBA0210 &middot; RA 2, RA 3 y RA 4 &middot; Volver a <a href="index.html">Inicio</a></p>
+  </div>
+</header>
+
+<nav>
+  <ul class="nav-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="unidad1.html">Unidad 1 — Cinemática y Dinámica</a></li>
+    <li><a href="unidad2.html">Unidad 2 — Energía, Trabajo y Electrostática</a></li>
+    <li><a href="unidad3.html" class="activa">Unidad 3 — Circuitos y Fluidos</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section class="seccion ra">
+    <h3>Resultados de Aprendizaje de esta unidad</h3>
+    <p><strong>RA 2:</strong> Aplicar conceptos de carga eléctrica, gradiente, campo y potencial analizando los cambios de energía, trabajo mecánico, circuitos resistivos y RC.</p>
+    <p><strong>RA 3:</strong> Emplear conceptos de presión, densidad y viscosidad interpretando y prediciendo el comportamiento de fluidos estáticos y en movimiento para comprender procesos fisiológicos.</p>
+    <p><strong>RA 4:</strong> Utilizar el método científico en experimentos guiados y grupales.</p>
+  </section>
+
+  <section class="seccion indicadores">
+    <h3>Indicadores de logro</h3>
+    <ul>
+      <li>Analizar y resolver circuitos resistivos.</li>
+      <li>Analizar y predecir procesos de carga y descarga de capacitores en circuitos RC.</li>
+      <li>Calcular densidad y presión en fluidos estáticos.</li>
+      <li>Distinguir entre fluidos ideales y viscosos.</li>
+      <li>Calcular usando la ecuación de continuidad y el principio de Bernoulli.</li>
+      <li>Aplicar la ley de Poiseuille para describir el comportamiento de fluidos viscosos.</li>
+      <li>Relacionar parámetros del flujo (caudal, gradientes de presión y viscosidad) con la circulación de fluidos corporales.</li>
+      <li>Colaborar activamente con estudiantes de distintas carreras y comunicar aportes con evidencia.</li>
+    </ul>
+  </section>
+
+  <!-- ===================== TEMA 3.1 ===================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>3.1 Circuitos resistivos: Ley de Ohm, serie y paralelo</h2>
+
+      <h3>Ley de Ohm</h3>
+      <p>Relaciona el voltaje (V), la corriente (I) y la resistencia (R) de un conductor.</p>
+      <div class="formula">
+        <span class="etiqueta">Ley de Ohm</span>
+        <strong>V = I·R</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>I = V / R</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>R = V / I</strong><br>
+        <span class="nota">V en voltios (V), I en amperios (A), R en ohmios (Ω)</span>
+      </div>
+
+      <div class="calculadora">
+        <h4>Calculadora — Ley de Ohm</h4>
+        <label>Voltaje V (V):</label>
+        <input type="number" id="ohm-v" value="12">
+        <label>Resistencia R (Ω):</label>
+        <input type="number" id="ohm-r" value="6">
+        <button id="btn-ohm">Calcular corriente y potencia</button>
+        <div class="resultado" id="ohm-resultado"></div>
+      </div>
+
+      <h3>Resistencias en serie</h3>
+      <p>La misma corriente circula por todas. La resistencia equivalente es la suma.</p>
+      <div class="formula">
+        <strong>R_T = R₁ + R₂ + R₃ + …</strong>
+      </div>
+
+      <h3>Resistencias en paralelo</h3>
+      <p>El mismo voltaje se aplica a cada rama. La inversa de la resistencia equivalente es la suma de las inversas.</p>
+      <div class="formula">
+        <strong>1 / R_T = 1 / R₁ + 1 / R₂ + 1 / R₃ + …</strong>
+      </div>
+
+      <div class="diagrama">
+        <svg viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg">
+          <!-- Serie -->
+          <line x1="60" y1="80" x2="120" y2="80" stroke="#333" stroke-width="2"/>
+          <rect x="120" y="65" width="40" height="30" fill="#1f5c8a" rx="4"/>
+          <text x="140" y="80" font-size="10" fill="#fff" text-anchor="middle">R1</text>
+          <line x1="160" y1="80" x2="220" y2="80" stroke="#333" stroke-width="2"/>
+          <rect x="220" y="65" width="40" height="30" fill="#1f5c8a" rx="4"/>
+          <text x="240" y="80" font-size="10" fill="#fff" text-anchor="middle">R2</text>
+          <line x1="260" y1="80" x2="320" y2="80" stroke="#333" stroke-width="2"/>
+          <rect x="320" y="65" width="40" height="30" fill="#1f5c8a" rx="4"/>
+          <text x="340" y="80" font-size="10" fill="#fff" text-anchor="middle">R3</text>
+          <line x1="360" y1="80" x2="420" y2="80" stroke="#333" stroke-width="2"/>
+          <text x="240" y="110" font-size="11" fill="#666">SERIE: misma corriente, R_T = suma</text>
+          <!-- Paralelo -->
+          <line x1="60" y1="200" x2="120" y2="200" stroke="#333" stroke-width="2"/>
+          <line x1="120" y1="185" x2="120" y2="215" stroke="#333" stroke-width="2"/>
+          <line x1="240" y1="185" x2="240" y2="215" stroke="#333" stroke-width="2"/>
+          <rect x="120" y="160" width="40" height="20" fill="#c62828" rx="4"/>
+          <text x="140" y="172" font-size="10" fill="#fff" text-anchor="middle">R1</text>
+          <rect x="240" y="160" width="40" height="20" fill="#c62828" rx="4"/>
+          <text x="260" y="172" font-size="10" fill="#fff" text-anchor="middle">R2</text>
+          <line x1="120" y1="200" x2="240" y2="200" stroke="#333" stroke-width="2"/>
+          <text x="150" y="230" font-size="11" fill="#666">PARALELO: mismo voltaje, inversas suman</text>
+        </svg>
+        <div class="leyenda">Serie: componentes uno tras otro. Paralelo: ramas separadas entre los mismos dos nodos.</div>
+      </div>
+
+      <h3>Ejemplo resuelto — Serie y paralelo</h3>
+      <p>Tres resistencias de 4 Ω, 6 Ω y 12 Ω están en paralelo. ¿Cuál es la resistencia equivalente?</p>
+      <div class="solucion" id="sol-u3-1">
+        <h5>Solución</h5>
+        <ol>
+          <li>1/R_T = 1/4 + 1/6 + 1/12 = 3/12 + 2/12 + 1/12 = 6/12 = 0,5.</li>
+          <li>R_T = 1 / 0,5 = <strong>2 Ω</strong>.</li>
+        </ol>
+      </div>
+      <button class="btn-solucion" data-target="sol-u3-1">Ver solución ▼</button>
+
+      <div class="calculadora">
+        <h4>Calculadora — Resistencias en serie</h4>
+        <label>Resistencias (Ω, separadas por coma o espacio):</label>
+        <input type="number" id="serie-r" value="4,6,12">
+        <button id="btn-serie">Calcular R_T (serie)</button>
+        <div class="resultado" id="serie-resultado"></div>
+      </div>
+      <div class="calculadora">
+        <h4>Calculadora — Resistencias en paralelo</h4>
+        <label>Resistencias (Ω, separadas por coma o espacio):</label>
+        <input type="number" id="paralelo-r" value="4,6,12">
+        <button id="btn-paralelo">Calcular R_T (paralelo)</button>
+        <div class="resultado" id="paralelo-resultado"></div>
+      </div>
+
+      <h3>Ejercicios propuestos</h3>
+      <div class="ejercicio">
+        <h4>Ejercicio 3.1</h4>
+        <p>Un aparato médico tiene una resistencia de 24 Ω y se conecta a una fuente de 12 V. ¿Qué corriente circula por él?</p>
+        <input type="number" id="e3-1-resp" placeholder="Corriente (A)">
+        <button class="btn-validar" data-target="e3-1">Validar respuesta</button>
+        <span id="e3-1-msg"></span>
+        <div class="solucion" id="sol-e3-1">
+          <h5>Solución</h5>
+          <ol>
+            <li>I = V / R = 12 / 24 = <strong>0,5 A</strong>.</li>
+          </ol>
+        </div>
+      </div>
+      <button class="btn-solucion" data-target="sol-e3-1">Ver solución ▼</button>
+
+      <div class="caso">
+        <h4>Caso aplicado — Equipo médico y fuente de voltaje</h4>
+        <p>Un monitor de signos vitales funciona a 12 V y tiene una resistencia interna equivalente de 24 Ω. Al conectarlo a una fuente de 12 V, circulan 0,5 A. Si la fuente baja a 6 V, la corriente cae a 0,25 A y el equipo podría no encender. Entender la Ley de Ohm ayuda a seleccionar fuentes de alimentación adecuadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TEMA 3.2 ===================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>3.2 Circuitos RC y constante de tiempo</h2>
+
+      <h3>¿Qué es un circuito RC?</h3>
+      <p>Está formado por un resistor (R) y un capacitor (C). Al conectarlo a una fuente de voltaje, el capacitor se carga progresivamente; al desconectar la fuente, se descarga a través del resistor.</p>
+
+      <h3>Constante de tiempo τ (tau)</h3>
+      <div class="formula">
+        <span class="etiqueta">Constante de tiempo RC</span>
+        <strong>τ = R·C</strong><br>
+        <span class="nota">τ en segundos, R en ohmios, C en faradios</span>
+      </div>
+      <p>Después de un tiempo τ, el capacitor se ha cargado aproximadamente al 63,2 % del voltaje final.</p>
+
+      <h3>Voltaje en el capacitor durante la carga</h3>
+      <div class="formula">
+        <strong>V_c(t) = V₀ · (1 − e^(−t/τ))</strong>
+      </div>
+
+      <div class="diagrama">
+        <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg">
+          <!-- Bateria -->
+          <line x1="40" y1="60" x2="40" y2="100" stroke="#333" stroke-width="3"/>
+          <line x1="60" y1="60" x2="60" y2="100" stroke="#333" stroke-width="3"/>
+          <line x1="40" y1="60" x2="60" y2="60" stroke="#333" stroke-width="3"/>
+          <line x1="40" y1="100" x2="60" y2="100" stroke="#333" stroke-width="3"/>
+          <!-- Resistor -->
+          <line x1="60" y1="80" x2="130" y2="80" stroke="#333" stroke-width="2"/>
+          <path d="M 130 80 L 150 60 L 170 100 L 190 60 L 210 100 L 230 80" fill="none" stroke="#333" stroke-width="2"/>
+          <line x1="230" y1="80" x2="280" y2="80" stroke="#333" stroke-width="2"/>
+          <!-- Capacitor -->
+          <line x1="280" y1="60" x2="280" y2="100" stroke="#333" stroke-width="3"/>
+          <line x1="320" y1="60" x2="320" y2="100" stroke="#333" stroke-width="3"/>
+          <line x1="320" y1="80" x2="380" y2="80" stroke="#333" stroke-width="2"/>
+          <line x1="380" y1="80" x2="40" y2="80" stroke="#333" stroke-width="2"/>
+          <text x="140" y="120" font-size="10" fill="#666">R</text>
+          <text x="300" y="120" font-size="10" fill="#666">C</text>
+          <text x="200" y="145" font-size="11" fill="#666">Circuito RC en serie: fuente, resistor y capacitor en un solo lazo.</text>
+        </svg>
+        <div class="leyenda">Circuito RC: al cerrar el interruptor, el capacitor se carga y el corriente decae exponencialmente.</div>
+      </div>
+
+      <div class="calculadora">
+        <h4>Calculadora — Carga de un capacitor RC</h4>
+        <label>Voltaje fuente V₀ (V):</label>
+        <input type="number" id="rc-v0" value="10">
+        <label>Resistencia R (Ω):</label>
+        <input type="number" id="rc-r" value="1000">
+        <label>Capacitancia C (µF):</label>
+        <input type="number" id="rc-c" value="1000">
+        <label>Tiempo t (s):</label>
+        <input type="number" id="rc-t" value="1">
+        <button id="btn-rc">Calcular V_c y τ</button>
+        <div class="resultado" id="rc-resultado"></div>
+        <p class="nota">Nota: la C se ingresa en µF y el script la convierte a faradios internamente.</p>
+      </div>
+
+      <h3>Ejemplo resuelto</h3>
+      <p>Un capacitor de 1000 µF se carga por un resistor de 1000 Ω conectado a una fuente de 10 V. ¿Cuál es τ y el voltaje en el capacitor después de 1 s?</p>
+      <div class="solucion" id="sol-u3-2">
+        <h5>Solución</h5>
+        <ol>
+          <li>C = 1000 µF = 1000×10⁻⁶ F = 10⁻³ F.</li>
+          <li>τ = R·C = 1000 · 10⁻³ = <strong>1 s</strong>.</li>
+          <li>V_c(1) = 10 · (1 − e^(−1/1)) = 10 · (1 − 0,368) = 10 · 0,632 = <strong>6,32 V</strong>.</li>
+        </ol>
+      </div>
+      <button class="btn-solucion" data-target="sol-u3-2">Ver solución ▼</button>
+
+      <h3>Ejercicios propuestos</h3>
+      <div class="ejercicio">
+        <h4>Ejercicio 3.2</h4>
+        <p>Un circuito RC tiene R = 500 Ω y C = 2000 µF. ¿Cuál es su constante de tiempo?</p>
+        <input type="number" id="e3-2-resp" placeholder="τ (s)">
+        <button class="btn-validar" data-target="e3-2">Validar respuesta</button>
+        <span id="e3-2-msg"></span>
+        <div class="solucion" id="sol-e3-2">
+          <h5>Solución</h5>
+          <ol>
+            <li>C = 2000 µF = 2×10⁻³ F.</li>
+            <li>τ = R·C = 500 · 2×10⁻³ = <strong>1 s</strong>.</li>
+          </ol>
+        </div>
+      </div>
+      <button class="btn-solucion" data-target="sol-e3-2">Ver solución ▼</button>
+
+      <div class="caso">
+        <h4>Caso aplicado — Marcapasos y temporización</h4>
+        <p>Un marcapasos usa circuitos RC para controlar el tiempo entre estímulos eléctricos al corazón. La constante de tiempo τ determina cuánto tarda el capacitor en cargarse hasta el umbral que dispara el próximo pulso. Ajustar R y C permite programar la frecuencia de estimulación según las necesidades del paciente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TEMA 3.3-3.7 ===================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>3.3 Fluidos: presión, continuidad, Bernoulli, viscosidad y Poiseuille</h2>
+
+      <h3>Densidad y presión hidrostática</h3>
+      <p>La presión en un fluido estático aumenta con la profundidad debido al peso del fluido sobre el punto considerado.</p>
+      <div class="formula">
+        <span class="etiqueta">Presión hidrostática</span>
+        <strong>P = ρ·g·h</strong><br>
+        <span class="nota">ρ = densidad (kg/m³), g = 9,8 m/s², h = profundidad (m)</span>
+      </div>
+
+      <div class="calculadora">
+        <h4>Calculadora — Presión hidrostática</h4>
+        <label>Densidad ρ (kg/m³):</label>
+        <input type="number" id="pres-rho" value="1000">
+        <label>Gravedad g (m/s²):</label>
+        <input type="number" id="pres-g" value="9.8">
+        <label>Altura/profundidad h (m):</label>
+        <input type="number" id="pres-h" value="1">
+        <button id="btn-pres">Calcular presión</button>
+        <div class="resultado" id="pres-resultado"></div>
+      </div>
+
+      <h3>Ecuación de continuidad</h3>
+      <p>Para un fluido incomprensible en flujo estable, el caudal es constante en todo el conducto.</p>
+      <div class="formula">
+        <strong>A₁·v₁ = A₂·v₂</strong> &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Q = A·v</strong><br>
+        <span class="nota">A = área de sección transversal (m²), v = velocidad (m/s), Q = caudal (m³/s)</span>
+      </div>
+
+      <h3>Principio de Bernoulli (fluido ideal)</h3>
+      <p>Relaciona presión, velocidad y altura a lo largo de una línea de corriente.</p>
+      <div class="formula">
+        <strong>P + ½·ρ·v² + ρ·g·h = constante</strong>
+      </div>
+
+      <h3>Viscosidad y ley de Poiseuille (fluido real)</h3>
+      <p>En tubos estrechos, la viscosidad del fluido se opone al flujo. El caudal depende de la diferencia de presión, el radio del tubo y la viscosidad.</p>
+      <div class="formula">
+        <span class="etiqueta">Ley de Poiseuille (flujo laminar en tubo cilíndrico)</span>
+        <strong>Q = (π·ΔP·r⁴) / (8·η·L)</strong><br>
+        <span class="nota">ΔP = diferencia de presión (Pa), r = radio (m), η = viscosidad (Pa·s), L = largo (m)</span>
+      </div>
+      <p class="nota">Ojo: el caudal depende de r⁴. Si el radio del tubo se reduce a la mitad, el caudal cae a 1/16.</p>
+
+      <h3>Flujo laminar y turbulento — Número de Reynolds</h3>
+      <p>El número de Reynolds indica si el flujo es laminar (ordenado, capas paralelas) o turbulento (caótico, remolinos).</p>
+      <div class="formula">
+        <strong>Re = (ρ·v·D) / η</strong><br>
+        <span class="nota">Re < 2000: típicamente laminar &nbsp; Re > 4000: típicamente turbulento</span>
+      </div>
+
+      <div class="diagrama">
+        <svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg">
+          <!-- Laminar -->
+          <rect x="40" y="40" width="220" height="80" fill="#f4f6f8" stroke="#999"/>
+          <text x="150" y="55" font-size="11" fill="#333" text-anchor="middle">FLUJO LAMINAR</text>
+          <line x1="60" y1="60" x2="240" y2="60" stroke="#1f5c8a" stroke-width="2"/>
+          <line x1="60" y1="80" x2="240" y2="80" stroke="#1f5c8a" stroke-width="2"/>
+          <line x1="60" y1="100" x2="240" y2="100" stroke="#1f5c8a" stroke-width="2"/>
+          <line x1="60" y1="110" x2="240" y2="110" stroke="#1f5c8a" stroke-width="2"/>
+          <!-- Turbulento -->
+          <rect x="300" y="40" width="220" height="80" fill="#f4f6f8" stroke="#999"/>
+          <text x="410" y="55" font-size="11" fill="#333" text-anchor="middle">FLUJO TURBULENTO</text>
+          <path d="M 320 60 Q 340 70 360 60 T 400 60 T 440 60 T 480 60 T 520 60" fill="none" stroke="#c62828" stroke-width="2"/>
+          <path d="M 320 100 Q 340 90 360 100 T 400 100 T 440 100 T 480 100 T 520 100" fill="none" stroke="#c62828" stroke-width="2"/>
+          <path d="M 320 120 Q 340 110 360 120 T 400 120 T 440 120 T 480 120 T 520 120" fill="none" stroke="#c62828" stroke-width="2"/>
+          <text x="410" y="210" font-size="11" fill="#c62828">remolinos y mezclas</text>
+        </svg>
+        <div class="leyenda">Laminar: capas ordenadas. Turbulento: remolinos y mezclas, típico a altas velocidades o tubos anchos.</div>
+      </div>
+
+      <h3>Ejemplo resuelto — Presión hidrostática</h3>
+      <p>¿Cuál es la presión a 1,5 m de profundidad en agua (ρ = 1000 kg/m³)?</p>
+      <div class="solucion" id="sol-u3-3">
+        <h5>Solución</h5>
+        <ol>
+          <li>P = ρ·g·h = 1000 · 9,8 · 1,5 = <strong>14 700 Pa</strong> (14,7 kPa).</li>
+        </ol>
+      </div>
+      <button class="btn-solucion" data-target="sol-u3-3">Ver solución ▼</button>
+
+      <h3>Ejemplo resuelto — Ley de Poiseuille</h3>
+      <p>En un catéter de radio 0,5 mm y largo 0,3 m, con viscosidad de sangre η = 0,004 Pa·s y diferencia de presión ΔP = 2000 Pa, calcula el caudal.</p>
+      <div class="solucion" id="sol-u3-4">
+        <h5>Solución</h5>
+        <ol>
+          <li>r = 0,5 mm = 5×10⁻⁴ m → r⁴ = (5×10⁻⁴)⁴ = 6,25×10⁻¹⁴ m⁴.</li>
+          <li>Q = π · 2000 · 6,25×10⁻¹⁴ / (8 · 0,004 · 0,3).</li>
+          <li>Numerador ≈ 3,927×10⁻¹⁰. Denominador = 0,0096.</li>
+          <li>Q ≈ 4,09×10⁻⁸ m³/s ≈ <strong>0,041 ml/s</strong>.</li>
+        </ol>
+      </div>
+      <button class="btn-solucion" data-target="sol-u3-4">Ver solución ▼</button>
+
+      <h3>Ejercicios propuestos</h3>
+      <div class="ejercicio">
+        <h4>Ejercicio 3.3</h4>
+        <p>El agua fluye por un tubo de área 0,01 m² a 2 m/s. El tubo se estrecha a 0,005 m². ¿Cuál es la nueva velocidad?</p>
+        <input type="number" id="e3-3-resp" placeholder="Velocidad (m/s)">
+        <button class="btn-validar" data-target="e3-3">Validar respuesta</button>
+        <span id="e3-3-msg"></span>
+        <div class="solucion" id="sol-e3-3">
+          <h5>Solución</h5>
+          <ol>
+            <li>Continuidad: A₁·v₁ = A₂·v₂ → v₂ = A₁·v₁ / A₂ = 0,01 · 2 / 0,005 = <strong>4 m/s</strong>.</li>
+          </ol>
+        </div>
+      </div>
+      <button class="btn-solucion" data-target="sol-e3-3">Ver solución ▼</button>
+
+      <div class="ejercicio">
+        <h4>Ejercicio 3.4</h4>
+        <p>Calcula el número de Reynolds para sangre (ρ ≈ 1060 kg/m³) que fluye a 0,3 m/s en un vaso de D = 0,005 m y η = 0,004 Pa·s. ¿Es laminar?</p>
+        <input type="number" id="e3-4-resp" placeholder="Re">
+        <button class="btn-validar" data-target="e3-4">Validar respuesta</button>
+        <span id="e3-4-msg"></span>
+        <div class="solucion" id="sol-e3-4">
+          <h5>Solución</h5>
+          <ol>
+            <li>Re = ρ·v·D / η = 1060 · 0,3 · 0,005 / 0,004 = 1,59 / 0,004 ≈ <strong>397</strong>.</li>
+            <li>Re < 2000, por lo tanto el flujo es <strong>laminar</strong>.</li>
+          </ol>
+        </div>
+      </div>
+      <button class="btn-solucion" data-target="sol-e3-4">Ver solución ▼</button>
+
+      <div class="caso">
+        <h4>Caso aplicado — Hipertensión y resistencia vascular</h4>
+        <p>Según Poiseuille, el flujo sanguíneo depende críticamente del radio del vaso (r⁴). Una vasoconstricción que reduzca el radio de una arteria disminuye drásticamente el flujo, lo que obliga al corazón a generar mayor presión. Esto explica fisiológicamente por qué la hipertensión arterial y la aterosclerosis (estrechamiento de arterias) están relacionadas.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Guía Didáctica de Física &middot; CBA0210 &middot; Unidad 3 — Circuitos y Fluidos &middot; 2026</p>
+  <p><a href="index.html">← Volver al inicio</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

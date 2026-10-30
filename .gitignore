@@ -1,0 +1,9 @@
+# Programa oficial del curso: se usa como fuente, no se publica.
+programa_oficial_del_curso_de_F_sica(9).pdf
+
+# Artefactos de las pruebas locales
+_test2.html
+
+# Python
+__pycache__/
+*.pyc

@@ -1,0 +1,767 @@
+/* ==========================================================================
+   Guía de Estudio de Física — CBA0210
+   Hoja de estilos única. Pensada para lectura larga, pantalla y papel.
+   ========================================================================== */
+
+:root {
+  --azul-oscuro: #14405f;
+  --azul: #1f5c8a;
+  --azul-medio: #3a7ca5;
+  --azul-claro: #eaf2f8;
+  --azul-borde: #cfe0ec;
+  --gris-texto: #24313c;
+  --gris-suave: #5a6b7a;
+  --gris-fondo: #f6f8fa;
+  --gris-borde: #dde4ea;
+  --verde: #2e7d32;
+  --verde-claro: #e8f5e9;
+  --rojo: #c62828;
+  --rojo-claro: #fdecea;
+  --naranja: #e89c1c;
+  --naranja-claro: #fff5e0;
+  --violeta: #6a4c93;
+  --violeta-claro: #f1ecf8;
+  --radius: 10px;
+  --sombra: 0 2px 10px rgba(20, 64, 95, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--gris-texto);
+  background: var(--gris-fondo);
+}
+
+/* ---------------- Encabezado y navegación ---------------- */
+
+header {
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-medio));
+  color: #fff;
+  padding: 1.4rem 1rem 1.2rem;
+}
+
+.header-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+header .sub {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.92;
+}
+
+header .sub a { color: #cfe8ff; }
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #fff;
+  border-bottom: 1px solid var(--gris-borde);
+  box-shadow: 0 1px 6px rgba(20, 64, 95, 0.06);
+}
+
+.nav-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-list li { flex: 1 1 auto; }
+
+.nav-list a {
+  display: block;
+  padding: 0.75rem 0.9rem;
+  color: var(--azul-oscuro);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-list a:hover { background: var(--azul-claro); }
+
+.nav-list a.activa {
+  border-bottom-color: var(--azul);
+  background: var(--azul-claro);
+}
+
+/* ---------------- Estructura ---------------- */
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.6rem 1rem 3rem;
+}
+
+section.seccion { margin-bottom: 2rem; }
+
+h2 {
+  color: var(--azul-oscuro);
+  font-size: 1.4rem;
+  margin: 0 0 0.4rem;
+  line-height: 1.3;
+}
+
+h3 {
+  color: var(--azul);
+  font-size: 1.12rem;
+  margin: 1.6rem 0 0.5rem;
+}
+
+h4 {
+  color: var(--azul-oscuro);
+  font-size: 1rem;
+  margin: 1.1rem 0 0.4rem;
+}
+
+p { margin: 0 0 0.85rem; }
+
+ul, ol { margin: 0 0 0.9rem; padding-left: 1.5rem; }
+
+li { margin-bottom: 0.35rem; }
+
+strong { color: var(--azul-oscuro); }
+
+a { color: var(--azul); }
+
+/* ---------------- Tarjetas y bloques ---------------- */
+
+.tarjeta {
+  background: #fff;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem 1.6rem;
+  box-shadow: var(--sombra);
+}
+
+.tema {
+  background: #fff;
+  border: 1px solid var(--gris-borde);
+  border-left: 5px solid var(--azul);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.5rem 1.7rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--sombra);
+}
+
+.tema > h2 {
+  font-size: 1.32rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--azul-claro);
+  margin-bottom: 1rem;
+}
+
+.num-tema {
+  display: inline-block;
+  background: var(--azul);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.12rem 0.55rem;
+  border-radius: 20px;
+  margin-right: 0.5rem;
+  vertical-align: 2px;
+}
+
+/* ---------------- Objetivo y activación ---------------- */
+
+.objetivo {
+  background: var(--verde-claro);
+  border-left: 4px solid var(--verde);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.objetivo h4 { color: var(--verde); margin: 0 0 0.3rem; font-size: 0.95rem; }
+.objetivo p { margin: 0; font-size: 0.96rem; }
+
+.activacion {
+  background: var(--naranja-claro);
+  border-left: 4px solid var(--naranja);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.activacion h4 { color: #8a5a00; margin: 0 0 0.3rem; font-size: 0.95rem; }
+.activacion p { margin: 0 0 0.4rem; font-size: 0.96rem; }
+
+.activacion details { font-size: 0.92rem; }
+.activacion summary { cursor: pointer; color: var(--azul); font-weight: 600; }
+
+/* ---------------- Idea central ---------------- */
+
+.idea {
+  background: #fff;
+  border: 1px dashed var(--azul-borde);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.idea h4 { color: var(--azul-oscuro); margin: 0 0 0.4rem; }
+
+.analogia {
+  background: var(--violeta-claro);
+  border-left: 4px solid var(--violeta);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 0.8rem 0 1rem;
+  font-size: 0.96rem;
+}
+
+.analogia strong { color: var(--violeta); }
+
+/* ---------------- Fórmulas ---------------- */
+
+.formula {
+  background: var(--azul-claro);
+  border: 1px solid var(--azul-borde);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.formula .etiqueta {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--gris-suave);
+  margin-bottom: 0.4rem;
+}
+
+.formula strong { font-size: 1.12rem; }
+
+.formula .nota, .nota {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--gris-suave);
+  margin-top: 0.4rem;
+}
+
+.lectura {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.8rem 0 1rem;
+  font-size: 0.92rem;
+}
+
+.lectura th, .lectura td {
+  border: 1px solid var(--gris-borde);
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.lectura th { background: var(--azul-claro); color: var(--azul-oscuro); }
+.lectura td:first-child { font-weight: 600; white-space: nowrap; }
+
+table.general {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.8rem 0 1.2rem;
+  font-size: 0.93rem;
+}
+
+table.general th, table.general td {
+  border: 1px solid var(--gris-borde);
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.general th { background: var(--azul-claro); color: var(--azul-oscuro); }
+
+/* ---------------- Método de resolución ---------------- */
+
+.metodo {
+  background: #fff;
+  border: 1px solid var(--azul-borde);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  margin: 1rem 0;
+}
+
+.metodo h4 { margin: 0 0 0.5rem; color: var(--azul); }
+.metodo ol { margin: 0; }
+.metodo li { margin-bottom: 0.45rem; font-size: 0.95rem; }
+
+/* ---------------- Ejemplo resuelto ---------------- */
+
+.ejemplo {
+  background: #f7fbfd;
+  border: 1px solid var(--azul-borde);
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  margin: 1rem 0;
+}
+
+.ejemplo h4 { margin: 0 0 0.5rem; color: var(--azul-oscuro); }
+
+.paso {
+  margin-bottom: 0.75rem;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--azul-borde);
+}
+
+.paso .titulo-paso {
+  display: block;
+  font-weight: 700;
+  color: var(--azul);
+  font-size: 0.9rem;
+}
+
+.paso p { margin: 0.15rem 0 0; font-size: 0.96rem; }
+
+.porque {
+  font-size: 0.9rem;
+  color: var(--gris-suave);
+  font-style: italic;
+}
+
+/* ---------------- Diagramas ---------------- */
+
+.diagrama {
+  margin: 1.1rem 0;
+  text-align: center;
+}
+
+.diagrama svg {
+  max-width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+}
+
+.leyenda {
+  font-size: 0.87rem;
+  color: var(--gris-suave);
+  margin-top: 0.35rem;
+}
+
+/* ---------------- Errores frecuentes ---------------- */
+
+.errores {
+  background: var(--rojo-claro);
+  border-left: 4px solid var(--rojo);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  margin: 1.1rem 0;
+}
+
+.errores h4 { color: var(--rojo); margin: 0 0 0.4rem; font-size: 0.98rem; }
+.errores ul { margin: 0; padding-left: 0; list-style: none; }
+.errores li {
+  position: relative;
+  padding-left: 1.3rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.94rem;
+}
+.errores li::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  color: var(--rojo);
+  font-weight: 700;
+}
+
+/* ---------------- Prácticas ---------------- */
+
+.practica {
+  background: #fff;
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  margin: 1.1rem 0;
+}
+
+.practica h4 { margin: 0 0 0.45rem; color: var(--azul-oscuro); }
+
+.practica .enunciado { font-size: 0.97rem; }
+
+/* ---------------- Autoevaluación ---------------- */
+
+.autoevaluacion {
+  background: #fbfaff;
+  border: 1px solid #e0d8ef;
+  border-left: 4px solid var(--violeta);
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  margin: 1.2rem 0;
+}
+
+.autoevaluacion h4 { color: var(--violeta); margin: 0 0 0.2rem; }
+.autoevaluacion .indicacion { font-size: 0.88rem; color: var(--gris-suave); margin-bottom: 0.7rem; }
+
+.pregunta { margin-bottom: 0.95rem; }
+.pregunta > label { display: block; margin-bottom: 0.35rem; font-size: 0.97rem; }
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-left: 0.2rem;
+}
+
+.opciones label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.94rem;
+  cursor: pointer;
+  padding: 0.3rem 0.45rem;
+  border-radius: 5px;
+}
+
+.opciones label:hover { background: var(--azul-claro); }
+.opciones input[type="radio"] { margin-top: 0.3rem; accent-color: var(--azul); }
+
+.feedback {
+  margin-top: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.feedback.correcto { background: var(--verde-claro); color: var(--verde); border: 1px solid #a5d6a7; }
+.feedback.incorrecto { background: var(--rojo-claro); color: var(--rojo); border: 1px solid #ef9a9a; }
+
+.resultado-auto, .resultado-diag {
+  display: none;
+  margin-top: 0.8rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: var(--azul-claro);
+  border: 1px solid var(--azul-borde);
+}
+
+.resultado-diag.mostrar { display: block; }
+
+.resultado-diag.bajo { background: var(--rojo-claro); border-color: #ef9a9a; }
+.resultado-diag.medio { background: var(--naranja-claro); border-color: #f0cf95; }
+.resultado-diag.alto { background: var(--verde-claro); border-color: #a5d6a7; }
+
+/* ---------------- Inputs y botones ---------------- */
+
+input[type="number"], input[type="text"] {
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--gris-borde);
+  border-radius: 6px;
+  width: 220px;
+  max-width: 100%;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+  outline: 2px solid var(--azul-medio);
+  outline-offset: 1px;
+  border-color: var(--azul-medio);
+}
+
+button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  border: 1px solid var(--azul);
+  background: var(--azul);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button:hover { background: var(--azul-oscuro); }
+
+.btn-solucion, .btn-pista {
+  background: #fff;
+  color: var(--azul);
+  border: 1px solid var(--azul);
+}
+
+.btn-solucion:hover, .btn-pista:hover { background: var(--azul-claro); color: var(--azul-oscuro); }
+
+.btn-validar {
+  background: #fff;
+  color: var(--azul-oscuro);
+  border: 1px solid var(--azul-medio);
+}
+
+.btn-validar:hover { background: var(--azul-claro); }
+
+.btn-ir {
+  font-size: 0.82rem;
+  padding: 0.3rem 0.6rem;
+  background: #fff;
+  color: var(--azul);
+  border: 1px solid var(--azul-borde);
+}
+
+.btn-ir:hover { background: var(--azul-claro); }
+
+.msg-validacion {
+  display: none;
+  margin-left: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ---------------- Soluciones y pistas ---------------- */
+
+.solucion, .pista {
+  display: none;
+  background: #f7fbfd;
+  border: 1px solid var(--azul-borde);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin: 0.6rem 0;
+}
+
+.solucion.mostrar, .pista.mostrar { display: block; }
+
+.solucion h5, .pista h5 {
+  margin: 0 0 0.4rem;
+  font-size: 0.92rem;
+  color: var(--azul);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.pista h5 { color: #8a5a00; }
+.pista { background: var(--naranja-claro); border-color: #f0cf95; }
+.pista ol, .solucion ol { margin: 0; }
+
+/* ---------------- Caso aplicado ---------------- */
+
+.caso {
+  background: var(--azul-claro);
+  border-left: 4px solid var(--azul-medio);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  margin: 1.1rem 0;
+}
+
+.caso h4 { margin: 0 0 0.35rem; color: var(--azul-oscuro); font-size: 0.98rem; }
+.caso p { margin: 0; font-size: 0.95rem; }
+
+/* ---------------- Calculadoras ---------------- */
+
+.calculadora {
+  background: #fff;
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  margin: 1.1rem 0;
+}
+
+.calculadora h4 { margin: 0 0 0.6rem; }
+
+.calculadora label {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--gris-suave);
+  margin: 0.45rem 0 0.2rem;
+}
+
+.calculadora .resultado {
+  margin-top: 0.8rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--azul-claro);
+  border: 1px solid var(--azul-borde);
+  border-radius: 6px;
+  font-size: 0.92rem;
+  min-height: 1rem;
+}
+
+/* ---------------- Estado y checklist ---------------- */
+
+.estado-tema {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--gris-borde);
+}
+
+.badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.78rem;
+  background: #eef2f5;
+  color: var(--gris-suave);
+  border: 1px solid var(--gris-borde);
+  white-space: nowrap;
+}
+
+.badge.iniciado, .badge.enprogreso {
+  background: var(--naranja-claro);
+  color: #8a5a00;
+  border-color: #f0cf95;
+}
+
+.badge.dominado {
+  background: var(--verde-claro);
+  color: var(--verde);
+  border-color: #a5d6a7;
+}
+
+.checklist { display: flex; align-items: center; gap: 0.5rem; }
+.checklist input[type="checkbox"] { width: 17px; height: 17px; accent-color: var(--verde); cursor: pointer; }
+.checklist label { cursor: pointer; font-size: 0.9rem; user-select: none; }
+.checklist label.marcado { color: var(--verde); font-weight: 700; }
+
+/* ---------------- Mapa de temas ---------------- */
+
+.mapa-unidad { margin-bottom: 1.6rem; }
+
+.mapa-unidad h3 {
+  font-size: 1.05rem;
+  color: var(--azul-oscuro);
+  border-bottom: 1px solid var(--gris-borde);
+  padding-bottom: 0.35rem;
+}
+
+.tema-mapa {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.7rem;
+  align-items: center;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px dotted var(--gris-borde);
+  font-size: 0.94rem;
+}
+
+.tema-mapa:hover { background: var(--azul-claro); }
+
+.leyenda-estados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  font-size: 0.86rem;
+  color: var(--gris-suave);
+}
+
+.progreso-caja {
+  background: #fff;
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  margin: 1rem 0 1.6rem;
+}
+
+.barra {
+  height: 12px;
+  background: #eef2f5;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.barra > span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--azul-medio), var(--verde));
+  transition: width 0.4s ease;
+}
+
+.progreso-texto { font-size: 0.9rem; color: var(--gris-suave); margin: 0; }
+
+/* ---------------- Resultados de aprendizaje ---------------- */
+
+.ra, .indicadores {
+  background: #fff;
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--sombra);
+}
+
+.ra h3, .indicadores h3 { margin-top: 0; }
+
+/* ---------------- Footer ---------------- */
+
+footer {
+  background: var(--azul-oscuro);
+  color: #d8e6f0;
+  padding: 1.4rem 1rem;
+  font-size: 0.87rem;
+}
+
+footer p { margin: 0.25rem 0; text-align: center; }
+footer a { color: #cfe8ff; }
+
+/* ---------------- Utilidades ---------------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.destacado {
+  background: var(--naranja-claro);
+  border-radius: 4px;
+  padding: 0 0.25rem;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  header h1 { font-size: 1.35rem; }
+  .tema, .tarjeta { padding: 1rem 1rem 1.3rem; }
+  .nav-list a { font-size: 0.82rem; padding: 0.6rem 0.5rem; }
+  .tema-mapa { grid-template-columns: 1fr auto; }
+  .tema-mapa .badge { grid-column: 1 / -1; justify-self: start; }
+  input[type="number"], input[type="text"] { width: 100%; }
+}
+
+/* ---------------- Impresión ---------------- */
+
+@media print {
+  nav, .btn-solucion, .btn-pista, .btn-validar, .calculadora button, footer { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  header { background: #fff; color: #000; border-bottom: 2px solid #000; }
+  header .sub { color: #333; }
+  .tema, .tarjeta { box-shadow: none; border: none; padding: 0; margin-bottom: 1.2rem; }
+  .solucion, .pista { display: block !important; }
+  .ejemplo, .practica, .errores, .caso, .analogia, .objetivo, .activacion,
+  .autoevaluacion, .formula, .metodo { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+  a { color: #000; text-decoration: none; }
+}

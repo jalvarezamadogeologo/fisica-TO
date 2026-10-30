@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Estudio de Física — CBA0210</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Guía de Estudio de Física</h1>
+    <p class="sub">Curso CBA0210 &middot; Instituto de Ciencias Biomédicas &middot; Facultad de Medicina, Universidad de Chile &middot; 2026, segundo semestre</p>
+  </div>
+</header>
+
+<nav>
+  <ul class="nav-list">
+    <li><a href="index.html" class="activa">Inicio y diagnóstico</a></li>
+    <li><a href="unidad1.html">Unidad 1 — Cinemática y Dinámica</a></li>
+    <li><a href="unidad2.html">Unidad 2 — Energía, Trabajo y Electrostática</a></li>
+    <li><a href="unidad3.html">Unidad 3 — Circuitos y Fluidos</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ==================== PORTADA ==================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>Para qué sirve esta guía</h2>
+      <p>Esta guía está escrita para que <strong>entiendas</strong> la física del curso, no para que memorices fórmulas. La diferencia importa: en el certamen los enunciados cambian, los números cambian y los contextos son clínicos; lo único que no cambia es el razonamiento. Si sabes <em>por qué</em> una fórmula es así y <em>cuándo</em> se puede usar, puedes resolver problemas que nunca viste. Si solo memorizas, cualquier variación te deja sin herramienta.</p>
+      <p>Está organizada en <strong>20 temas</strong> que siguen exactamente los contenidos del programa oficial. Cada tema es una micro-lección autosuficiente: puedes estudiarla en 20 a 30 minutos, en cualquier orden que respete la progresión de la unidad.</p>
+
+      <h3>Cómo está construido cada tema</h3>
+      <p>Siempre en el mismo orden, para que sepas qué esperar:</p>
+      <ol>
+        <li><strong>Objetivo</strong>: qué serás capaz de hacer al terminar.</li>
+        <li><strong>Activación</strong>: una pregunta para conectar con lo que ya sabes (con respuesta plegada).</li>
+        <li><strong>Idea central</strong>: la explicación conceptual, primero en palabras y con analogías, sin fórmulas.</li>
+        <li><strong>De la idea a la fórmula</strong>: la ecuación con la lectura de cada símbolo, sus unidades y sus condiciones de validez.</li>
+        <li><strong>Método</strong>: el procedimiento concreto para resolver ese tipo de problema.</li>
+        <li><strong>Ejemplo resuelto</strong>: paso a paso, con el razonamiento explícito, no solo los números.</li>
+        <li><strong>Errores frecuentes</strong>: los que de verdad aparecen en las pruebas.</li>
+        <li><strong>Práctica guiada</strong>: ejercicio con pistas progresivas.</li>
+        <li><strong>Práctica autónoma</strong>: ejercicio sin ayuda, con validación numérica inmediata.</li>
+        <li><strong>Autoevaluación</strong>: tres preguntas conceptuales con retroalimentación.</li>
+        <li><strong>Conexión con la salud</strong>: el mismo concepto en un fenómeno fisiológico o clínico.</li>
+        <li><strong>Checklist</strong>: marcas el tema como dominado cuando corresponde.</li>
+      </ol>
+      <p class="nota">Tu avance se guarda en este navegador. Si cambias de equipo o borras los datos del navegador, se pierde; no hay cuentas ni servidores.</p>
+    </div>
+  </section>
+
+  <!-- ==================== CÓMO ESTUDIAR ==================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>Cómo estudiar física (y cómo no hacerlo)</h2>
+
+      <div class="idea">
+        <h4>La regla que ordena todo</h4>
+        <p>Un problema de física no se resuelve buscando la fórmula que tenga las letras del enunciado. Se resuelve <strong>traduciendo el enunciado a un modelo</strong>: qué objeto estudio, qué fuerzas o intercambios de energía actúan, qué se conserva, qué cambia. La fórmula es el último paso, no el primero.</p>
+      </div>
+
+      <div class="metodo">
+        <h4>Método de resolución en seis pasos (se usa en toda la guía)</h4>
+        <ol>
+          <li><strong>Lee y traduce.</strong> Identifica el objeto de estudio y el instante o intervalo que te piden. Subraya las magnitudes con su unidad.</li>
+          <li><strong>Dibuja.</strong> Un esquema del sistema, con ejes y sentido positivo elegido por ti. En dinámica, un diagrama de cuerpo libre. En fluidos, el tubo con sus secciones. En circuitos, el esquema con nodos.</li>
+          <li><strong>Elige el modelo.</strong> ¿Aceleración constante? ¿Fuerza neta cero? ¿Energía se conserva? ¿Fluido ideal o viscoso? El modelo decide qué ecuaciones son válidas.</li>
+          <li><strong>Plantea antes de calcular.</strong> Escribe la ecuación con símbolos. Despeja la incógnita simbólicamente. Esto te permite detectar errores de lógica antes de tocar la calculadora.</li>
+          <li><strong>Calcula con unidades.</strong> Sustituye valores con su unidad. Si al final la unidad no corresponde, el error es de planteo, no de aritmética.</li>
+          <li><strong>Verifica el sentido físico.</strong> ¿El resultado es del orden esperado? ¿El signo tiene sentido? ¿Una velocidad de 3000 m/s en una sala es razonable? No. Vuelve al paso 3.</li>
+        </ol>
+      </div>
+
+      <div class="analogia">
+        <strong>Analogía útil.</strong> Resolver un problema es como hacer una anamnesis: primero describes el cuadro (datos, antecedentes), después planteas la hipótesis (modelo), luego pides los exámenes que la confirman (cálculo) y al final verificas que el resultado sea coherente con el paciente (control de sentido). Saltarse la anamnesis y pedir exámenes al azar es exactamente lo que hace quien busca fórmulas a ciegas.
+      </div>
+
+      <h3>Tres hábitos que suben la nota</h3>
+      <ul>
+        <li><strong>Resolver en papel, con dibujo.</strong> Leer la solución no entrena nada. La mano que dibuja y escribe es la que aprende.</li>
+        <li><strong>Explicar en voz alta.</strong> Si no puedes explicar el concepto sin mirar la fórmula, todavía no lo dominas. Explícaselo a alguien o grábate.</li>
+        <li><strong>Volver a los errores.</strong> Un ejercicio mal resuelto vale más que tres bien resueltos, si te detienes a identificar en qué paso fallaste: ¿modelo, álgebra, unidades o interpretación?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== HERRAMIENTAS TRANSVERSALES ==================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>Herramientas que se usan en las tres unidades</h2>
+
+      <h3>Unidades del Sistema Internacional</h3>
+      <table class="general">
+        <tr><th>Magnitud</th><th>Unidad</th><th>Símbolo</th><th>Equivalencias útiles</th></tr>
+        <tr><td>Longitud</td><td>metro</td><td>m</td><td>1 cm = 10⁻² m; 1 mm = 10⁻³ m; 1 µm = 10⁻⁶ m</td></tr>
+        <tr><td>Masa</td><td>kilogramo</td><td>kg</td><td>1 g = 10⁻³ kg</td></tr>
+        <tr><td>Tiempo</td><td>segundo</td><td>s</td><td>1 min = 60 s</td></tr>
+        <tr><td>Velocidad</td><td>metro por segundo</td><td>m/s</td><td>1 m/s = 3,6 km/h</td></tr>
+        <tr><td>Aceleración</td><td>metro por segundo al cuadrado</td><td>m/s²</td><td>g ≈ 9,8 m/s²</td></tr>
+        <tr><td>Fuerza</td><td>newton</td><td>N</td><td>1 N = 1 kg·m/s²</td></tr>
+        <tr><td>Energía, trabajo</td><td>joule</td><td>J</td><td>1 J = 1 N·m</td></tr>
+        <tr><td>Presión</td><td>pascal</td><td>Pa</td><td>1 Pa = 1 N/m²; 1 atm = 101 325 Pa = 760 mmHg</td></tr>
+        <tr><td>Presión (clínica)</td><td>milímetro de mercurio</td><td>mmHg</td><td>1 mmHg ≈ 133,3 Pa</td></tr>
+        <tr><td>Viscosidad</td><td>pascal segundo</td><td>Pa·s</td><td>agua a 20 °C ≈ 1,0 × 10⁻³ Pa·s</td></tr>
+        <tr><td>Carga eléctrica</td><td>coulomb</td><td>C</td><td>carga del electrón ≈ −1,6 × 10⁻¹⁹ C</td></tr>
+        <tr><td>Potencial</td><td>volt</td><td>V</td><td>1 V = 1 J/C</td></tr>
+        <tr><td>Resistencia</td><td>ohm</td><td>Ω</td><td>1 Ω = 1 V/A</td></tr>
+        <tr><td>Capacitancia</td><td>farad</td><td>F</td><td>1 F = 1 C/V; 1 µF = 10⁻⁶ F</td></tr>
+      </table>
+
+      <h3>Notación científica y prefijos</h3>
+      <p>En este curso casi todo se mueve entre 10⁻⁶ y 10⁶. Escribir en notación científica evita errores de factor 1000, que son los más caros en un certamen.</p>
+      <table class="general">
+        <tr><th>Prefijo</th><th>Símbolo</th><th>Factor</th><th>Ejemplo del curso</th></tr>
+        <tr><td>mega</td><td>M</td><td>10⁶</td><td>1 MΩ = 10⁶ Ω</td></tr>
+        <tr><td>kilo</td><td>k</td><td>10³</td><td>1 kPa = 1000 Pa</td></tr>
+        <tr><td>centi</td><td>c</td><td>10⁻²</td><td>1 cm = 0,01 m</td></tr>
+        <tr><td>mili</td><td>m</td><td>10⁻³</td><td>1 mmHg; 1 mL = 10⁻⁶ m³</td></tr>
+        <tr><td>micro</td><td>µ</td><td>10⁻⁶</td><td>1 µF = 10⁻⁶ F</td></tr>
+        <tr><td>nano</td><td>n</td><td>10⁻⁹</td><td>1 nm = 10⁻⁹ m</td></tr>
+      </table>
+
+      <div class="errores">
+        <h4>Tres errores de cálculo que cuestan puntos en todas las unidades</h4>
+        <ul>
+          <li>Mezclar unidades: usar cm con m, o gramos con kilogramos, sin convertir. Convierte <em>antes</em> de reemplazar.</li>
+          <li>Olvidar elevar al cuadrado o al cubo al convertir superficies y volúmenes: 1 cm² = 10⁻⁴ m², 1 cm³ = 10⁻⁶ m³, no 10⁻² ni 10⁻³.</li>
+          <li>Redondear demasiado pronto. Conserva al menos tres cifras significativas durante los pasos intermedios y redondea solo al final.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DIAGNÓSTICO ==================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>Test diagnóstico inicial</h2>
+      <p>Diez preguntas conceptuales, dos o tres por bloque. No afecta tu nota: sirve para decidir por dónde empezar. Responde sin buscar las respuestas; el valor está en saber qué no sabes. Al enviar, verás la explicación de cada pregunta y el bloque que conviene priorizar.</p>
+
+      <form id="form-diagnostico" class="autoevaluacion-form">
+
+        <div class="pregunta">
+          <label><strong>1.</strong> Un auto avanza en línea recta con velocidad constante de 20 m/s. ¿Qué se puede afirmar de su aceleración?</label>
+          <div class="opciones">
+            <label><input type="radio" name="d1" value="a"> a) Vale 20 m/s², igual que la velocidad.</label>
+            <label><input type="radio" name="d1" value="b"> b) Aumenta a medida que avanza.</label>
+            <label><input type="radio" name="d1" value="c"> c) Es cero, porque la velocidad no cambia.</label>
+          </div>
+          <div class="feedback" id="fb-diag-d1"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>2.</strong> Un objeto cae libremente desde el reposo, sin resistencia del aire. Su aceleración:</label>
+          <div class="opciones">
+            <label><input type="radio" name="d2" value="a"> a) Aumenta mientras cae, porque va más rápido.</label>
+            <label><input type="radio" name="d2" value="b"> b) Es constante y vale aproximadamente 9,8 m/s².</label>
+            <label><input type="radio" name="d2" value="c"> c) Es cero en el punto más alto de su trayectoria.</label>
+          </div>
+          <div class="feedback" id="fb-diag-d2"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>3.</strong> Una persona tiene una masa de 70 kg. ¿Cuál es su peso en la Tierra (g = 9,8 m/s²)?</label>
+          <div class="opciones">
+            <label><input type="radio" name="d3" value="a"> a) 70 N</label>
+            <label><input type="radio" name="d3" value="b"> b) 686 N</label>
+            <label><input type="radio" name="d3" value="c"> c) 7,1 N</label>
+          </div>
+          <div class="feedback" id="fb-diag-d3"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>4.</strong> Si la fuerza neta sobre un cuerpo es cero, entonces el cuerpo:</label>
+          <div class="opciones">
+            <label><input type="radio" name="d4" value="a"> a) Está necesariamente en reposo.</label>
+            <label><input type="radio" name="d4" value="b"> b) Está necesariamente acelerando.</label>
+            <label><input type="radio" name="d4" value="c"> c) Puede estar en reposo o moviéndose con velocidad constante.</label>
+          </div>
+          <div class="feedback" id="fb-diag-d4"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>5.</strong> Una fuerza actúa perpendicular al desplazamiento de un cuerpo. El trabajo que realiza es:</label>
+          <div class="opciones">
+            <label><input type="radio" name="d5" value="a"> a) Cero.</label>
+            <label><input type="radio" name="d5" value="b"> b) Máximo, porque no se opone al movimiento.</label>
+            <label><input type="radio" name="d5" value="c"> c) Igual a F·d, sin importar el ángulo.</label>
+          </div>
+          <div class="feedback" id="fb-diag-d5"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>6.</strong> Se suelta una pelota desde una altura h. Sin roce, al llegar al suelo:</label>
+          <div class="opciones">
+            <label><input type="radio" name="d6" value="a"> a) Toda la energía potencial se transformó en cinética.</label>
+            <label><input type="radio" name="d6" value="b"> b) La energía mecánica se destruyó durante la caída.</label>
+            <label><input type="radio" name="d6" value="c"> c) La energía cinética sigue siendo cero.</label>
+          </div>
+          <div class="feedback" id="fb-diag-d6"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>7.</strong> Dos cargas eléctricas de igual signo, separadas cierta distancia:</label>
+          <div class="opciones">
+            <label><input type="radio" name="d7" value="a"> a) Se atraen.</label>
+            <label><input type="radio" name="d7" value="b"> b) Se repelen.</label>
+            <label><input type="radio" name="d7" value="c"> c) No interactúan entre sí.</label>
+          </div>
+          <div class="feedback" id="fb-diag-d7"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>8.</strong> En un circuito en serie con tres resistencias distintas, la corriente eléctrica:</label>
+          <div class="opciones">
+            <label><input type="radio" name="d8" value="a"> a) Se divide entre las resistencias, según su valor.</label>
+            <label><input type="radio" name="d8" value="b"> b) Es la misma en las tres.</label>
+            <label><input type="radio" name="d8" value="c"> c) Es cero en la última del circuito.</label>
+          </div>
+          <div class="feedback" id="fb-diag-d8"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>9.</strong> Un fluido ideal circula por un tubo horizontal cuya sección se reduce. En la zona más estrecha:</label>
+          <div class="opciones">
+            <label><input type="radio" name="d9" value="a"> a) La presión aumenta.</label>
+            <label><input type="radio" name="d9" value="b"> b) La presión disminuye.</label>
+            <label><input type="radio" name="d9" value="c"> c) La presión no cambia, solo la velocidad.</label>
+          </div>
+          <div class="feedback" id="fb-diag-d9"></div>
+        </div>
+
+        <div class="pregunta">
+          <label><strong>10.</strong> Según la ley de Poiseuille, si el radio de un vaso se reduce a la mitad manteniendo la misma diferencia de presión, el caudal:</label>
+          <div class="opciones">
+            <label><input type="radio" name="d10" value="a"> a) Se reduce a la mitad.</label>
+            <label><input type="radio" name="d10" value="b"> b) Se reduce a la cuarta parte.</label>
+            <label><input type="radio" name="d10" value="c"> c) Se reduce aproximadamente a la dieciseisava parte.</label>
+          </div>
+          <div class="feedback" id="fb-diag-d10"></div>
+        </div>
+
+        <button type="submit" style="margin-top:0.4rem;">Ver resultado y explicaciones</button>
+      </form>
+
+      <div id="resultado-diag" class="resultado-diag"></div>
+    </div>
+  </section>
+
+  <!-- ==================== PROGRESO ==================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>Mapa de temas y progreso</h2>
+      <p>Haz clic en cualquier tema para ir directo a su micro-lección. El estado se actualiza solo: pasa a <strong>En progreso</strong> cuando respondes una autoevaluación y a <strong>Dominado</strong> cuando aciertas las tres preguntas o marcas el checklist.</p>
+
+      <div class="progreso-caja" id="progreso-global">
+        <p class="progreso-texto">Sin datos todavía.</p>
+        <div class="barra"><span></span></div>
+      </div>
+
+      <div class="leyenda-estados">
+        <span class="badge">● No iniciado</span>
+        <span class="badge enprogreso">● En progreso</span>
+        <span class="badge dominado">● Dominado</span>
+      </div>
+
+      <div class="mapa-unidad">
+        <h3>Unidad 1 — Cinemática y Dinámica (RA 1 y RA 4)</h3>
+        <div class="tema-mapa">
+          <span>1.1 Posición, distancia, desplazamiento, velocidad y aceleración</span>
+          <a href="unidad1.html#u1-t1"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u1-t1"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>1.2 Cinemática en una dimensión: MRU, MRUA y caída libre</span>
+          <a href="unidad1.html#u1-t2"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u1-t2"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>1.3 Cinemática en dos dimensiones: vectores y tiro parabólico</span>
+          <a href="unidad1.html#u1-t3"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u1-t3"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>1.4 Gráficos de movimiento: x-t, v-t y a-t</span>
+          <a href="unidad1.html#u1-t4"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u1-t4"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>1.5 Fuerzas: gravitacional, normal, roce y elástica</span>
+          <a href="unidad1.html#u1-t5"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u1-t5"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>1.6 Leyes de Newton y diagrama de cuerpo libre</span>
+          <a href="unidad1.html#u1-t6"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u1-t6"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>1.7 Dinámica en una y dos dimensiones: equilibrio, planos inclinados y poleas</span>
+          <a href="unidad1.html#u1-t7"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u1-t7"></span>
+        </div>
+      </div>
+
+      <div class="mapa-unidad">
+        <h3>Unidad 2 — Energía, Trabajo y Electrostática (RA 2 y RA 4)</h3>
+        <div class="tema-mapa">
+          <span>2.1 Trabajo de una fuerza</span>
+          <a href="unidad2.html#u2-t1"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u2-t1"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>2.2 Energía cinética</span>
+          <a href="unidad2.html#u2-t2"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u2-t2"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>2.3 Energías potenciales y conservación de la energía</span>
+          <a href="unidad2.html#u2-t3"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u2-t3"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>2.4 Carga eléctrica y ley de Coulomb</span>
+          <a href="unidad2.html#u2-t4"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u2-t4"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>2.5 Campo eléctrico</span>
+          <a href="unidad2.html#u2-t5"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u2-t5"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>2.6 Energía y potencial eléctrico</span>
+          <a href="unidad2.html#u2-t6"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u2-t6"></span>
+        </div>
+      </div>
+
+      <div class="mapa-unidad">
+        <h3>Unidad 3 — Circuitos y Fluidos (RA 2, RA 3 y RA 4)</h3>
+        <div class="tema-mapa">
+          <span>3.1 Ley de Ohm y circuitos resistivos: serie y paralelo</span>
+          <a href="unidad3.html#u3-t1"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u3-t1"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>3.2 Circuitos RC: carga, descarga y constante de tiempo</span>
+          <a href="unidad3.html#u3-t2"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u3-t2"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>3.3 Densidad, presión y presión hidrostática</span>
+          <a href="unidad3.html#u3-t3"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u3-t3"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>3.4 Flujo y ecuación de continuidad</span>
+          <a href="unidad3.html#u3-t4"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u3-t4"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>3.5 Fluidos ideales y ecuación de Bernoulli</span>
+          <a href="unidad3.html#u3-t5"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u3-t5"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>3.6 Viscosidad, fluidos reales y ley de Poiseuille</span>
+          <a href="unidad3.html#u3-t6"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u3-t6"></span>
+        </div>
+        <div class="tema-mapa">
+          <span>3.7 Flujo laminar y turbulento: número de Reynolds</span>
+          <a href="unidad3.html#u3-t7"><button class="btn-ir" type="button">Ir al tema</button></a>
+          <span class="badge" data-badge-tema="u3-t7"></span>
+        </div>
+      </div>
+
+      <p class="nota">Progreso guardado solo en este navegador.
+        <button id="btn-reiniciar-progreso" type="button" class="btn-ir" style="margin-left:0.4rem;">Borrar progreso</button>
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== EVALUACIÓN ==================== -->
+  <section class="seccion">
+    <div class="tarjeta">
+      <h2>Cómo te van a evaluar</h2>
+      <table class="general">
+        <tr><th>Unidad</th><th>Ponderación en la nota final</th><th>Composición de la nota de unidad</th></tr>
+        <tr><td>Unidad 1 — Cinemática y Dinámica</td><td>33,33 %</td><td rowspan="3">Controles de seminario 30 % (resolución individual de problemas 22,5 %; informes de trabajos prácticos 6 %; coevaluación 1,5 %) + certamen integrador 70 %.</td></tr>
+        <tr><td>Unidad 2 — Energía, Trabajo y Electrostática</td><td>33,33 %</td></tr>
+        <tr><td>Unidad 3 — Circuitos y Fluidos</td><td>33,33 %</td></tr>
+      </table>
+      <p>Consecuencia práctica para el estudio: el <strong>certamen pesa 70 %</strong> de cada unidad y es de resolución de problemas. Por eso esta guía insiste en el método y en la práctica autónoma, no en la lectura pasiva.</p>
+
+      <h3>Bibliografía</h3>
+      <p>Serway, R. y Vuille, C. (2018). <em>Fundamentos de Física</em>, 10ª edición. Cengage Learning. Disponible en el portal de bibliografías de la Universidad de Chile.</p>
+      <p class="nota">Esta guía sigue el orden y los contenidos de ese texto para los temas del programa, con ejemplos orientados a las carreras de la salud.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Guía de Estudio de Física &middot; CBA0210 &middot; Progreso guardado en el navegador (localStorage)</p>
+  <p>Contenidos según el programa oficial del curso, Facultad de Medicina, Universidad de Chile, 2026.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
